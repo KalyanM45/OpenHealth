@@ -8,5 +8,6 @@ dvc
 catboost
 xgboost
 mlflow==2.2.2
+google.generativeai
 
 -e .
