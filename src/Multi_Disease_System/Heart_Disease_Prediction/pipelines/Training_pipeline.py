@@ -1,6 +1,6 @@
-from src.Heart_Disease_Prediction.components.Data_ingestion import DataIngestion
-from src.Heart_Disease_Prediction.components.Data_transformation import DataTransformation
-from src.Heart_Disease_Prediction.components.Model_trainer import ModelTrainer
+from src.Multi_Disease_System.Heart_Disease_Prediction.components.Data_ingestion import DataIngestion
+from src.Multi_Disease_System.Heart_Disease_Prediction.components.Data_transformation import DataTransformation
+from src.Multi_Disease_System.Heart_Disease_Prediction.components.Model_trainer import ModelTrainer
 
 class Heart_Disease:
 
