@@ -1,28 +1,24 @@
 import os
 import sys
-import subprocess
 from PIL import Image
-import google.generativeai as genai
-from flask import Flask, render_template,request
-
-# Setting Gemini Large Language Model Credentials
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY")) # Configure API key
-vision_model = genai.GenerativeModel('gemini-pro-vision') # Initialize Gemini Pro Vision Model
-text_model = genai.GenerativeModel('gemini-pro') # Initialize Gemini Pro Model
+from src.utils import gen_from_image, gen_from_text
+from flask import Flask, render_template,request,redirect,url_for
 
 app = Flask(__name__)
-
-def gen_from_image(prompt,imagefile):
-    pass
-
-def gen_from_text(prompt):
-    pass
 
 @app.route('/')
 def index():
     return render_template('index.html')
 
-@app.route('/medrecog')
+@app.route('/redirect')
+def redirect_to_landing():
+    return redirect(url_for('landing'))
+
+@app.route('/landing')
+def landing():
+    return render_template('landing.html')
+
+@app.route('/medrecog', methods=['GET', 'POST'])
 def medrecog():
     if request.method == 'POST':
         med_prompt = '''
@@ -36,19 +32,17 @@ def medrecog():
         validation_prompt = f"Check if the provided description is related to the medical field. Just Reply with 'Yes' or 'No'. Response: {response}"
         image_file = request.files['file']
         imagefile = Image.open(image_file)
-        response = gen_from_image(med_prompt,imagefile)
+        response = gen_from_image(med_prompt, imagefile)
         validation_response = gen_from_text(validation_prompt)
 
         if validation_response == 'Yes':
-            render_template('medrecog.html',response=response)
+            return render_template('medrecog.html', response=response)
         else:
-            render_template('medrecog.html',response="Please provide a valid medical image.")
+            return render_template('medrecog.html', response="Please provide a valid medical image.")
 
-    render_template('medrecog.html')
+    return render_template('medrecog.html')
 
-@app.route('/conditional')
-
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/conditional', methods=['GET', 'POST'])
 def conditional():
     if request.method == 'POST':
         try:
@@ -79,16 +73,11 @@ def conditional():
         - Refrain from presenting inaccurate or ambiguous information.
         - Ensure the query is focused and not overly broad."""
 
-        # Get Gemini response
         gemini_response = gen_from_text(prompt)
 
         return render_template('index.html', user_input=user_input, response=gemini_response)
 
     return render_template('index.html')
-
-@app.route('/chatbot')
-def chat():
-    pass
 
 
 if __name__ == '__main__':

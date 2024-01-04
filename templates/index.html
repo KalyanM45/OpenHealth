@@ -1,17 +1,17 @@
-<!-- index.html -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="indexstyle.css">
-    <title>Initial Screen</title>
+    <link rel="stylesheet" href="static/style.css">
+    <script src="static/script1.js"></script>
+    <title>OpenHealth</title>
   </head>
+
   <body>
     <div id="particles-js"></div>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-     <script src="script1.js"></script> 
+     <script src="static\script1.js"></script> 
     <div class="container" id="initialScreen">
       <button id="clickableButton" class="glow-button">
         START
@@ -171,7 +171,14 @@
     <div class="container hidden" id="screen2">
       <p id="openHealthText">OpenHealth</p>
     </div>
-
-    <script src="script2.js"></script>
+    
+    <script src="static\script2.js"></script>
+    <script>
+      window.onload = function() {
+          setTimeout(function() {
+              window.location.href = '/redirect';
+          }, 5000); // Redirect after 5 seconds (you can adjust this)
+      };
+  </script>
   </body>
 </html>

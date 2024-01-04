@@ -6,6 +6,11 @@ import pandas as pd
 from src.logger import logging
 from sklearn.metrics import accuracy_score
 from src.exception import customexception
+import google.generativeai as genai
+
+genai.configure(api_key=os.getenv("GOOGLE_API_KEY")) # Configure API key
+vision_model = genai.GenerativeModel('gemini-pro-vision') # Initialize Gemini Pro Vision Model
+text_model = genai.GenerativeModel('gemini-pro')
 
 def save_object(file_path, obj):
     try:
@@ -36,3 +41,11 @@ def load_object(file_path):
     except Exception as e:
         logging.info('Exception Occured in load_object function utils')
         raise customexception(e,sys)
+    
+def gen_from_image(prompt,imagefile):
+    vresponse = vision_model.generate_content(prompt, imagefile)
+    return vresponse.text
+
+def gen_from_text(prompt):
+    tresponse = text_model.generate_content(prompt)
+    return tresponse.text

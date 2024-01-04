@@ -13,8 +13,4 @@ document
               document.getElementById("openHealthText").style.opacity = "1";
             }, 100);
           }, 400);
-
-          setTimeout(function () {
-            window.location.href = "landing1.html";
-          }, 4000);
         });
