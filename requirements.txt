@@ -7,7 +7,7 @@ flask
 dvc
 catboost
 xgboost
-mlflow==2.2.2
+mlflow
 google.generativeai
 python-dotenv
 

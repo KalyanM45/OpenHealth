@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input Form</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-image: url(background1.jpeg);
+        background-size: cover;
+        font-family: Arial, sans-serif;
+      }
+      h1 {
+        color: #0ef;
+        text-align: center;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 31%;
+        gap: 7px;
+        position: relative;
+        color: #0ef;
+      }
+
+      .container .label {
+        font-size: 15px;
+        padding-left: 20px;
+        padding-top: 23px;
+        position: absolute;
+        top: 13px;
+        transition: 0.3s;
+        pointer-events: none;
+      }
+
+      .input {
+        width: 200px;
+        height: 45px;
+        border: none;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        outline: none;
+        padding: 0px 7px;
+        border-radius: 6px;
+        font-size: 15px;
+        color: #0ef;
+        background-color: transparent;
+        box-shadow: 3px 3px 10px rgba(0, 238, 255, 1),
+          -1px -1px 6px rgba(0, 238, 255, 0.4);
+      }
+
+      .input:focus {
+        border: 2px solid transparent;
+        color: #0ef;
+        box-shadow: 3px 3px 10px rgba(0, 238, 255, 1),
+          -1px -1px 6px rgba(0, 223, 255, 0.4),
+          inset 3px 3px 10px rgba(0, 238, 255, 1),
+          inset -1px -1px 6px rgba(0, 238, 255, 0.4);
+      }
+
+      .container .input:valid ~ .label,
+      .container .input:focus ~ .label {
+        transition: 0.3s;
+        padding-left: 2px;
+        transform: translateY(-35px);
+      }
+
+      .container .input:valid,
+      .container .input:focus {
+        box-shadow: 3px 3px 10px rgba(0, 238, 255, 1),
+          -1px -1px 6px rgba(0, 238, 255, 0.4),
+          inset 3px 3px 10px rgba(0, 238, 255, 0.5),
+          inset -1px -1px 6px rgba(0, 238, 255, 0.4);
+      }
+
+      .bg-text {
+        background-color: rgb(0, 238, 255);
+        background-color: rgba(0, 0, 0, 0.4);
+        color: #0ef;
+        font-weight: bold;
+        border: 3px solid #0ef;
+        position: absolute;
+        top: 58%;
+        left: 50%;
+        transform: translate(-55%, -60%);
+        z-index: 2;
+        width: 50%;
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0.2;
+        z-index: -1;
+      }
+      
+      .button {
+        padding: 15px 10px;
+        width: 220px;
+        font-weight: bolder;
+        font-size: 18px;
+        outline: none;
+        border: none;
+        border-radius: 10px;
+        transition: 0.5s;
+        background: linear-gradient(45deg, #00ffec, #009dff);
+        cursor: pointer;
+        color: #000;
+        box-shadow: 0 0 25px rgba(0, 238, 255, 1),
+                inset 0 0 25px rgba(0, 238, 255, 1);
+      }
+
+      .button:hover {
+        animation: a 0.5s 1 linear;
+      }
+
+      @keyframes a {
+        0% {
+          transform: scale(0.7, 1.3);
+        }
+
+        25% {
+          transform: scale(1.3, 0.7);
+        }
+
+        50% {
+          transform: scale(0.7, 1.3);
+        }
+
+        75% {
+          transform: scale(1.3, 0.7);
+        }
+
+        100% {
+          transform: scale(1, 1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="overlay"></div>
+    <h1>Diabetes Disease Detection</h1>
+    <div class="bg-text">
+      <div class="container">
+        <input required="" type="text" name="text" class="input" />
+        <label class="label">Age</label>
+      </div>
+      <div class="container">
+        <input required="" type="text" name="text" class="input" />
+        <label class="label">Gender</label>
+      </div>
+      <div class="container">
+        <input required="" type="text" name="text" class="input" />
+        <label class="label">Constrictive pericarditis</label>
+      </div>
+      <div class="container">
+        <input required="" type="text" name="text" class="input" />
+        <label class="label">Trest BPS</label>
+      </div>
+      <div class="container">
+        <input required="" type="text" name="text" class="input" />
+        <label class="label">cholesterol</label>
+      </div>
+      <div class="container">
+        <input required="" type="text" name="text" class="input" />
+        <label class="label">FBS</label>
+      </div>
+      <div class="container">
+        <input required="" type="text" name="text" class="input" />
+        <label class="label">Rest ECG</label>
+      </div>
+      <div class="container">
+        <input required="" type="text" name="text" class="input" />
+        <label class="label">Thalach</label>
+      </div>
+      <div class="container">
+        <input required="" type="text" name="text" class="input" />
+        <label class="label">Exang</label>
+      </div>
+      <div class="container">
+        <input required="" type="text" name="text" class="input" />
+        <label class="label">Old Peak</label>
+      </div>
+      <div class="container">
+        <input required="" type="text" name="text" class="input" />
+        <label class="label">Slope</label>
+      </div>
+      <div class="container">
+        <input required="" type="text" name="text" class="input" />
+        <label class="label">CA</label>
+      </div>
+      <div class="container">
+        <input required="" type="text" name="text" class="input" />
+        <label class="label">Thal</label>
+      </div>
+      <div class="container">
+      <input type="submit" value="Submit" class="button" />
+    </div>
+    </div>
+  </body>
+</html>
