@@ -1,3 +1,11 @@
+# Data Artifacts
+Notebook_Experiments\Data\BrainMRI
+Notebook_Experiments\Data\Kidn\yCT
+Notebook_Experiments\Data\LungDisease
+Notebook_Experiments\Data\Malaria
+Notebook_Experiments\Data\Skin
+Notebook_Experiments\Data\*.csv
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
