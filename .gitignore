@@ -1,14 +1,5 @@
 # Data Artifacts
-Notebook_Experiments\Data\BrainMRI
-Notebook_Experiments\Data\Kidn\yCT
-Notebook_Experiments\Data\LungDisease
-Notebook_Experiments\Data\Malaria
-Notebook_Experiments\Data\Skin
-Notebook_Experiments\Data\cancerb.csv
-Notebook_Experiments\Data\diabetes.csv
-Notebook_Experiments\Data\heart.csv
-Notebook_Experiments\Data\Liver.csv
-Notebook_Experiments\Data\parkinsons.txt
+Notebook_Experiments\Data
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
