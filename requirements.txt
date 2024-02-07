@@ -9,5 +9,6 @@ catboost
 xgboost
 mlflow==2.2.2
 google.generativeai
+python-dotenv
 
 -e .

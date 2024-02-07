@@ -15,6 +15,8 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from src.utils import save_object, evaluate_model
+from sklearn.model_selection import GridSearchCV
+
 
 
 @dataclass 
@@ -25,50 +27,52 @@ class ModelTrainerConfig:
 class ModelTrainer:
     def __init__(self):
         self.model_trainer_config = ModelTrainerConfig()
-    
-    def initate_model_training(self,train_array,test_array):
+
+    def initiate_model_training(self, x_train, x_test, y_train, y_test):
+        print(x_train.shape, x_test.shape, y_train.shape, y_test.shape)
         try:
-            logging.info('Heart Disease Prediction: Splitting Dependent and Independent variables from train and test data')
-            X_train, y_train, X_test, y_test = (
-                train_array[:,:-1],
-                train_array[:,-1],
-                test_array[:,:-1],
-                test_array[:,-1])
             
             models = {
-                'Logistic Regression':LogisticRegression(),
-                'Naive Bayes':GaussianNB(),
-                'Random Forest Classfier':RandomForestClassifier(n_estimators=20, random_state=12,max_depth=5),
-                'XG Boost':XGBClassifier(learning_rate=0.01, n_estimators=25, max_depth=15,gamma=0.6, subsample=0.52,colsample_bytree=0.6,
-                                         seed=27, reg_lambda=2, booster='dart', colsample_bylevel=0.6, colsample_bynode=0.5),
-                'K Nearest Neighbors':KNeighborsClassifier(n_neighbors=10),
-                'Decision Tree':DecisionTreeClassifier(criterion = 'entropy',random_state=0,max_depth = 6),
-                'Support Vector Machine':SVC(kernel='rbf', C=2)
-                }
-            
-            model_report = evaluate_model(X_train, y_train, X_test, y_test, models)
+                'Logistic Regression': LogisticRegression(),
+                'Naive Bayes': GaussianNB(),
+                'Random Forest Classifier': RandomForestClassifier(),
+                'XG Boost': XGBClassifier(),
+                'K Nearest Neighbors': KNeighborsClassifier(),
+                'Decision Tree': DecisionTreeClassifier(),
+                'Support Vector Machine': SVC()
+            }
+
+            param_grid = {
+                'Random Forest Classifier': {'n_estimators': [10, 20, 30], 'max_depth': [5, 10, 15]},
+                'XG Boost': {'learning_rate': [0.01, 0.1, 0.2], 'max_depth': [10, 15, 20], 'subsample': [0.5, 0.7, 0.9]},
+                'K Nearest Neighbors': {'n_neighbors': [5, 10, 15]},
+                'Decision Tree': {'max_depth': [4, 6, 8], 'criterion': ['gini', 'entropy']},
+                'Support Vector Machine': {'C': [0.1, 1, 10], 'kernel': ['linear', 'rbf']}
+            }
+            model_report:dict=evaluate_model(x_train,y_train,x_test,y_test,models)
+
             print(model_report)
             print('\n====================================================================================\n')
-            logging.info(f'Heart Disease Prediction: Model Report: {model_report}')
+            logging.info(f'Model Report : {model_report}')
 
-            # To get the best model score from the dictionary
+            # To get best model score from dictionary 
             best_model_score = max(sorted(model_report.values()))
 
             best_model_name = list(model_report.keys())[
                 list(model_report.values()).index(best_model_score)
             ]
-
+            
             best_model = models[best_model_name]
 
-            print(f'Heart Disease Prediction: Best Model Found, Model Name: {best_model_name}, Accuracy Score: {best_model_score}')
+            print(f'Best Model Found , Model Name : {best_model_name} , R2 Score : {best_model_score}')
             print('\n====================================================================================\n')
-            logging.info(f'Heart Disease Prediction: Best Model Found, Model Name: {best_model_name}, Accuracy Score: {best_model_score}')
+            logging.info(f'Best Model Found , Model Name : {best_model_name} , R2 Score : {best_model_score}')
 
             save_object(
-                 file_path=self.model_trainer_config.trained_model_file_path,
-                 obj=best_model
+                file_path=self.model_trainer_config.trained_model_file_path,
+                obj=best_model
             )
-          
+
         except Exception as e:
-            logging.info('Exception occured at Model Training')
-            raise customexception(e,sys)    
+            logging.info('Exception occurred at Model Training')
+            raise customexception(e, sys)

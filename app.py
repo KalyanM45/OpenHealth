@@ -18,6 +18,10 @@ def redirect_to_landing():
 def landing():
     return render_template('landing.html')
 
+@app.route('/heartdisease', methods=['GET', 'POST'])
+def heartdisease():
+    return render_template('heartdisease.html')
+
 @app.route('/medrecog', methods=['GET', 'POST'])
 def medrecog():
     if request.method == 'POST':
@@ -40,6 +44,7 @@ def medrecog():
         else:
             return render_template('medrecog.html', response="Please provide a valid medical image.")
     return render_template('medrecog.html')
+
 
 @app.route('/conditional', methods=['GET', 'POST'])
 def conditional():
@@ -75,4 +80,4 @@ def conditional():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0', port=5000)
