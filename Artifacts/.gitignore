@@ -1,0 +1,14 @@
+Brain_Tumour/BrainModel.h5
+Breast_Cancer_Disease/BCancer_Model.pkl
+Breast_Cancer_Disease/BCancer_Preprocessor.pkl
+Diabetes_Disease/Diabetes_Model.pkl
+Diabetes_Disease/Diabetes_Preprocessor.pkl
+Heart_Disease/Heart_Model.pkl
+Heart_Disease/Heart_Preprocessor.pkl
+Kidney_Disease/Kidney_Model.h5
+Liver_Disease/Liver_Model.h5
+Lung_Disease/Lung_Model.h5
+Malaria_Disease/Malaria_Model.h5
+Ocular_Disease/Ocular_Model.h5
+Parkinson_Disease/Parkinson_Model.pkl
+Skin_Cancer/SkinCancer_Model.h5
