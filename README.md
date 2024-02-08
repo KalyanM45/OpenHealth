@@ -1,7 +1,7 @@
 # OpenHealth: A Comprehensive AI Tool for Remote Health Care 
 
 
-(<b>Under Development</b>)
+## Under Development
 
 By [<b>Hema Kalyan Murapaka</b>](https://hemakalyan.netlify.app)
 
