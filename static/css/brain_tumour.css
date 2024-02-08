@@ -1,0 +1,225 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(../images/brain_background.jpeg);
+    background-size: cover;
+    font-family: Arial, sans-serif;
+  }
+  .patterns {
+    height: 100vh;
+    margin-top: -23%;
+  }
+
+  svg text {
+    font-family: Lora;
+    letter-spacing: 5px;
+    stroke: #0ef;
+    font-size: 80px;
+    font-weight: bold;
+    stroke-width: 1.2;
+    animation: textAnimate 1.5s infinite alternate;
+  }
+
+  @keyframes textAnimate {
+    0% {
+      stroke-dasharray: 0 50%;
+      stroke-dashoffset: 20%;
+      fill: hsl(189, 85%, 60%);
+    }
+
+    100% {
+      stroke-dasharray: 50% 0;
+      stroke-dashoffstet: -20%;
+      fill: hsla(189, 68%, 75%, 0%);
+    }
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.4;
+    z-index: -1;
+  }
+  .bg-text {
+    background-color: rgb(0, 238, 255);
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #0ef;
+    font-weight: bold;
+    border: 3px solid #0ef;
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-140%, -65%);
+    z-index: 2;
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .bg-text1 {
+    background-color: rgb(0, 238, 255);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #0ef;
+    font-weight: bold;
+    border: 3px solid #0ef;
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(50%, -100%);
+    z-index: 2;
+    width: 25%;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .bg-text1 h2 {
+    color: #0ef;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px #0ef;
+  }
+
+
+  .container {
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 5px;
+    background-color: rgba(130, 181, 247, 0.041);
+  }
+
+  .header {
+    flex: 1;
+    width: 100%;
+    border: 2px dashed #0ef;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .header svg {
+    height: 100px;
+  }
+
+  .header p {
+    text-align: center;
+    color: #0ef;
+  }
+
+  .footer {
+    background-color: rgba(0, 110, 255, 0.075);
+    width: 100%;
+    height: 40px;
+    padding: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: #0ef;
+    border: none;
+  }
+
+  .footer svg {
+    height: 130%;
+    fill: #0ef;
+    background-color: rgba(70, 66, 66, 0.103);
+    border-radius: 50%;
+    padding: 2px;
+    cursor: pointer;
+    box-shadow: 0 2px 30px rgba(0, 0, 0, 0.205);
+  }
+
+  .footer p {
+    flex: 1;
+    text-align: center;
+  }
+
+  #file {
+    display: none;
+  }
+  #customButton {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  #submitButton {
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: 1px solid #0ef;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: transparent;
+    color: #fff;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    transition: all 0.2s ease-in;
+    top: 10px;
+  }
+
+  #submitButton:hover {
+    background: #0ef;
+    color: #000;
+    box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+    transition: all 0.2s ease-out;
+  }
+
+  #submitButton:hover::before {
+    animation: sh02 0.5s 0s linear;
+  }
+
+  #submitButton::before {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    transform: skewX(-20deg);
+  }
+
+  @keyframes sh02 {
+    from {
+      opacity: 0;
+      left: 0%;
+    }
+
+    50% {
+      opacity: 1;
+    }
+
+    to {
+      opacity: 0;
+      left: 100%;
+    }
+  }
+
+  #submitButton:active {
+    box-shadow: 0 0 0 0 transparent;
+    transition: box-shadow 0.2s ease-in;
+  }

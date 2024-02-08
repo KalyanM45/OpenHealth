@@ -3,19 +3,69 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Input Form</title>
+    <title>Malaria Input Form</title>
     <style>
       body {
         margin: 0;
         padding: 0;
-        background-image: url(background1.jpeg);
+        background-image: url(12.jpg);
         background-size: cover;
         font-family: Arial, sans-serif;
       }
-      h1 {
-        color: #0ef;
-        text-align: center;
+      .heading {
+        position: relative;
+        font-family: Lora;
       }
+
+      .heading h2 {
+        color: #fff;
+        font-size: 5em;
+        position: absolute;
+        top: -50px;
+        left: 300px;
+      }
+
+      .heading h2:nth-child(1) {
+        color: transparent;
+        -webkit-text-stroke: 2px #0ef;
+      }
+
+      .heading h2:nth-child(2) {
+        color: #0ef;
+        animation: animate 2s ease-in-out infinite;
+      }
+
+      @keyframes animate {
+        0%,
+        100% {
+          clip-path: polygon(
+            0% 45%,
+            16% 44%,
+            33% 50%,
+            54% 60%,
+            70% 61%,
+            84% 59%,
+            100% 52%,
+            100% 100%,
+            0% 100%
+          );
+        }
+
+        50% {
+          clip-path: polygon(
+            0% 60%,
+            15% 65%,
+            34% 66%,
+            51% 62%,
+            67% 50%,
+            84% 45%,
+            100% 46%,
+            100% 100%,
+            0% 100%
+          );
+        }
+      }
+
       .container {
         display: flex;
         flex-direction: column;
@@ -84,7 +134,7 @@
         position: absolute;
         top: 58%;
         left: 50%;
-        transform: translate(-55%, -60%);
+        transform: translate(-90%, -50%);
         z-index: 2;
         width: 50%;
         padding: 20px;
@@ -94,17 +144,31 @@
         justify-content: space-between;
         align-items: center;
       }
-      .overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: black;
-        opacity: 0.2;
-        z-index: -1;
+      .bg-text1 {
+        background-color: rgb(0, 238, 255);
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #0ef;
+        font-weight: bold;
+        border: 3px solid #0ef;
+        position: absolute;
+        top: 58%;
+        left: 50%;
+        transform: translate(50%, -100%);
+        z-index: 2;
+        width: 25%;
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
       }
-      
+      .bg-text1 h2 {
+        color: #0ef;
+        font-weight: bold;
+        text-shadow: 2px 2px 8px #0ef;
+      }
+
       .button {
         padding: 15px 10px;
         width: 220px;
@@ -118,7 +182,7 @@
         cursor: pointer;
         color: #000;
         box-shadow: 0 0 25px rgba(0, 238, 255, 1),
-                inset 0 0 25px rgba(0, 238, 255, 1);
+          inset 0 0 25px rgba(0, 238, 255, 1);
       }
 
       .button:hover {
@@ -149,8 +213,12 @@
     </style>
   </head>
   <body>
-    <div class="overlay"></div>
-    <h1>Diabetes Disease Detection</h1>
+    <section>
+      <div class="heading">
+        <h2>Malaria Prediction</h2>
+        <h2>Malaria Prediction</h2>
+      </div>
+    </section>
     <div class="bg-text">
       <div class="container">
         <input required="" type="text" name="text" class="input" />
@@ -205,8 +273,13 @@
         <label class="label">Thal</label>
       </div>
       <div class="container">
-      <input type="submit" value="Submit" class="button" />
+        <input type="submit" value="Submit" class="button" />
+      </div>
     </div>
+
+    <div class="bg-text1">
+      <h2>Results</h2>
+      <p>Here are the predicted results based on the provided information.</p>
     </div>
   </body>
 </html>

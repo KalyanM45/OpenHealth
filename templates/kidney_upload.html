@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Kidney Upload Form</title>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-image: url(brain_background.jpeg);
+        background-size: cover;
+        font-family: Arial, sans-serif;
+      }
+      .patterns {
+        height: 100vh;
+        margin-top: -23%;
+      }
+
+      svg text {
+        font-family: Lora;
+        letter-spacing: 5px;
+        stroke: #0ef;
+        font-size: 80px;
+        font-weight: bold;
+        stroke-width: 1.2;
+        animation: textAnimate 1.5s infinite alternate;
+      }
+
+      @keyframes textAnimate {
+        0% {
+          stroke-dasharray: 0 50%;
+          stroke-dashoffset: 20%;
+          fill: hsl(189, 85%, 60%);
+        }
+
+        100% {
+          stroke-dasharray: 50% 0;
+          stroke-dashoffstet: -20%;
+          fill: hsla(189, 68%, 75%, 0%);
+        }
+      }
+
+      .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0.4;
+        z-index: -1;
+      }
+      .bg-text {
+        background-color: rgb(0, 238, 255);
+        background-color: rgba(0, 0, 0, 0.1);
+        color: #0ef;
+        font-weight: bold;
+        border: 3px solid #0ef;
+        position: absolute;
+        top: 58%;
+        left: 50%;
+        transform: translate(-140%, -65%);
+        z-index: 2;
+        width: 30%;
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .bg-text1 {
+        background-color: rgb(0, 238, 255);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #0ef;
+        font-weight: bold;
+        border: 3px solid #0ef;
+        position: absolute;
+        top: 58%;
+        left: 50%;
+        transform: translate(50%, -100%);
+        z-index: 2;
+        width: 25%;
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+      .bg-text1 h2 {
+        color: #0ef;
+        font-weight: bold;
+        text-shadow: 2px 2px 8px #0ef;
+      }
+
+
+      .container {
+        height: 300px;
+        width: 300px;
+        border-radius: 10px;
+        box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        gap: 5px;
+        background-color: rgba(130, 181, 247, 0.041);
+      }
+
+      .header {
+        flex: 1;
+        width: 100%;
+        border: 2px dashed #0ef;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .header svg {
+        height: 100px;
+      }
+
+      .header p {
+        text-align: center;
+        color: #0ef;
+      }
+
+      .footer {
+        background-color: rgba(0, 110, 255, 0.075);
+        width: 100%;
+        height: 40px;
+        padding: 8px;
+        border-radius: 10px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        color: #0ef;
+        border: none;
+      }
+
+      .footer svg {
+        height: 130%;
+        fill: #0ef;
+        background-color: rgba(70, 66, 66, 0.103);
+        border-radius: 50%;
+        padding: 2px;
+        cursor: pointer;
+        box-shadow: 0 2px 30px rgba(0, 0, 0, 0.205);
+      }
+
+      .footer p {
+        flex: 1;
+        text-align: center;
+      }
+
+      #file {
+        display: none;
+      }
+      #customButton {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+      }
+      #submitButton {
+        position: relative;
+        padding: 10px 20px;
+        border-radius: 7px;
+        border: 1px solid #0ef;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 2px;
+        background: transparent;
+        color: #fff;
+        overflow: hidden;
+        box-shadow: 0 0 0 0 transparent;
+        transition: all 0.2s ease-in;
+        top: 10px;
+      }
+
+      #submitButton:hover {
+        background: #0ef;
+        color: #000;
+        box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+        transition: all 0.2s ease-out;
+      }
+
+      #submitButton:hover::before {
+        animation: sh02 0.5s 0s linear;
+      }
+
+      #submitButton::before {
+        content: "";
+        display: block;
+        width: 0px;
+        height: 86%;
+        position: absolute;
+        top: 7%;
+        left: 0%;
+        opacity: 0;
+        background: #fff;
+        box-shadow: 0 0 50px 30px #fff;
+        transform: skewX(-20deg);
+      }
+
+      @keyframes sh02 {
+        from {
+          opacity: 0;
+          left: 0%;
+        }
+
+        50% {
+          opacity: 1;
+        }
+
+        to {
+          opacity: 0;
+          left: 100%;
+        }
+      }
+
+      #submitButton:active {
+        box-shadow: 0 0 0 0 transparent;
+        transition: box-shadow 0.2s ease-in;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="overlay"></div>
+    <div class="patterns">
+      <svg width="100%" height="100%">
+        <defs>
+          <pattern
+            id="polka-dots"
+            x="0"
+            y="0"
+            width="100"
+            height="100"
+            patternUnits="userSpaceOnUse"
+          >
+            
+          </pattern>
+          <style>
+            @import url("https://fonts.googleapis.com/css?  family=Lora:400,400i,700,700i");
+          </style>
+        </defs>
+
+        <rect
+          x="0"
+          y="0"
+          width="100%"
+          height="100%"
+          fill="url(#polka-dots)"
+        ></rect>
+
+        <text x="50%" y="60%" text-anchor="middle">Kidney Disease Prediction</text>
+      </svg>
+    </div>
+    <div class="bg-text">
+      <div class="container">
+        <div class="header">
+          <button id="customButton">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M7 10V9C7 6.23858 9.23858 4 12 4C14.7614 4 17 6.23858 17 9V10C19.2091 10 21 11.7909 21 14C21 15.4806 20.1956 16.8084 19 17.5M7 10C4.79086 10 3 11.7909 3 14C3 15.4806 3.8044 16.8084 5 17.5M7 10C7.43285 10 7.84965 10.0688 8.24006 10.1959M12 12V21M12 12L15 15M12 12L9 15"
+                  stroke="#0ef"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </g>
+            </svg>
+          </button>
+          <p>Browse File to upload!</p>
+        </div>
+        <label for="file" class="footer">
+          <svg
+            fill="#0ef"
+            viewBox="0 0 32 32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path d="M15.331 6H8.5v20h15V14.154h-8.169z"></path>
+              <path d="M18.153 6h-.009v5.342H23.5v-.002z"></path>
+            </g>
+          </svg>
+          <p>No file selected</p>
+          <svg
+            class="delete-button"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M5.16565 10.1534C5.07629 8.99181 5.99473 8 7.15975 8H16.8402C18.0053 8 18.9237 8.9918 18.8344 10.1534L18.142 19.1534C18.0619 20.1954 17.193 21 16.1479 21H7.85206C6.80699 21 5.93811 20.1954 5.85795 19.1534L5.16565 10.1534Z"
+                stroke="#000000"
+                stroke-width="2"
+              ></path>
+              <path
+                d="M19.5 5H4.5"
+                stroke="#000000"
+                stroke-width="2"
+                stroke-linecap="round"
+              ></path>
+              <path
+                d="M10 3C10 2.44772 10.4477 2 11 2H13C13.5523 2 14 2.44772 14 3V5H10V3Z"
+                stroke="#000000"
+                stroke-width="2"
+              ></path>
+            </g>
+          </svg>
+        </label>
+      </div>
+      <input id="file" type="file" />
+      <button type="submit" id="submitButton">Submit</button>
+    </div>
+    <script>
+      document
+        .getElementById("customButton")
+        .addEventListener("click", function () {
+          document.getElementById("file").click();
+        });
+
+      document.getElementById("file").addEventListener("change", function () {
+        const fileInput = document.getElementById("file");
+        const fileName = fileInput.files[0]?.name || "Not selected file";
+        const fileLabel = document.querySelector(".footer p");
+        fileLabel.textContent = fileName;
+      });
+
+      const viewButton = document.querySelector(".footer svg");
+      viewButton.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        const fileInput = document.getElementById("file");
+        const file = fileInput.files[0];
+
+        if (file) {
+          const fileType = file.type.split("/")[0];
+          if (fileType === "image") {
+            const imageUrl = URL.createObjectURL(file);
+            window.open(imageUrl, "_blank");
+          } else if (
+            fileType === "application" &&
+            file.type === "application/pdf"
+          ) {
+            const pdfUrl = URL.createObjectURL(file);
+            window.open(pdfUrl, "_blank");
+          } else {
+            alert("Cannot display this file type");
+          }
+        } else {
+          alert("No file selected");
+        }
+      });
+
+      const deleteButton = document.querySelector(".delete-button");
+      deleteButton.addEventListener("click", function (event) {
+        event.preventDefault();
+        const fileInput = document.getElementById("file");
+        fileInput.value = null;
+        const fileLabel = document.querySelector(".footer p");
+        fileLabel.textContent = "No file selected";
+      });
+    </script>
+    <div class="bg-text1">
+      <h2>Results</h2>
+      <p>Here are the predicted results based on the provided information.</p>
+    </div>
+  </body>
+</html>
