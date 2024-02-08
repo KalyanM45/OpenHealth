@@ -20,7 +20,7 @@ def landing():
 
 @app.route('/brain')
 def brain():
-    return render_template('brain.html')
+    return render_template('brain_tumour.html')
 
 @app.route('/bcancer')
 def brain_post():
