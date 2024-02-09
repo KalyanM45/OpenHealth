@@ -33,6 +33,7 @@ In an era where healthcare demands precision, accessibility, and personalised so
  - XGBoost
  - MLflow
  - Google.generativeai
+ - Streamlit
 
 ## Getting Started
 
