@@ -2,10 +2,9 @@ import os
 import sys
 import numpy as np
 import pandas as pd
-from sklearn.svm import SVC
-from xgboost import XGBClassifier
-from dataclasses import dataclass
 from src.logger import logging
+from dataclasses import dataclass
+from src.exception import customexception
 from sklearn.metrics import accuracy_score
 from src.utils import save_object, evaluate_model
 
