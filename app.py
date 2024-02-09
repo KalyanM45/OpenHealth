@@ -1,3 +1,6 @@
+import warnings
+warnings.simplefilter('ignore')
+
 import os
 import sys
 import pickle
