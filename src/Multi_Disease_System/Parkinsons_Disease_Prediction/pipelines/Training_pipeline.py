@@ -7,6 +7,6 @@ from src.Multi_Disease_System.Parkinsons_Disease_Prediction.components.Data_tran
 data_transformation=DataTransformation()
 x_train, x_test, y_train, y_test=data_transformation.initialize_data_transformation(train_data_path,test_data_path)
 
-from src.Multi_Disease_System.Parkinsons_Disease_Prediction.components.Model_trainer import ModelTrainer
-model_trainer_obj=ModelTrainer()
-model_trainer_obj.initiate_model_training(x_train, x_test, y_train, y_test)
+#from src.Multi_Disease_System.Parkinsons_Disease_Prediction.components.Model_trainer import ModelTrainer
+#model_trainer_obj=ModelTrainer()
+#model_trainer_obj.initiate_model_training(x_train, x_test, y_train, y_test)
