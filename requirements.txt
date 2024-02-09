@@ -10,5 +10,6 @@ xgboost
 mlflow
 google.generativeai
 python-dotenv
+streamlit
 
 -e .

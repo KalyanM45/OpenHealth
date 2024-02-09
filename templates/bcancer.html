@@ -57,67 +57,129 @@
         <h2>Breast Cancer Prediction</h2>
       </div>
     </section>
-    <div class="bg-text">
-      <div class="container">
-        <input required="" type="text" name="text" class="input" />
-        <label class="label">Age</label>
-      </div>
-      <div class="container">
-        <input required="" type="text" name="text" class="input" />
-        <label class="label">Gender</label>
-      </div>
-      <div class="container">
-        <input required="" type="text" name="text" class="input" />
-        <label class="label">Constrictive pericarditis</label>
-      </div>
-      <div class="container">
-        <input required="" type="text" name="text" class="input" />
-        <label class="label">Trest BPS</label>
-      </div>
-      <div class="container">
-        <input required="" type="text" name="text" class="input" />
-        <label class="label">cholesterol</label>
-      </div>
-      <div class="container">
-        <input required="" type="text" name="text" class="input" />
-        <label class="label">FBS</label>
-      </div>
-      <div class="container">
-        <input required="" type="text" name="text" class="input" />
-        <label class="label">Rest ECG</label>
-      </div>
-      <div class="container">
-        <input required="" type="text" name="text" class="input" />
-        <label class="label">Thalach</label>
-      </div>
-      <div class="container">
-        <input required="" type="text" name="text" class="input" />
-        <label class="label">Exang</label>
-      </div>
-      <div class="container">
-        <input required="" type="text" name="text" class="input" />
-        <label class="label">Old Peak</label>
-      </div>
-      <div class="container">
-        <input required="" type="text" name="text" class="input" />
-        <label class="label">Slope</label>
-      </div>
-      <div class="container">
-        <input required="" type="text" name="text" class="input" />
-        <label class="label">CA</label>
-      </div>
-      <div class="container">
-        <input required="" type="text" name="text" class="input" />
-        <label class="label">Thal</label>
-      </div>
-      <div class="container">
-        <input type="submit" value="Submit" class="button" />
-      </div>
-    </div>
 
-    <div class="bg-text1">
-      <h2>Results</h2>
-      <p>Here are the predicted results based on the provided information.</p>
-    </div>
+    <div class="bg-text">
+      
+      <form id="breast_cancer_form" action="/bcancer" method="post">
+        <div class="container">
+            <input required="" type="text" name="texture_mean" class="input" />
+            <label class="label">Texture Mean</label>
+        </div>
+
+        <div class="container">
+            <input required="" type="text" name="smoothness_mean" class="input" />
+            <label class="label">Smoothness Mean</label>
+        </div>
+
+        <div class="container">
+            <input required="" type="text" name="compactness_mean" class="input" />
+            <label class="label">Compactness Mean</label>
+        </div>
+
+        <div class="container">
+            <input required="" type="text" name="concave_points_mean" class="input" />
+            <label class="label">Concave Points Mean</label>
+        </div>
+
+        <div class="container">
+            <input required="" type="text" name="symmetry_mean" class="input" />
+            <label class="label">Symmetry Mean</label>
+        </div>
+
+        <div class="container">
+            <input required="" type="text" name="fractal_dimension_mean" class="input" />
+            <label class="label">Fractal Dimension Mean</label>
+        </div>
+
+        <div class="container">
+            <input required="" type="text" name="texture_se" class="input" />
+            <label class="label">Texture SE</label>
+        </div>
+
+        <div class="container">
+            <input required="" type="text" name="area_se" class="input" />
+            <label class="label">Area SE</label>
+        </div>
+
+        <div class="container">
+            <input required="" type="text" name="smoothness_se" class="input" />
+            <label class="label">Smoothness SE</label>
+        </div>
+
+        <div class="container">
+            <input required="" type="text" name="compactness_se" class="input" />
+            <label class="label">Compactness SE</label>
+        </div>
+
+        <div class="container">
+            <input required="" type="text" name="concavity_se" class="input" />
+            <label class="label">Concavity SE</label>
+        </div>
+
+        <div class="container">
+            <input required="" type="text" name="concave_points_se" class="input" />
+            <label class="label">Concave Points SE</label>
+        </div>
+
+        <div class="container">
+            <input required="" type="text" name="symmetry_se" class="input" />
+            <label class="label">Symmetry SE</label>
+        </div>
+
+        <div class="container">
+            <input required="" type="text" name="fractal_dimension_se" class="input" />
+            <label class="label">Fractal Dimension SE</label>
+        </div>
+
+        <div class="container">
+            <input required="" type="text" name="texture_worst" class="input" />
+            <label class="label">Texture Worst</label>
+        </div>
+
+        <div class="container">
+            <input required="" type="text" name="area_worst" class="input" />
+            <label class="label">Area Worst</label>
+        </div>
+
+        <div class="container">
+            <input required="" type="text" name="smoothness_worst" class="input" />
+            <label class="label">Smoothness Worst</label>
+        </div>
+
+        <div class="container">
+            <input required="" type="text" name="compactness_worst" class="input" />
+            <label class="label">Compactness Worst</label>
+        </div>
+
+        <div class="container">
+            <input required="" type="text" name="concavity_worst" class="input" />
+            <label class="label">Concavity Worst</label>
+        </div>
+
+        <div class="container">
+            <input required="" type="text" name="concave_points_worst" class="input" />
+            <label class="label">Concave Points Worst</label>
+        </div>
+
+        <div class="container">
+            <input required="" type="text" name="symmetry_worst" class="input" />
+            <label class="label">Symmetry Worst</label>
+        </div>
+
+        <div class="container">
+            <input required="" type="text" name="fractal_dimension_worst" class="input" />
+            <label class="label">Fractal Dimension Worst</label>
+        </div>
+        
+        <input type="submit" value="Predict">
+    </form>
+    
+    <div id="bg-text1">
+      {% if result %}
+          <h2>Prediction Result</h2>
+          <p>The tumor is predicted to be: <strong>{{ result }}</strong></p>
+      {% endif %}
+  </div>
+
   </body>
 </html>
