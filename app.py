@@ -9,10 +9,8 @@ import numpy as np
 from PIL import Image
 from src.utils import gen_from_image, gen_from_text
 from flask import Flask, render_template,request,redirect,url_for
+from src.Multi_Disease_System.Parkinsons_Disease_Prediction.pipelines.Prediction_pipeline import CustomData, PredictPipeline
 
-# Loading the Model
-bcancer_model = pickle.load(open('Artifacts/Breast_Cancer_Disease/BCancer_Model.pkl', 'rb'))
-bcancer_preprocessor = pickle.load(open('Artifacts/Breast_Cancer_Disease/BCancer_Preprocessor.pkl', 'rb'))
 
 app = Flask(__name__)
 
@@ -75,14 +73,8 @@ def brain_post():
                             smoothness_worst, compactness_worst, concavity_worst, concave_points_worst,
                             symmetry_worst, fractal_dimension_worst]])
 
-        prediction = bcancer_model.predict(features)
-
-        if prediction[0] == 0:
-            result = 'Benign'
-        else:
-            result = 'Malignant'
         
-        return render_template('bcancer.html', result=result)
+        return render_template('bcancer.html')
     except:
         return render_template('error.html')
 
@@ -115,8 +107,28 @@ def pneumonia():
     return render_template('ocular.html')
 
 @app.route('/parkinsons')
-def ocular():
-    return render_template('parkinsons.html')
+def parkinsons():
+    try:
+        data = CustomData(
+            age=request.form.get("MDVPfo"),
+            sex=request.form.get("MDVPfhi"),
+            cp=(request.form.get("MDVPflo")),
+            trestbps=(request.form.get("MDVPjitter")),
+            chol=(request.form.get("RPDE")),
+            fbs=request.form.get("DFA"),
+            restecg=request.form.get("spread2"),
+            thalach=(request.form.get("D2")))
+
+        final_data = data.get_data_as_dataframe()
+        predict_pipeline = PredictPipeline()
+        pred = predict_pipeline.predict(final_data)
+        result = round(pred[0], 2)
+        return render_template("parkinsons.html", final_result=result)
+    except Exception as e:
+        error_message = f"Error during prediction: {str(e)}"
+        return render_template("error.html", error_message=error_message)
+    else:
+        return render_template('parkinsons.html')
 
 @app.route('/skincancer')
 def parkinsons():
