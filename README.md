@@ -3,8 +3,6 @@
 
 ## Under Development
 
-By [<b>Hema Kalyan Murapaka</b>](https://hemakalyan.netlify.app)
-
 Connect with me on social media and explore my work:
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/hemakalyan)
