@@ -72,7 +72,7 @@ def brain_post():
         predict_pipeline = PredictPipeline()
         pred = predict_pipeline.predict(final_data)
         result = round(pred[0], 2)
-        return render_template('bcancer.html')
+        return render_template('bcancer.html', final_result=result)
     
     return render_template('bcancer.html')
 

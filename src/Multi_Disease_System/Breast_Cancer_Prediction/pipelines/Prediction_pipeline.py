@@ -10,13 +10,13 @@ class PredictPipeline:
         pass
     
     def predict(self,features):
-        try:
+        try:            
             preprocessor_path=os.path.join("Artifacts","Breast_Cancer_Disease","BCancer_Preprocessor.pkl")
             model_path=os.path.join("Artifacts","Breast_Cancer_Disease","BCancer_Model.pkl")
             preprocessor=load_object(preprocessor_path)
             model=load_object(model_path)
-            scaled_data=preprocessor.transform(features)
-            pred=model.predict(scaled_data)
+            #scaled_data=preprocessor.transform(features)
+            pred=model.predict(features)
             return pred
 
         except Exception as e:
