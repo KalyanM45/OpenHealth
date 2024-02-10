@@ -1,109 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../static/css/input.css" />
-    <title>Parkinsons Input Form</title>
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        background-image: url(12.jpg);
-        background-size: cover;
-        font-family: Arial, sans-serif;
-      }
-      
-      .bg-text1 {
-        background-color: rgb(0, 238, 255);
-        background-color: rgba(0, 0, 0, 0.7);
-        color: #0ef;
-        font-weight: bold;
-        border: 3px solid #0ef;
-        position: absolute;
-        top: 58%;
-        left: 50%;
-        transform: translate(50%, -100%);
-        z-index: 2;
-        width: 25%;
-        padding: 20px;
-        text-align: center;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-      }
-      
-    </style>
-  </head>
-  <body>
-    <section>
-      <div class="heading">
-        <h2>Parkinson`s Disease Prediction</h2>
-        <h2>Parkinson`s Disease Prediction</h2>
-      </div>
-    </section>
-    <div class="bg-text">
-      <div class="container">
-        <input required="" type="text" name="text" class="input" />
-        <label class="label">Age</label>
-      </div>
-      <div class="container">
-        <input required="" type="text" name="text" class="input" />
-        <label class="label">Gender</label>
-      </div>
-      <div class="container">
-        <input required="" type="text" name="text" class="input" />
-        <label class="label">Constrictive pericarditis</label>
-      </div>
-      <div class="container">
-        <input required="" type="text" name="text" class="input" />
-        <label class="label">Trest BPS</label>
-      </div>
-      <div class="container">
-        <input required="" type="text" name="text" class="input" />
-        <label class="label">cholesterol</label>
-      </div>
-      <div class="container">
-        <input required="" type="text" name="text" class="input" />
-        <label class="label">FBS</label>
-      </div>
-      <div class="container">
-        <input required="" type="text" name="text" class="input" />
-        <label class="label">Rest ECG</label>
-      </div>
-      <div class="container">
-        <input required="" type="text" name="text" class="input" />
-        <label class="label">Thalach</label>
-      </div>
-      <div class="container">
-        <input required="" type="text" name="text" class="input" />
-        <label class="label">Exang</label>
-      </div>
-      <div class="container">
-        <input required="" type="text" name="text" class="input" />
-        <label class="label">Old Peak</label>
-      </div>
-      <div class="container">
-        <input required="" type="text" name="text" class="input" />
-        <label class="label">Slope</label>
-      </div>
-      <div class="container">
-        <input required="" type="text" name="text" class="input" />
-        <label class="label">CA</label>
-      </div>
-      <div class="container">
-        <input required="" type="text" name="text" class="input" />
-        <label class="label">Thal</label>
-      </div>
-      <div class="container">
-        <input type="submit" value="Submit" class="button" />
-      </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parkinson's Disease Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='input.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Parkinson's Disease Prediction</h1>
+        <form action="/parkinsons" method="post">
+            <label for="MDVPfo">MDVPfo:</label>
+            <input type="number" step="any" name="MDVPfo" required>
+
+            <label for="MDVPfhi">MDVPfhi:</label>
+            <input type="number" step="any" name="MDVPfhi" required>
+
+            <label for="MDVPflo">MDVPflo:</label>
+            <input type="number" step="any" name="MDVPflo" required>
+
+            <label for="MDVPjitter">MDVPjitter:</label>
+            <input type="number" step="any" name="MDVPjitter" required>
+
+            <label for="RPDE">RPDE:</label>
+            <input type="number" step="any" name="RPDE" required>
+
+            <label for="DFA">DFA:</label>
+            <input type="number" step="any" name="DFA" required>
+
+            <label for="spread2">spread2:</label>
+            <input type="number" step="any" name="spread2" required>
+
+            <label for="D2">D2:</label>
+            <input type="number" step="any" name="D2" required>
+
+            <button type="submit">Submit</button>
+        </form>
     </div>
 
-    <div class="bg-text1">
-      <h2>Results</h2>
-      <p>Here are the predicted results based on the provided information.</p>
+    {% if final_result is defined %}
+    <div class="result">
+        {% if final_result == 0 %}
+            <center><h1>No Parkinson's Disease detected</h1></center>
+        {% else %}
+            <center><h1>Parkinson's Disease detected</h1></center>
+        {% endif %}
     </div>
-  </body>
+    {% endif %}
+
+</body>
 </html>

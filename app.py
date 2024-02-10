@@ -106,32 +106,29 @@ def malaria():
 def pneumonia():
     return render_template('ocular.html')
 
-@app.route('/parkinsons')
+@app.route('/parkinsons', methods=["GET", "POST"])
 def parkinsons():
-    try:
+    if request.method == 'POST':
         data = CustomData(
-            age=request.form.get("MDVPfo"),
-            sex=request.form.get("MDVPfhi"),
-            cp=(request.form.get("MDVPflo")),
-            trestbps=(request.form.get("MDVPjitter")),
-            chol=(request.form.get("RPDE")),
-            fbs=request.form.get("DFA"),
-            restecg=request.form.get("spread2"),
-            thalach=(request.form.get("D2")))
-
+                MDVPfo=float(request.form.get("MDVPfo")),
+                MDVPfhi=float(request.form.get("MDVPfhi")),
+                MDVPflo=float(request.form.get("MDVPflo")),
+                MDVPjitter=float(request.form.get("MDVPjitter")),
+                RPDE=float(request.form.get("RPDE")),
+                DFA=float(request.form.get("DFA")),
+                spread2=float(request.form.get("spread2")),
+                D2=float(request.form.get("D2")))
+    
         final_data = data.get_data_as_dataframe()
         predict_pipeline = PredictPipeline()
         pred = predict_pipeline.predict(final_data)
         result = round(pred[0], 2)
         return render_template("parkinsons.html", final_result=result)
-    except Exception as e:
-        error_message = f"Error during prediction: {str(e)}"
-        return render_template("error.html", error_message=error_message)
-    else:
-        return render_template('parkinsons.html')
+    
+    return render_template('parkinsons.html')
 
 @app.route('/skincancer')
-def parkinsons():
+def skin():
     return render_template('skin.html')
 
 @app.route('/error')
