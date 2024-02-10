@@ -110,10 +110,10 @@ def pneumonia():
 def parkinsons():
     if request.method == 'POST':
         data = CustomData(
-                MDVPfo=float(request.form.get("MDVPfo")),
-                MDVPfhi=float(request.form.get("MDVPfhi")),
-                MDVPflo=float(request.form.get("MDVPflo")),
-                MDVPjitter=float(request.form.get("MDVPjitter")),
+                MDVPFO=float(request.form.get("MDVPFO")),
+                MDVPFHI=float(request.form.get("MDVPFHI")),
+                MDVPFLO=float(request.form.get("MDVPFLO")),
+                MDVPJ=float(request.form.get("MDVPJ")),
                 RPDE=float(request.form.get("RPDE")),
                 DFA=float(request.form.get("DFA")),
                 spread2=float(request.form.get("spread2")),

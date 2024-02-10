@@ -20,19 +20,19 @@ class PredictPipeline:
     
 class CustomData:
     def __init__(self,
-                 MDVPfo:float,
-                 MDVPfhi:float,
-                 MDVPflo:float,
-                 MDVPjitter:float,
+                 MDVPFO:float,
+                 MDVPFHI:float,
+                 MDVPFLO:float,
+                 MDVPJ:float,
                  RPDE:float,
                  DFA:float,
                  spread2:float,
                  D2:float):
         
-        self.MDVPfo = MDVPfo
-        self.MDVPfhi = MDVPfhi
-        self.MDVPflo = MDVPflo
-        self.MDVPjitter = MDVPjitter
+        self.MDVPFO = MDVPFO
+        self.MDVPFHI = MDVPFLO
+        self.MDVPFLO = MDVPFLO
+        self.MDVPJ = MDVPJ
         self.RPDE = RPDE
         self.DFA = DFA
         self.spread2 = spread2
@@ -42,10 +42,10 @@ class CustomData:
     def get_data_as_dataframe(self):
             try:
                 custom_data_input_dict = {
-                    'MDVPfo':[self.MDVPfo],
-                    'MDVPfhi':[self.MDVPfhi],
-                    'MDVPflo':[self.MDVPflo],
-                    'MDVPjitter':[self.MDVPjitter],
+                    'MDVPFO':[self.MDVPFO],
+                    'MDVPFHI':[self.MDVPFHI],
+                    'MDVPFLO':[self.MDVPFLO],
+                    'MDVPJ':[self.MDVPJ],
                     'RPDE':[self.RPDE],
                     'DFA':[self.DFA],
                     'spread2':[self.spread2],
