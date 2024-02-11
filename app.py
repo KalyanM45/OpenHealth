@@ -11,6 +11,7 @@ from src.utils import gen_from_image, gen_from_text
 from flask import Flask, render_template,request,redirect,url_for
 from src.Multi_Disease_System.Parkinsons_Disease_Prediction.pipelines.Prediction_pipeline import CustomData, PredictPipeline
 from src.Multi_Disease_System.Breast_Cancer_Prediction.pipelines.Prediction_pipeline import CustomData, PredictPipeline
+from src.Multi_Disease_System.Heart_Disease_Prediction.pipelines.Prediction_pipeline import CustomData, PredictPipeline
 
 
 app = Flask(__name__)
@@ -80,9 +81,31 @@ def brain_post():
 def bcancer_post():
         return render_template('diabetes.html')
 
-@app.route('/heart')
+@app.route('/heart', methods=["GET", "POST"])
 def heart():
-    return render_template('heart.html')
+    if request.method == "POST":
+        data = CustomData(
+            age=request.form.get("age"),
+            sex=request.form.get("sex"),
+            cp=(request.form.get("cp")),
+            trestbps=(request.form.get("trestbps")),
+            chol=(request.form.get("chol")),
+            fbs=request.form.get("fbs"),
+            restecg=request.form.get("restecg"),
+            thalach=(request.form.get("thalach")),
+            exang=request.form.get("exang"),
+            oldpeak=request.form.get("oldpeak"),
+            slope=request.form.get("slope"),
+            ca=request.form.get("ca"),
+            thal=(request.form.get("thal")))
+        
+        final_data = data.get_data_as_dataframe()
+        predict_pipeline = PredictPipeline()
+        pred = predict_pipeline.predict(final_data)
+        result = round(pred[0], 2)
+        return render_template("heart.html", final_result=result)
+    
+    return render_template("heart.html")
 
 @app.route('/kidney')
 def kidney():
