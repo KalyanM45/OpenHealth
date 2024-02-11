@@ -11,5 +11,6 @@ mlflow
 google.generativeai
 python-dotenv
 streamlit
+tensorflow
 
 -e .

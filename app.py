@@ -7,12 +7,14 @@ import pickle
 import subprocess
 import numpy as np
 from PIL import Image
+from tensorflow.keras.models import load_model
 from src.utils import gen_from_image, gen_from_text
 from flask import Flask, render_template,request,redirect,url_for
 from src.Multi_Disease_System.Parkinsons_Disease_Prediction.pipelines.Prediction_pipeline import CustomData, PredictPipeline
 from src.Multi_Disease_System.Breast_Cancer_Prediction.pipelines.Prediction_pipeline import CustomData, PredictPipeline
 from src.Multi_Disease_System.Heart_Disease_Prediction.pipelines.Prediction_pipeline import CustomData, PredictPipeline
 
+brain_model = load_model('Artifacts\Brain_Tumour\BrainModel.h5')
 
 app = Flask(__name__)
 
@@ -38,9 +40,34 @@ def run_streamlit1():
     subprocess.Popen(['streamlit', 'run', 'src/MedicineRecognition/app.py'])
     return redirect(url_for('index'))
 
-@app.route('/brain')
+
+
+@app.route('/brain', methods=['GET', 'POST'])
 def brain():
+    if request.method == 'POST':
+        def preprocess_image(image):
+            img = Image.open(image)
+            img = img.resize((299, 299))
+            img = np.asarray(img)
+            img = np.expand_dims(img, axis=0)
+            img = img / 255
+            return img
+        
+        class_labels = {0: 'Glioma Tumour', 1: 'Meningioma Tumour', 2: 'No Tumour', 3: 'Pituitary Tumour'}
+        file = request.files['file']
+        file_path = 'temp.jpg'
+        file.save(file_path)
+        processed_image = preprocess_image(file_path)
+        predictions = brain_model.predict(processed_image)
+        prediction_label = class_labels[np.argmax(predictions)]
+        confidence = np.max(predictions)
+        os.remove(file_path)
+        return render_template('brain_tumour.html', prediction=prediction_label, confidence=confidence)
     return render_template('brain_tumour.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
 
 @app.route('/bcancer', methods=["GET", "POST"])
 def brain_post():
