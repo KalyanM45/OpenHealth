@@ -1,7 +1,6 @@
-# OpenHealth: A Comprehensive AI Tool for Remote Health Care 
+# OpenHealth: A Comprehensive AI Tool for Remote Health Care    (Under Development)
 
-
-## Under Development
+<img src="static/images/Logo.png" alt="Project Logo"/>
 
 Connect with me on social media and explore my work:
 
