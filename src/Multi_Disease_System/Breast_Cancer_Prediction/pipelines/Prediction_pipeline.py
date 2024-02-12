@@ -5,7 +5,7 @@ from src.logger import logging
 from src.utils import load_object
 from src.exception import customexception
 
-class PredictPipeline:
+class PredictBCancer:
     def __init__(self):
         pass
     
@@ -22,7 +22,7 @@ class PredictPipeline:
         except Exception as e:
             raise customexception(e,sys)
     
-class CustomData:
+class BCancer_Data:
     
     def __init__(self,
                 texture_mean: float,

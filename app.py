@@ -10,10 +10,9 @@ from PIL import Image
 from tensorflow.keras.models import load_model
 from src.utils import gen_from_image, gen_from_text
 from flask import Flask, render_template,request,redirect,url_for
-from src.Multi_Disease_System.Parkinsons_Disease_Prediction.pipelines.Prediction_pipeline import CustomData, PredictPipeline
-from src.Multi_Disease_System.Breast_Cancer_Prediction.pipelines.Prediction_pipeline import CustomData, PredictPipeline
+from src.Multi_Disease_System.Parkinsons_Disease_Prediction.pipelines.Prediction_pipeline import Parkinsons_Data, PredictParkinsons
+from src.Multi_Disease_System.Breast_Cancer_Prediction.pipelines.Prediction_pipeline import BCancer_Data, PredictBCancer
 from src.Multi_Disease_System.Heart_Disease_Prediction.pipelines.Prediction_pipeline import CustomData, PredictPipeline
-
 brain_model = load_model('Artifacts\Brain_Tumour\BrainModel.h5')
 
 app = Flask(__name__)
@@ -69,7 +68,7 @@ def brain():
 @app.route('/bcancer', methods=["GET", "POST"])
 def brain_post():
     if request.method == 'POST':
-        data = CustomData(
+        data = BCancer_Data(
             texture_mean = float(request.form['texture_mean']),
             smoothness_mean = float(request.form['smoothness_mean']),
             compactness_mean = float(request.form['compactness_mean']),
@@ -94,7 +93,7 @@ def brain_post():
             fractal_dimension_worst = float(request.form['fractal_dimension_worst'])
             )
         final_data = data.get_data_as_dataframe()
-        predict_pipeline = PredictPipeline()
+        predict_pipeline = PredictBCancer()
         pred = predict_pipeline.predict(final_data)
         result = round(pred[0], 2)
         return render_template('bcancer.html', final_result=result)
@@ -154,7 +153,7 @@ def pneumonia():
 @app.route('/parkinsons', methods=["GET", "POST"])
 def parkinsons():
     if request.method == 'POST':
-        data = CustomData(
+        data = Parkinsons_Data(
                 MDVPFO=float(request.form.get("MDVPFO")),
                 MDVPFHI=float(request.form.get("MDVPFHI")),
                 MDVPFLO=float(request.form.get("MDVPFLO")),
@@ -165,7 +164,7 @@ def parkinsons():
                 D2=float(request.form.get("D2")))
     
         final_data = data.get_data_as_dataframe()
-        predict_pipeline = PredictPipeline()
+        predict_pipeline = PredictParkinsons()
         pred = predict_pipeline.predict(final_data)
         result = round(pred[0], 2)
         return render_template("parkinsons.html", final_result=result)

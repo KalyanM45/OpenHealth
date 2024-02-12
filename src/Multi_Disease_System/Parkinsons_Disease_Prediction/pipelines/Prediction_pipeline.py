@@ -5,7 +5,7 @@ from src.logger import logging
 from src.utils import load_object
 from src.exception import customexception
 
-class PredictPipeline:
+class PredictParkinsons:
     def __init__(self):
         pass
     
@@ -18,7 +18,7 @@ class PredictPipeline:
         except Exception as e:
             raise customexception(e,sys)
     
-class CustomData:
+class Parkinsons_Data:
     def __init__(self,
                  MDVPFO:float,
                  MDVPFHI:float,
