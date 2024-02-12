@@ -65,9 +65,6 @@ def brain():
         return render_template('brain_tumour.html', prediction=prediction_label, confidence=confidence)
     return render_template('brain_tumour.html')
 
-if __name__ == '__main__':
-    app.run(debug=True)
-
 
 @app.route('/bcancer', methods=["GET", "POST"])
 def brain_post():
