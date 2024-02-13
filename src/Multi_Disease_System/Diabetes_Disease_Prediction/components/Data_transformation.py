@@ -5,11 +5,8 @@ import pandas as pd
 from src.logger import logging
 from dataclasses import dataclass
 from src.utils import save_object
-from sklearn.pipeline import Pipeline
-from sklearn.impute import SimpleImputer
 from src.exception import customexception
-from sklearn.compose import ColumnTransformer
-from sklearn.preprocessing import StandardScaler, OrdinalEncoder
+from sklearn.preprocessing import StandardScaler
 
 
 @dataclass
@@ -26,35 +23,13 @@ class DataTransformation:
         try:
             logging.info('Diabetes Disease Prediction: Data Transformation initiated')
 
-            numerical_cols = ['age', 'bmi', 'HbA1c_level', 'blood_glucose_level','hypertension','heart_disease']
-            categorical_cols = ['gender', 'smoking_history']
+            numerical_cols = ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age', 'Outcome']
+            categorical_cols = []
 
             logging.info(f'Diabetes Disease Prediction: Numerical Columns : {numerical_cols}')
             logging.info(f'Diabetes Disease Prediction: Categorical Columns : {categorical_cols}')
 
-            gender_cat = ['Female', 'Male', 'Other']
-            smoking_history_cat = ['never', 'No Info', 'current', 'former', 'ever', 'not current']
-
             logging.info('Diabetes Disease Prediction: Numerical Pipeline Initiated')
-
-            ## Numerical Pipeline
-            num_pipeline=Pipeline(
-                steps=[
-                ('imputer',SimpleImputer(strategy='median')),
-                ('scaler',StandardScaler())])
-            
-            # Categorigal Pipeline
-            cat_pipeline=Pipeline(
-                steps=[
-                ('imputer',SimpleImputer(strategy='most_frequent')),
-                ('ordinalencoder',OrdinalEncoder(categories=[gender_cat,smoking_history_cat])),
-                ('scaler',StandardScaler())])
-            
-            preprocessor=ColumnTransformer([
-            ('num_pipeline',num_pipeline,numerical_cols),
-            ('cat_pipeline',cat_pipeline,categorical_cols)])
-            
-            return preprocessor
                 
         except Exception as e:
             logging.info("Exception occured in the initiate_datatransformation")
@@ -72,7 +47,7 @@ class DataTransformation:
             
             preprocessing_obj = self.get_data_transformation()
             
-            target_column_name = 'diabetes'
+            target_column_name = 'Outcome'
             drop_columns = [target_column_name]
             
             input_feature_train_df = train_df.drop(columns=drop_columns,axis=1)
@@ -81,16 +56,17 @@ class DataTransformation:
             target_feature_test_df=test_df[target_column_name]
             logging.info("Diabetes Disease Prediction: Splitting input and target features complete")
             
-            input_feature_train_arr=preprocessing_obj.fit_transform(input_feature_train_df)
-            input_feature_test_arr=preprocessing_obj.transform(input_feature_test_df)
+            scaler = StandardScaler()
+            input_feature_train_arr=scaler.fit_transform(input_feature_train_df)
+            input_feature_test_arr=scaler.transform(input_feature_test_df)
             logging.info("Diabetes Disease Prediction: Applying preprocessing object on training and testing datasets.")
             
             train_arr = np.c_[input_feature_train_arr, np.array(target_feature_train_df)]
             test_arr = np.c_[input_feature_test_arr, np.array(target_feature_test_df)]
 
-            save_object(
-                file_path=self.data_transformation_config.preprocessor_obj_file_path,
-                obj=preprocessing_obj)
+            #save_object(
+            #    file_path=self.data_transformation_config.preprocessor_obj_file_path,
+            #    obj=preprocessing_obj)
             
             logging.info("Diabetes Disease Prediction: Preprocessing pickle file saved")
             return (train_arr,test_arr)

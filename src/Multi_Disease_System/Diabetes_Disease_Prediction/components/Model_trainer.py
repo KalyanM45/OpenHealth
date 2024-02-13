@@ -64,10 +64,10 @@ class ModelTrainer:
             print('\n====================================================================================\n')
             logging.info(f'Diabetes Disease Prediction: Best Model Found, Model Name: {best_model_name}, Accuracy Score: {best_model_score}')
 
-            save_object(
+            '''save_object(
                  file_path=self.model_trainer_config.trained_model_file_path,
                  obj=best_model
-            )
+            )'''
           
         except Exception as e:
             logging.info('Exception occured at Model Training')
