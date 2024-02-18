@@ -8,7 +8,6 @@ import pickle
 import subprocess
 import numpy as np
 from PIL import Image
-from werkzeug.utils import secure_filename
 from tensorflow.keras.models import load_model
 from src.utils import gen_from_image, gen_from_text
 from flask import Flask, render_template,request,redirect,url_for
@@ -161,16 +160,12 @@ def kidney():
             file = request.files['file']
             if file.filename == '':
                 return render_template('error.html', message='No file selected')
-
             file_path = 'temp.jpg'
             file.save(file_path)
-
             img = cv2.imread(file_path)
             img = cv2.resize(img, (150, 150))
             img = img / 255.0
             img = np.expand_dims(img, axis=0)
-
-            # Make predictions using the loaded model
             predictions = kidney_model.predict(img)
             prediction_label = class_labels[np.argmax(predictions)]
             os.remove(file_path)
