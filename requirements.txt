@@ -12,5 +12,5 @@ google.generativeai
 python-dotenv
 streamlit
 tensorflow
-
+opencv-python
 -e .

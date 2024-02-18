@@ -2,11 +2,13 @@ import warnings
 warnings.simplefilter('ignore')
 
 import os
+import cv2
 import sys
 import pickle
 import subprocess
 import numpy as np
 from PIL import Image
+from werkzeug.utils import secure_filename
 from tensorflow.keras.models import load_model
 from src.utils import gen_from_image, gen_from_text
 from flask import Flask, render_template,request,redirect,url_for
@@ -14,6 +16,7 @@ from src.Multi_Disease_System.Parkinsons_Disease_Prediction.pipelines.Prediction
 from src.Multi_Disease_System.Breast_Cancer_Prediction.pipelines.Prediction_pipeline import BCancer_Data, PredictBCancer
 from src.Multi_Disease_System.Heart_Disease_Prediction.pipelines.Prediction_pipeline import CustomData, PredictPipeline
 brain_model = load_model('Artifacts\Brain_Tumour\BrainModel.h5')
+kidney_model = load_model('Artifacts\Kidney_Disease\Kidney_Model.h5')
 
 app = Flask(__name__)
 
@@ -150,12 +153,31 @@ def heart():
             return render_template("error.html")
     return render_template("heart.html")
 
-@app.route('/kidney')
+@app.route('/kidney', methods=['GET', 'POST'])
 def kidney():
-    try:
-        return render_template('kidney.html')
-    except:
-        return render_template('error.html')
+    if request.method == 'POST':
+        try:
+            class_labels = {0: 'Cyst', 1: 'Normal', 2: 'Stone', 3: 'Tumor'}
+            file = request.files['file']
+            if file.filename == '':
+                return render_template('error.html', message='No file selected')
+
+            file_path = 'temp.jpg'
+            file.save(file_path)
+
+            img = cv2.imread(file_path)
+            img = cv2.resize(img, (150, 150))
+            img = img / 255.0
+            img = np.expand_dims(img, axis=0)
+
+            # Make predictions using the loaded model
+            predictions = kidney_model.predict(img)
+            prediction_label = class_labels[np.argmax(predictions)]
+            os.remove(file_path)
+            return render_template('kidney.html', prediction=prediction_label)
+        except Exception as e:
+            return render_template('error.html', message=str(e))
+    return render_template('kidney.html')
 
 @app.route('/liver')
 def liver():
