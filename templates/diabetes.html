@@ -1,118 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../static/css/input.css" />
-    <title>Diabetes Input Form</title>
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        background-image: url(../static/images/diabetes.jpg);
-        background-size: cover;
-        font-family: Arial, sans-serif;
-      }
-      .bg-text1 {
-        background-color: rgb(0, 238, 255);
-        background-color: rgba(0, 0, 0, 0.7);
-        color: #0ef;
-        font-weight: bold;
-        border: 3px solid #0ef;
-        position: absolute;
-        top: 58%;
-        left: 50%;
-        transform: translate(50%, -100%);
-        z-index: 2;
-        width: 25%;
-        padding: 20px;
-        text-align: center;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-      }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Disease Prediction</title>
+</head>
+<body>
+    <h1>Diabetes Prediction</h1>
+    <form action="/diabetes" method="post">
+        <label for="pregnancies">Pregnancies:</label>
+        <input type="number" id="pregnancies" name="pregnancies" required><br><br>
+        
+        <label for="Glucose">Glucose:</label>
+        <input type="number" id="Glucose" name="Glucose" required><br><br>
+        
+        <label for="BloodPressure">Blood Pressure:</label>
+        <input type="number" id="BloodPressure" name="BloodPressure" required><br><br>
+        
+        <label for="skin_thickness">Skin Thickness:</label>
+        <input type="number" id="skin_thickness" name="skin_thickness" required><br><br>
+        
+        <label for="insulin">Insulin:</label>
+        <input type="number" id="insulin" name="insulin" required><br><br>
+        
+        <label for="BMI">BMI:</label>
+        <input type="number" id="BMI" name="BMI" required><br><br>
+        
+        <label for="DiabetesPedigreeFunction">Diabetes Pedigree Function:</label>
+        <input type="number" id="DiabetesPedigreeFunction" name="DiabetesPedigreeFunction" required><br><br>
+        
+        <label for="Age">Age:</label>
+        <input type="number" id="Age" name="Age" required><br><br>
+        
+        <input type="submit" value="Predict">
+    </form>
 
-      .overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: black;
-        opacity: 0.6;
-        z-index: -1;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="overlay"></div>
-    <section>
-      <div class="heading">
-        <h2>Diabetes Disease Prediction</h2>
-        <h2>Diabetes Disease Prediction</h2>
-      </div>
-    </section>
-    <div class="bg-text">
-      <div class="container">
-        <input required="" type="text" name="text" class="input" />
-        <label class="label">Age</label>
-      </div>
-      <div class="container">
-        <input required="" type="text" name="text" class="input" />
-        <label class="label">Gender</label>
-      </div>
-      <div class="container">
-        <input required="" type="text" name="text" class="input" />
-        <label class="label">Constrictive pericarditis</label>
-      </div>
-      <div class="container">
-        <input required="" type="text" name="text" class="input" />
-        <label class="label">Trest BPS</label>
-      </div>
-      <div class="container">
-        <input required="" type="text" name="text" class="input" />
-        <label class="label">cholesterol</label>
-      </div>
-      <div class="container">
-        <input required="" type="text" name="text" class="input" />
-        <label class="label">FBS</label>
-      </div>
-      <div class="container">
-        <input required="" type="text" name="text" class="input" />
-        <label class="label">Rest ECG</label>
-      </div>
-      <div class="container">
-        <input required="" type="text" name="text" class="input" />
-        <label class="label">Thalach</label>
-      </div>
-      <div class="container">
-        <input required="" type="text" name="text" class="input" />
-        <label class="label">Exang</label>
-      </div>
-      <div class="container">
-        <input required="" type="text" name="text" class="input" />
-        <label class="label">Old Peak</label>
-      </div>
-      <div class="container">
-        <input required="" type="text" name="text" class="input" />
-        <label class="label">Slope</label>
-      </div>
-      <div class="container">
-        <input required="" type="text" name="text" class="input" />
-        <label class="label">CA</label>
-      </div>
-      <div class="container">
-        <input required="" type="text" name="text" class="input" />
-        <label class="label">Thal</label>
-      </div>
-      <div class="container">
-        <input type="submit" value="Submit" class="button" />
-      </div>
-    </div>
-    <div class="bg-text1">
-      <h2>Results</h2>
-      <p>Here are the predicted results based on the provided information.</p>
-    </div>
-  </body>
+    {% if final_result %}
+    <h2>{{ final_result }}</h2>
+    {% endif %}
+</body>
 </html>

@@ -13,6 +13,7 @@ from src.utils import gen_from_image, gen_from_text
 from flask import Flask, render_template,request,redirect,url_for
 from src.Multi_Disease_System.Parkinsons_Disease_Prediction.pipelines.Prediction_pipeline import Parkinsons_Data, PredictParkinsons
 from src.Multi_Disease_System.Breast_Cancer_Prediction.pipelines.Prediction_pipeline import BCancer_Data, PredictBCancer
+from src.Multi_Disease_System.Diabetes_Disease_Prediction.pipelines.Prediction_pipeline import Diabetes_Data, PredictDiabetes
 from src.Multi_Disease_System.Heart_Disease_Prediction.pipelines.Prediction_pipeline import CustomData, PredictPipeline
 brain_model = load_model('Artifacts\Brain_Tumour\BrainModel.h5')
 kidney_model = load_model('Artifacts\Kidney_Disease\Kidney_Model.h5')
@@ -118,12 +119,26 @@ def brain_post():
             return render_template('error.html')
     return render_template('bcancer.html')
 
-@app.route('/diabetes')
-def bcancer_post():
+@app.route('/diabetes', methods=["GET", "POST"])
+def diabetes():
+    if request.method == "POST":
         try:
-            return render_template('diabetes.html')
-        except:
-            return render_template('error.html')
+            data = Diabetes_Data(
+                pregnancies=request.form.get("pregnancies"),
+                Glucose=request.form.get("Glucose"),
+                BloodPressure=request.form.get("BloodPressure"),
+                skin_thickness=request.form.get("skin_thickness"),
+                insulin=request.form.get("insulin"),
+                BMI=request.form.get("BMI"),
+                DiabetesPedigreeFunction=request.form.get("DiabetesPedigreeFunction"),
+                Age=request.form.get("Age"))
+            final_data = data.get_data_as_dataframe()
+            predict_pipeline = PredictDiabetes()
+            pred = predict_pipeline.predict(final_data)
+            return render_template("diabetes.html", final_result=pred)
+        except Exception as e:
+            pass
+    return render_template("diabetes.html")
 
 @app.route('/heart', methods=["GET", "POST"])
 def heart():
