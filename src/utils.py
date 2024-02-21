@@ -72,8 +72,8 @@ def recognition_prompt(query):
     medicine recognition system capable of identifying detailed medications not only from images of tablets but also from various 
     other forms such as capsules, liquids, or even packaging labels. The system should be able to identify medications
     - provide a detailed response about the image.
-    - If you dont find any medical equipment, print please provide a detailed response about the image.
     - Please ensure the generated content is accurate and clinically relevant.
     - Please don't provide false and misleading information.
     - Additionally, {query}
-'''
+
+if the image is not related to medical or healthcare, please provide a message saying "Please Provide Valid Medical Image".'''
