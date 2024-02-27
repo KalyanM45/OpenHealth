@@ -1,0 +1,3896 @@
+{
+  "id": "13d1d83b-6e32-4b7c-8459-3a40fb8bbf83",
+  "name": null,
+  "timestamp": "2024-02-27T03:51:14.501371",
+  "metadata": {
+    "metric_presets": [
+      "DataQualityPreset"
+    ]
+  },
+  "tags": [],
+  "suite": {
+    "metrics": [
+      {
+        "type": "evidently.metrics.data_integrity.dataset_summary_metric.DatasetSummaryMetric",
+        "options": {
+          "color": null,
+          "render": null,
+          "custom": {}
+        },
+        "almost_duplicated_threshold": 0.95,
+        "almost_constant_threshold": 0.95
+      },
+      {
+        "type": "evidently.metrics.data_integrity.column_summary_metric.ColumnSummaryMetric",
+        "options": {
+          "color": null,
+          "render": null,
+          "custom": {}
+        },
+        "column_name": {
+          "type": "evidently.base_metric.ColumnName",
+          "name": "prediction",
+          "display_name": "prediction",
+          "dataset": "main",
+          "feature_class": null
+        }
+      },
+      {
+        "type": "evidently.metrics.data_integrity.column_summary_metric.ColumnSummaryMetric",
+        "options": {
+          "color": null,
+          "render": null,
+          "custom": {}
+        },
+        "column_name": {
+          "type": "evidently.base_metric.ColumnName",
+          "name": "Age",
+          "display_name": "Age",
+          "dataset": "main",
+          "feature_class": null
+        }
+      },
+      {
+        "type": "evidently.metrics.data_integrity.column_summary_metric.ColumnSummaryMetric",
+        "options": {
+          "color": null,
+          "render": null,
+          "custom": {}
+        },
+        "column_name": {
+          "type": "evidently.base_metric.ColumnName",
+          "name": "BMI",
+          "display_name": "BMI",
+          "dataset": "main",
+          "feature_class": null
+        }
+      },
+      {
+        "type": "evidently.metrics.data_integrity.column_summary_metric.ColumnSummaryMetric",
+        "options": {
+          "color": null,
+          "render": null,
+          "custom": {}
+        },
+        "column_name": {
+          "type": "evidently.base_metric.ColumnName",
+          "name": "Pregnancies",
+          "display_name": "Pregnancies",
+          "dataset": "main",
+          "feature_class": null
+        }
+      },
+      {
+        "type": "evidently.metrics.data_integrity.column_summary_metric.ColumnSummaryMetric",
+        "options": {
+          "color": null,
+          "render": null,
+          "custom": {}
+        },
+        "column_name": {
+          "type": "evidently.base_metric.ColumnName",
+          "name": "DiabetesPedigreeFunction",
+          "display_name": "DiabetesPedigreeFunction",
+          "dataset": "main",
+          "feature_class": null
+        }
+      },
+      {
+        "type": "evidently.metrics.data_integrity.column_summary_metric.ColumnSummaryMetric",
+        "options": {
+          "color": null,
+          "render": null,
+          "custom": {}
+        },
+        "column_name": {
+          "type": "evidently.base_metric.ColumnName",
+          "name": "SkinThickness",
+          "display_name": "SkinThickness",
+          "dataset": "main",
+          "feature_class": null
+        }
+      },
+      {
+        "type": "evidently.metrics.data_integrity.column_summary_metric.ColumnSummaryMetric",
+        "options": {
+          "color": null,
+          "render": null,
+          "custom": {}
+        },
+        "column_name": {
+          "type": "evidently.base_metric.ColumnName",
+          "name": "BloodPressure",
+          "display_name": "BloodPressure",
+          "dataset": "main",
+          "feature_class": null
+        }
+      },
+      {
+        "type": "evidently.metrics.data_integrity.column_summary_metric.ColumnSummaryMetric",
+        "options": {
+          "color": null,
+          "render": null,
+          "custom": {}
+        },
+        "column_name": {
+          "type": "evidently.base_metric.ColumnName",
+          "name": "Insulin",
+          "display_name": "Insulin",
+          "dataset": "main",
+          "feature_class": null
+        }
+      },
+      {
+        "type": "evidently.metrics.data_integrity.column_summary_metric.ColumnSummaryMetric",
+        "options": {
+          "color": null,
+          "render": null,
+          "custom": {}
+        },
+        "column_name": {
+          "type": "evidently.base_metric.ColumnName",
+          "name": "Glucose",
+          "display_name": "Glucose",
+          "dataset": "main",
+          "feature_class": null
+        }
+      },
+      {
+        "type": "evidently.metrics.data_integrity.column_summary_metric.ColumnSummaryMetric",
+        "options": {
+          "color": null,
+          "render": null,
+          "custom": {}
+        },
+        "column_name": {
+          "type": "evidently.base_metric.ColumnName",
+          "name": "Outcome",
+          "display_name": "Outcome",
+          "dataset": "main",
+          "feature_class": null
+        }
+      },
+      {
+        "type": "evidently.metrics.data_integrity.dataset_missing_values_metric.DatasetMissingValuesMetric",
+        "options": {
+          "color": null,
+          "render": null,
+          "custom": {}
+        },
+        "missing_values": [
+          "",
+          -Infinity,
+          null,
+          Infinity
+        ]
+      },
+      {
+        "type": "evidently.metrics.data_quality.dataset_correlations_metric.DatasetCorrelationsMetric",
+        "options": {
+          "color": null,
+          "render": null,
+          "custom": {}
+        }
+      }
+    ],
+    "metric_results": [
+      {
+        "type": "evidently.metrics.data_integrity.dataset_summary_metric.DatasetSummaryMetricResult",
+        "almost_duplicated_threshold": 0.95,
+        "current": {
+          "type": "evidently.metrics.data_integrity.dataset_summary_metric.DatasetSummary",
+          "target": null,
+          "prediction": "prediction",
+          "date_column": null,
+          "id_column": null,
+          "number_of_columns": 10,
+          "number_of_rows": 300,
+          "number_of_missing_values": 0,
+          "number_of_categorical_columns": 0,
+          "number_of_numeric_columns": 9,
+          "number_of_text_columns": 0,
+          "number_of_datetime_columns": 0,
+          "number_of_constant_columns": 1,
+          "number_of_almost_constant_columns": 1,
+          "number_of_duplicated_columns": 0,
+          "number_of_almost_duplicated_columns": 0,
+          "number_of_empty_rows": 0,
+          "number_of_empty_columns": 0,
+          "number_of_duplicated_rows": 121,
+          "columns_type_data": {
+            "Pregnancies": {
+              "dtype": "int64"
+            },
+            "Glucose": {
+              "dtype": "int64"
+            },
+            "BloodPressure": {
+              "dtype": "int64"
+            },
+            "SkinThickness": {
+              "dtype": "int64"
+            },
+            "Insulin": {
+              "dtype": "int64"
+            },
+            "BMI": {
+              "dtype": "float64"
+            },
+            "DiabetesPedigreeFunction": {
+              "dtype": "float64"
+            },
+            "Age": {
+              "dtype": "int64"
+            },
+            "Outcome": {
+              "dtype": "int64"
+            },
+            "prediction": {
+              "dtype": "int64"
+            }
+          },
+          "nans_by_columns": {
+            "Pregnancies": 0,
+            "Glucose": 0,
+            "BloodPressure": 0,
+            "SkinThickness": 0,
+            "Insulin": 0,
+            "BMI": 0,
+            "DiabetesPedigreeFunction": 0,
+            "Age": 0,
+            "Outcome": 0,
+            "prediction": 0
+          },
+          "number_uniques_by_columns": {
+            "Pregnancies": 17,
+            "Glucose": 91,
+            "BloodPressure": 35,
+            "SkinThickness": 38,
+            "Insulin": 61,
+            "BMI": 120,
+            "DiabetesPedigreeFunction": 160,
+            "Age": 43,
+            "Outcome": 1,
+            "prediction": 2
+          }
+        },
+        "reference": {
+          "type": "evidently.metrics.data_integrity.dataset_summary_metric.DatasetSummary",
+          "target": null,
+          "prediction": "prediction",
+          "date_column": null,
+          "id_column": null,
+          "number_of_columns": 10,
+          "number_of_rows": 700,
+          "number_of_missing_values": 0,
+          "number_of_categorical_columns": 0,
+          "number_of_numeric_columns": 9,
+          "number_of_text_columns": 0,
+          "number_of_datetime_columns": 0,
+          "number_of_constant_columns": 0,
+          "number_of_almost_constant_columns": 0,
+          "number_of_duplicated_columns": 1,
+          "number_of_almost_duplicated_columns": 1,
+          "number_of_empty_rows": 0,
+          "number_of_empty_columns": 0,
+          "number_of_duplicated_rows": 52,
+          "columns_type_data": {
+            "Pregnancies": {
+              "dtype": "int64"
+            },
+            "Glucose": {
+              "dtype": "int64"
+            },
+            "BloodPressure": {
+              "dtype": "int64"
+            },
+            "SkinThickness": {
+              "dtype": "int64"
+            },
+            "Insulin": {
+              "dtype": "int64"
+            },
+            "BMI": {
+              "dtype": "float64"
+            },
+            "DiabetesPedigreeFunction": {
+              "dtype": "float64"
+            },
+            "Age": {
+              "dtype": "int64"
+            },
+            "Outcome": {
+              "dtype": "int64"
+            },
+            "prediction": {
+              "dtype": "int64"
+            }
+          },
+          "nans_by_columns": {
+            "Pregnancies": 0,
+            "Glucose": 0,
+            "BloodPressure": 0,
+            "SkinThickness": 0,
+            "Insulin": 0,
+            "BMI": 0,
+            "DiabetesPedigreeFunction": 0,
+            "Age": 0,
+            "Outcome": 0,
+            "prediction": 0
+          },
+          "number_uniques_by_columns": {
+            "Pregnancies": 15,
+            "Glucose": 129,
+            "BloodPressure": 45,
+            "SkinThickness": 49,
+            "Insulin": 163,
+            "BMI": 233,
+            "DiabetesPedigreeFunction": 461,
+            "Age": 51,
+            "Outcome": 2,
+            "prediction": 2
+          }
+        }
+      },
+      {
+        "type": "evidently.metrics.data_integrity.column_summary_metric.ColumnSummaryResult",
+        "column_name": "prediction",
+        "column_type": "cat",
+        "reference_characteristics": {
+          "type": "evidently.metrics.data_integrity.column_summary_metric.CategoricalCharacteristics",
+          "number_of_rows": 700,
+          "count": 700,
+          "missing": 0,
+          "missing_percentage": 0.0,
+          "unique": 2,
+          "unique_percentage": 0.29,
+          "most_common": 0,
+          "most_common_percentage": 71.43,
+          "new_in_current_values_count": null,
+          "unused_in_current_values_count": null
+        },
+        "current_characteristics": {
+          "type": "evidently.metrics.data_integrity.column_summary_metric.CategoricalCharacteristics",
+          "number_of_rows": 300,
+          "count": 300,
+          "missing": 0,
+          "missing_percentage": 0.0,
+          "unique": 2,
+          "unique_percentage": 0.67,
+          "most_common": 1,
+          "most_common_percentage": 63.33,
+          "new_in_current_values_count": 0,
+          "unused_in_current_values_count": 0
+        },
+        "plot_data": {
+          "type": "evidently.metrics.data_integrity.column_summary_metric.DataQualityPlot",
+          "bins_for_hist": {
+            "type": "evidently.metric_results.Histogram",
+            "current": {
+              "type": "evidently.metric_results.HistogramData",
+              "x": [
+                "1",
+                "0"
+              ],
+              "count": [
+                190,
+                110
+              ],
+              "name": null
+            },
+            "reference": {
+              "type": "evidently.metric_results.HistogramData",
+              "x": [
+                "0",
+                "1"
+              ],
+              "count": [
+                500,
+                200
+              ],
+              "name": null
+            },
+            "current_log": null,
+            "reference_log": null
+          },
+          "data_in_time": null,
+          "data_by_target": null,
+          "counts_of_values": {
+            "current": {
+              "x": {
+                "0": 1,
+                "1": 0
+              },
+              "count": {
+                "0": 190,
+                "1": 110
+              }
+            },
+            "reference": {
+              "x": {
+                "0": 0,
+                "1": 1
+              },
+              "count": {
+                "0": 500,
+                "1": 200
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "evidently.metrics.data_integrity.column_summary_metric.ColumnSummaryResult",
+        "column_name": "Age",
+        "column_type": "num",
+        "reference_characteristics": {
+          "type": "evidently.metrics.data_integrity.column_summary_metric.NumericCharacteristics",
+          "number_of_rows": 700,
+          "count": 700,
+          "missing": 0,
+          "missing_percentage": 0.0,
+          "mean": 32.69,
+          "std": 11.49,
+          "min": 21.0,
+          "p25": 24.0,
+          "p50": 29.0,
+          "p75": 39.0,
+          "max": 81.0,
+          "unique": 51,
+          "unique_percentage": 7.29,
+          "infinite_count": 0,
+          "infinite_percentage": 0.0,
+          "most_common": 22.0,
+          "most_common_percentage": 9.43
+        },
+        "current_characteristics": {
+          "type": "evidently.metrics.data_integrity.column_summary_metric.NumericCharacteristics",
+          "number_of_rows": 300,
+          "count": 300,
+          "missing": 0,
+          "missing_percentage": 0.0,
+          "mean": 37.97,
+          "std": 11.38,
+          "min": 21.0,
+          "p25": 28.0,
+          "p50": 37.0,
+          "p75": 45.0,
+          "max": 70.0,
+          "unique": 43,
+          "unique_percentage": 14.33,
+          "infinite_count": 0,
+          "infinite_percentage": 0.0,
+          "most_common": 22.0,
+          "most_common_percentage": 7.0
+        },
+        "plot_data": {
+          "type": "evidently.metrics.data_integrity.column_summary_metric.DataQualityPlot",
+          "bins_for_hist": {
+            "type": "evidently.metric_results.Histogram",
+            "current": {
+              "type": "evidently.metric_results.HistogramData",
+              "x": [
+                21.0,
+                25.0,
+                29.0,
+                33.0,
+                37.0,
+                41.0,
+                45.0,
+                49.0,
+                53.0,
+                57.0,
+                61.0,
+                65.0,
+                69.0,
+                73.0,
+                77.0
+              ],
+              "count": [
+                39,
+                40,
+                32,
+                35,
+                22,
+                48,
+                27,
+                29,
+                8,
+                9,
+                5,
+                5,
+                1,
+                0,
+                0
+              ],
+              "name": null
+            },
+            "reference": {
+              "type": "evidently.metric_results.HistogramData",
+              "x": [
+                21.0,
+                25.0,
+                29.0,
+                33.0,
+                37.0,
+                41.0,
+                45.0,
+                49.0,
+                53.0,
+                57.0,
+                61.0,
+                65.0,
+                69.0,
+                73.0,
+                77.0
+              ],
+              "count": [
+                211,
+                132,
+                80,
+                60,
+                56,
+                55,
+                29,
+                22,
+                15,
+                17,
+                10,
+                9,
+                3,
+                0,
+                1
+              ],
+              "name": null
+            },
+            "current_log": {
+              "type": "evidently.metric_results.HistogramData",
+              "x": [
+                1.3222192947339193,
+                1.3640954178871143,
+                1.4059715410403093,
+                1.4478476641935045,
+                1.4897237873466995,
+                1.5315999104998945,
+                1.5734760336530895,
+                1.6153521568062845,
+                1.6572282799594795,
+                1.6991044031126745,
+                1.7409805262658695,
+                1.7828566494190647,
+                1.8247327725722597,
+                1.8666088957254547
+              ],
+              "count": [
+                35,
+                20,
+                24,
+                17,
+                28,
+                27,
+                28,
+                48,
+                29,
+                24,
+                9,
+                7,
+                4,
+                0
+              ],
+              "name": null
+            },
+            "reference_log": {
+              "type": "evidently.metric_results.HistogramData",
+              "x": [
+                1.3222192947339193,
+                1.3640954178871143,
+                1.4059715410403093,
+                1.4478476641935045,
+                1.4897237873466995,
+                1.5315999104998945,
+                1.5734760336530895,
+                1.6153521568062845,
+                1.6572282799594795,
+                1.6991044031126745,
+                1.7409805262658695,
+                1.7828566494190647,
+                1.8247327725722597,
+                1.8666088957254547
+              ],
+              "count": [
+                167,
+                89,
+                87,
+                47,
+                65,
+                47,
+                54,
+                47,
+                32,
+                23,
+                19,
+                16,
+                6,
+                1
+              ],
+              "name": null
+            }
+          },
+          "data_in_time": null,
+          "data_by_target": null,
+          "counts_of_values": {
+            "current": {
+              "x": {
+                "0": 22,
+                "1": 36,
+                "2": 25,
+                "3": 43,
+                "4": 44,
+                "5": 28,
+                "6": 29,
+                "7": 41,
+                "8": 45,
+                "9": 23
+              },
+              "count": {
+                "0": 21,
+                "1": 16,
+                "2": 16,
+                "3": 15,
+                "4": 14,
+                "5": 13,
+                "6": 12,
+                "7": 11,
+                "8": 11,
+                "9": 10
+              }
+            },
+            "reference": {
+              "x": {
+                "0": 22,
+                "1": 21,
+                "2": 25,
+                "3": 24,
+                "4": 23,
+                "5": 26,
+                "6": 28,
+                "7": 27,
+                "8": 29,
+                "9": 31
+              },
+              "count": {
+                "0": 66,
+                "1": 64,
+                "2": 45,
+                "3": 44,
+                "4": 37,
+                "5": 31,
+                "6": 28,
+                "7": 28,
+                "8": 27,
+                "9": 22
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "evidently.metrics.data_integrity.column_summary_metric.ColumnSummaryResult",
+        "column_name": "BMI",
+        "column_type": "num",
+        "reference_characteristics": {
+          "type": "evidently.metrics.data_integrity.column_summary_metric.NumericCharacteristics",
+          "number_of_rows": 700,
+          "count": 700,
+          "missing": 0,
+          "missing_percentage": 0.0,
+          "mean": 31.75,
+          "std": 7.72,
+          "min": 0.0,
+          "p25": 26.8,
+          "p50": 32.0,
+          "p75": 36.5,
+          "max": 57.3,
+          "unique": 233,
+          "unique_percentage": 33.29,
+          "infinite_count": 0,
+          "infinite_percentage": 0.0,
+          "most_common": 31.6,
+          "most_common_percentage": 1.71
+        },
+        "current_characteristics": {
+          "type": "evidently.metrics.data_integrity.column_summary_metric.NumericCharacteristics",
+          "number_of_rows": 300,
+          "count": 300,
+          "missing": 0,
+          "missing_percentage": 0.0,
+          "mean": 34.63,
+          "std": 6.45,
+          "min": 0.0,
+          "p25": 30.4,
+          "p50": 33.7,
+          "p75": 38.62,
+          "max": 55.0,
+          "unique": 120,
+          "unique_percentage": 40.0,
+          "infinite_count": 0,
+          "infinite_percentage": 0.0,
+          "most_common": 30.4,
+          "most_common_percentage": 3.67
+        },
+        "plot_data": {
+          "type": "evidently.metrics.data_integrity.column_summary_metric.DataQualityPlot",
+          "bins_for_hist": {
+            "type": "evidently.metric_results.Histogram",
+            "current": {
+              "type": "evidently.metric_results.HistogramData",
+              "x": [
+                0.0,
+                4.0928571428571425,
+                8.185714285714285,
+                12.278571428571428,
+                16.37142857142857,
+                20.46428571428571,
+                24.557142857142857,
+                28.65,
+                32.74285714285714,
+                36.83571428571428,
+                40.92857142857142,
+                45.021428571428565,
+                49.114285714285714,
+                53.207142857142856
+              ],
+              "count": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                10,
+                37,
+                79,
+                79,
+                39,
+                35,
+                16,
+                3,
+                1
+              ],
+              "name": null
+            },
+            "reference": {
+              "type": "evidently.metric_results.HistogramData",
+              "x": [
+                0.0,
+                4.0928571428571425,
+                8.185714285714285,
+                12.278571428571428,
+                16.37142857142857,
+                20.46428571428571,
+                24.557142857142857,
+                28.65,
+                32.74285714285714,
+                36.83571428571428,
+                40.92857142857142,
+                45.021428571428565,
+                49.114285714285714,
+                53.207142857142856
+              ],
+              "count": [
+                10,
+                0,
+                0,
+                0,
+                17,
+                73,
+                130,
+                150,
+                161,
+                87,
+                42,
+                22,
+                7,
+                1
+              ],
+              "name": null
+            },
+            "current_log": {
+              "type": "evidently.metric_results.HistogramData",
+              "x": [
+                1.2600713879850747,
+                1.2983854829067913,
+                1.3366995778285078,
+                1.3750136727502245,
+                1.413327767671941,
+                1.4516418625936576,
+                1.489955957515374,
+                1.5282700524370907,
+                1.5665841473588071,
+                1.6048982422805238,
+                1.6432123372022402,
+                1.681526432123957,
+                1.7198405270456734
+              ],
+              "count": [
+                0,
+                0,
+                6,
+                14,
+                20,
+                43,
+                67,
+                55,
+                35,
+                33,
+                20,
+                5,
+                1
+              ],
+              "name": null
+            },
+            "reference_log": {
+              "type": "evidently.metric_results.HistogramData",
+              "x": [
+                1.2600713879850747,
+                1.2983854829067913,
+                1.3366995778285078,
+                1.3750136727502245,
+                1.413327767671941,
+                1.4516418625936576,
+                1.489955957515374,
+                1.5282700524370907,
+                1.5665841473588071,
+                1.6048982422805238,
+                1.6432123372022402,
+                1.681526432123957,
+                1.7198405270456734
+              ],
+              "count": [
+                12,
+                15,
+                41,
+                71,
+                70,
+                96,
+                115,
+                111,
+                76,
+                46,
+                27,
+                8,
+                2
+              ],
+              "name": null
+            }
+          },
+          "data_in_time": null,
+          "data_by_target": null,
+          "counts_of_values": {
+            "current": {
+              "x": {
+                "0": 30.4,
+                "1": 31.2,
+                "2": 32.0,
+                "3": 31.6,
+                "4": 32.9,
+                "5": 42.9,
+                "6": 28.4,
+                "7": 33.3,
+                "8": 27.4,
+                "9": 30.0
+              },
+              "count": {
+                "0": 11,
+                "1": 11,
+                "2": 11,
+                "3": 8,
+                "4": 7,
+                "5": 6,
+                "6": 6,
+                "7": 6,
+                "8": 5,
+                "9": 5
+              }
+            },
+            "reference": {
+              "x": {
+                "0": 31.6,
+                "1": 32.0,
+                "2": 33.3,
+                "3": 0.0,
+                "4": 29.7,
+                "5": 31.2,
+                "6": 32.9,
+                "7": 30.8,
+                "8": 32.4,
+                "9": 34.9
+              },
+              "count": {
+                "0": 12,
+                "1": 11,
+                "2": 11,
+                "3": 10,
+                "4": 10,
+                "5": 9,
+                "6": 9,
+                "7": 8,
+                "8": 8,
+                "9": 8
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "evidently.metrics.data_integrity.column_summary_metric.ColumnSummaryResult",
+        "column_name": "Pregnancies",
+        "column_type": "num",
+        "reference_characteristics": {
+          "type": "evidently.metrics.data_integrity.column_summary_metric.NumericCharacteristics",
+          "number_of_rows": 700,
+          "count": 700,
+          "missing": 0,
+          "missing_percentage": 0.0,
+          "mean": 3.75,
+          "std": 3.29,
+          "min": 0.0,
+          "p25": 1.0,
+          "p50": 3.0,
+          "p75": 6.0,
+          "max": 15.0,
+          "unique": 15,
+          "unique_percentage": 2.14,
+          "infinite_count": 0,
+          "infinite_percentage": 0.0,
+          "most_common": 1.0,
+          "most_common_percentage": 17.43
+        },
+        "current_characteristics": {
+          "type": "evidently.metrics.data_integrity.column_summary_metric.NumericCharacteristics",
+          "number_of_rows": 300,
+          "count": 300,
+          "missing": 0,
+          "missing_percentage": 0.0,
+          "mean": 5.17,
+          "std": 3.9,
+          "min": 0.0,
+          "p25": 2.0,
+          "p50": 5.0,
+          "p75": 8.0,
+          "max": 17.0,
+          "unique": 17,
+          "unique_percentage": 5.67,
+          "infinite_count": 0,
+          "infinite_percentage": 0.0,
+          "most_common": 0.0,
+          "most_common_percentage": 13.67
+        },
+        "plot_data": {
+          "type": "evidently.metrics.data_integrity.column_summary_metric.DataQualityPlot",
+          "bins_for_hist": {
+            "type": "evidently.metric_results.Histogram",
+            "current": {
+              "type": "evidently.metric_results.HistogramData",
+              "x": [
+                0.0,
+                1.1333333333333333,
+                2.2666666666666666,
+                3.4,
+                4.533333333333333,
+                5.666666666666666,
+                6.8,
+                7.933333333333334,
+                9.066666666666666,
+                10.2,
+                11.333333333333332,
+                12.466666666666667,
+                13.6,
+                14.733333333333333,
+                15.866666666666667
+              ],
+              "count": [
+                73,
+                12,
+                25,
+                33,
+                24,
+                21,
+                33,
+                39,
+                9,
+                11,
+                6,
+                7,
+                2,
+                2,
+                3
+              ],
+              "name": null
+            },
+            "reference": {
+              "type": "evidently.metric_results.HistogramData",
+              "x": [
+                0.0,
+                1.1333333333333333,
+                2.2666666666666666,
+                3.4,
+                4.533333333333333,
+                5.666666666666666,
+                6.8,
+                7.933333333333334,
+                9.066666666666666,
+                10.2,
+                11.333333333333332,
+                12.466666666666667,
+                13.6,
+                14.733333333333333,
+                15.866666666666667
+              ],
+              "count": [
+                228,
+                97,
+                68,
+                60,
+                50,
+                52,
+                38,
+                57,
+                23,
+                11,
+                5,
+                10,
+                0,
+                1,
+                0
+              ],
+              "name": null
+            },
+            "current_log": {
+              "type": "evidently.metric_results.HistogramData",
+              "x": [
+                0.0,
+                0.0878892086698767,
+                0.1757784173397534,
+                0.2636676260096301,
+                0.3515568346795068,
+                0.43944604334938353,
+                0.5273352520192602,
+                0.6152244606891369,
+                0.7031136693590136,
+                0.7910028780288904,
+                0.8788920866987671,
+                0.9667812953686438,
+                1.0546705040385205,
+                1.142559712708397
+              ],
+              "count": [
+                32,
+                0,
+                0,
+                12,
+                0,
+                25,
+                33,
+                24,
+                21,
+                33,
+                39,
+                20,
+                13,
+                7
+              ],
+              "name": null
+            },
+            "reference_log": {
+              "type": "evidently.metric_results.HistogramData",
+              "x": [
+                0.0,
+                0.0878892086698767,
+                0.1757784173397534,
+                0.2636676260096301,
+                0.3515568346795068,
+                0.43944604334938353,
+                0.5273352520192602,
+                0.6152244606891369,
+                0.7031136693590136,
+                0.7910028780288904,
+                0.8788920866987671,
+                0.9667812953686438,
+                1.0546705040385205,
+                1.142559712708397
+              ],
+              "count": [
+                122,
+                0,
+                0,
+                97,
+                0,
+                68,
+                60,
+                50,
+                52,
+                38,
+                57,
+                34,
+                15,
+                1
+              ],
+              "name": null
+            }
+          },
+          "data_in_time": null,
+          "data_by_target": null,
+          "counts_of_values": {
+            "current": {
+              "x": {
+                "0": 0,
+                "1": 7,
+                "2": 4,
+                "3": 1,
+                "4": 3,
+                "5": 5,
+                "6": 8,
+                "7": 6,
+                "8": 9,
+                "9": 2
+              },
+              "count": {
+                "0": 41,
+                "1": 33,
+                "2": 33,
+                "3": 32,
+                "4": 25,
+                "5": 24,
+                "6": 22,
+                "7": 21,
+                "8": 17,
+                "9": 12
+              }
+            },
+            "reference": {
+              "x": {
+                "0": 1,
+                "1": 0,
+                "2": 2,
+                "3": 3,
+                "4": 4,
+                "5": 6,
+                "6": 5,
+                "7": 7,
+                "8": 8,
+                "9": 9
+              },
+              "count": {
+                "0": 122,
+                "1": 106,
+                "2": 97,
+                "3": 68,
+                "4": 60,
+                "5": 52,
+                "6": 50,
+                "7": 38,
+                "8": 33,
+                "9": 24
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "evidently.metrics.data_integrity.column_summary_metric.ColumnSummaryResult",
+        "column_name": "DiabetesPedigreeFunction",
+        "column_type": "num",
+        "reference_characteristics": {
+          "type": "evidently.metrics.data_integrity.column_summary_metric.NumericCharacteristics",
+          "number_of_rows": 700,
+          "count": 700,
+          "missing": 0,
+          "missing_percentage": 0.0,
+          "mean": 0.46,
+          "std": 0.31,
+          "min": 0.08,
+          "p25": 0.24,
+          "p50": 0.37,
+          "p75": 0.6,
+          "max": 2.33,
+          "unique": 461,
+          "unique_percentage": 65.86,
+          "infinite_count": 0,
+          "infinite_percentage": 0.0,
+          "most_common": 0.261,
+          "most_common_percentage": 0.86
+        },
+        "current_characteristics": {
+          "type": "evidently.metrics.data_integrity.column_summary_metric.NumericCharacteristics",
+          "number_of_rows": 300,
+          "count": 300,
+          "missing": 0,
+          "missing_percentage": 0.0,
+          "mean": 0.54,
+          "std": 0.34,
+          "min": 0.12,
+          "p25": 0.26,
+          "p50": 0.46,
+          "p75": 0.73,
+          "max": 1.89,
+          "unique": 160,
+          "unique_percentage": 53.33,
+          "infinite_count": 0,
+          "infinite_percentage": 0.0,
+          "most_common": 0.128,
+          "most_common_percentage": 2.0
+        },
+        "plot_data": {
+          "type": "evidently.metrics.data_integrity.column_summary_metric.DataQualityPlot",
+          "bins_for_hist": {
+            "type": "evidently.metric_results.Histogram",
+            "current": {
+              "type": "evidently.metric_results.HistogramData",
+              "x": [
+                0.078,
+                0.21868750000000003,
+                0.35937500000000006,
+                0.5000625000000001,
+                0.64075,
+                0.7814375000000001,
+                0.9221250000000001,
+                1.0628125000000002,
+                1.2035000000000002,
+                1.3441875000000003,
+                1.4848750000000004,
+                1.6255625000000002,
+                1.7662500000000003,
+                1.9069375000000004,
+                2.047625,
+                2.1883125000000003
+              ],
+              "count": [
+                42,
+                81,
+                35,
+                38,
+                40,
+                23,
+                17,
+                10,
+                7,
+                4,
+                0,
+                0,
+                3,
+                0,
+                0,
+                0
+              ],
+              "name": null
+            },
+            "reference": {
+              "type": "evidently.metric_results.HistogramData",
+              "x": [
+                0.078,
+                0.21868750000000003,
+                0.35937500000000006,
+                0.5000625000000001,
+                0.64075,
+                0.7814375000000001,
+                0.9221250000000001,
+                1.0628125000000002,
+                1.2035000000000002,
+                1.3441875000000003,
+                1.4848750000000004,
+                1.6255625000000002,
+                1.7662500000000003,
+                1.9069375000000004,
+                2.047625,
+                2.1883125000000003
+              ],
+              "count": [
+                138,
+                202,
+                117,
+                86,
+                65,
+                35,
+                17,
+                17,
+                10,
+                6,
+                1,
+                3,
+                1,
+                0,
+                1,
+                1
+              ],
+              "name": null
+            },
+            "current_log": {
+              "type": "evidently.metric_results.HistogramData",
+              "x": [
+                -1.1079053973095196,
+                -0.9849824901558363,
+                -0.8620595830021529,
+                -0.7391366758484695,
+                -0.6162137686947862,
+                -0.4932908615411028,
+                -0.37036795438741943,
+                -0.24744504723373606,
+                -0.12452214008005269,
+                -0.0015992329263694316,
+                0.12132367422731405,
+                0.24424658138099753
+              ],
+              "count": [
+                0,
+                13,
+                17,
+                32,
+                42,
+                37,
+                41,
+                50,
+                42,
+                19,
+                4,
+                3
+              ],
+              "name": null
+            },
+            "reference_log": {
+              "type": "evidently.metric_results.HistogramData",
+              "x": [
+                -1.1079053973095196,
+                -0.9849824901558363,
+                -0.8620595830021529,
+                -0.7391366758484695,
+                -0.6162137686947862,
+                -0.4932908615411028,
+                -0.37036795438741943,
+                -0.24744504723373606,
+                -0.12452214008005269,
+                -0.0015992329263694316,
+                0.12132367422731405,
+                0.24424658138099753
+              ],
+              "count": [
+                12,
+                19,
+                56,
+                87,
+                131,
+                101,
+                96,
+                99,
+                56,
+                30,
+                10,
+                3
+              ],
+              "name": null
+            }
+          },
+          "data_in_time": null,
+          "data_by_target": null,
+          "counts_of_values": {
+            "current": {
+              "x": {
+                "0": 0.128,
+                "1": 0.238,
+                "2": 0.402,
+                "3": 0.254,
+                "4": 0.212,
+                "5": 0.257,
+                "6": 0.682,
+                "7": 0.178,
+                "8": 0.933,
+                "9": 0.905
+              },
+              "count": {
+                "0": 6,
+                "1": 6,
+                "2": 6,
+                "3": 6,
+                "4": 6,
+                "5": 5,
+                "6": 4,
+                "7": 4,
+                "8": 4,
+                "9": 4
+              }
+            },
+            "reference": {
+              "x": {
+                "0": 0.261,
+                "1": 0.268,
+                "2": 0.245,
+                "3": 0.207,
+                "4": 0.314,
+                "5": 0.197,
+                "6": 0.238,
+                "7": 0.27,
+                "8": 0.237,
+                "9": 0.38
+              },
+              "count": {
+                "0": 6,
+                "1": 6,
+                "2": 5,
+                "3": 5,
+                "4": 5,
+                "5": 5,
+                "6": 5,
+                "7": 5,
+                "8": 4,
+                "9": 4
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "evidently.metrics.data_integrity.column_summary_metric.ColumnSummaryResult",
+        "column_name": "SkinThickness",
+        "column_type": "num",
+        "reference_characteristics": {
+          "type": "evidently.metrics.data_integrity.column_summary_metric.NumericCharacteristics",
+          "number_of_rows": 700,
+          "count": 700,
+          "missing": 0,
+          "missing_percentage": 0.0,
+          "mean": 20.48,
+          "std": 15.62,
+          "min": 0.0,
+          "p25": 0.0,
+          "p50": 23.0,
+          "p75": 32.0,
+          "max": 99.0,
+          "unique": 49,
+          "unique_percentage": 7.0,
+          "infinite_count": 0,
+          "infinite_percentage": 0.0,
+          "most_common": 0.0,
+          "most_common_percentage": 28.43
+        },
+        "current_characteristics": {
+          "type": "evidently.metrics.data_integrity.column_summary_metric.NumericCharacteristics",
+          "number_of_rows": 300,
+          "count": 300,
+          "missing": 0,
+          "missing_percentage": 0.0,
+          "mean": 19.98,
+          "std": 18.33,
+          "min": 0.0,
+          "p25": 0.0,
+          "p50": 24.0,
+          "p75": 35.0,
+          "max": 99.0,
+          "unique": 38,
+          "unique_percentage": 12.67,
+          "infinite_count": 0,
+          "infinite_percentage": 0.0,
+          "most_common": 0.0,
+          "most_common_percentage": 39.33
+        },
+        "plot_data": {
+          "type": "evidently.metrics.data_integrity.column_summary_metric.DataQualityPlot",
+          "bins_for_hist": {
+            "type": "evidently.metric_results.Histogram",
+            "current": {
+              "type": "evidently.metric_results.HistogramData",
+              "x": [
+                0.0,
+                7.071428571428571,
+                14.142857142857142,
+                21.214285714285715,
+                28.285714285714285,
+                35.357142857142854,
+                42.42857142857143,
+                49.5,
+                56.57142857142857,
+                63.64285714285714,
+                70.71428571428571,
+                77.78571428571428,
+                84.85714285714286,
+                91.92857142857143
+              ],
+              "count": [
+                120,
+                8,
+                9,
+                39,
+                51,
+                53,
+                16,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ],
+              "name": null
+            },
+            "reference": {
+              "type": "evidently.metric_results.HistogramData",
+              "x": [
+                0.0,
+                7.071428571428571,
+                14.142857142857142,
+                21.214285714285715,
+                28.285714285714285,
+                35.357142857142854,
+                42.42857142857143,
+                49.5,
+                56.57142857142857,
+                63.64285714285714,
+                70.71428571428571,
+                77.78571428571428,
+                84.85714285714286,
+                91.92857142857143
+              ],
+              "count": [
+                200,
+                39,
+                90,
+                117,
+                133,
+                78,
+                33,
+                8,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              "name": null
+            },
+            "current_log": {
+              "type": "evidently.metric_results.HistogramData",
+              "x": [
+                0.8450980400142568,
+                0.9272792653416349,
+                1.009460490669013,
+                1.0916417159963911,
+                1.173822941323769,
+                1.2560041666511472,
+                1.3381853919785254,
+                1.4203666173059033,
+                1.5025478426332814,
+                1.5847290679606596,
+                1.6669102932880375,
+                1.7490915186154157,
+                1.8312727439427938,
+                1.9134539692701718
+              ],
+              "count": [
+                2,
+                0,
+                1,
+                7,
+                4,
+                5,
+                24,
+                34,
+                54,
+                43,
+                6,
+                0,
+                0,
+                2
+              ],
+              "name": null
+            },
+            "reference_log": {
+              "type": "evidently.metric_results.HistogramData",
+              "x": [
+                0.8450980400142568,
+                0.9272792653416349,
+                1.009460490669013,
+                1.0916417159963911,
+                1.173822941323769,
+                1.2560041666511472,
+                1.3381853919785254,
+                1.4203666173059033,
+                1.5025478426332814,
+                1.5847290679606596,
+                1.6669102932880375,
+                1.7490915186154157,
+                1.8312727439427938,
+                1.9134539692701718
+              ],
+              "count": [
+                3,
+                5,
+                15,
+                17,
+                52,
+                38,
+                78,
+                108,
+                96,
+                71,
+                16,
+                1,
+                0,
+                1
+              ],
+              "name": null
+            }
+          },
+          "data_in_time": null,
+          "data_by_target": null,
+          "counts_of_values": {
+            "current": {
+              "x": {
+                "0": 0,
+                "1": 41,
+                "2": 24,
+                "3": 32,
+                "4": 37,
+                "5": 33,
+                "6": 36,
+                "7": 27,
+                "8": 39,
+                "9": 30
+              },
+              "count": {
+                "0": 118,
+                "1": 13,
+                "2": 12,
+                "3": 12,
+                "4": 11,
+                "5": 11,
+                "6": 10,
+                "7": 9,
+                "8": 8,
+                "9": 7
+              }
+            },
+            "reference": {
+              "x": {
+                "0": 0,
+                "1": 30,
+                "2": 32,
+                "3": 31,
+                "4": 23,
+                "5": 27,
+                "6": 28,
+                "7": 19,
+                "8": 18,
+                "9": 33
+              },
+              "count": {
+                "0": 199,
+                "1": 29,
+                "2": 27,
+                "3": 23,
+                "4": 21,
+                "5": 21,
+                "6": 18,
+                "7": 18,
+                "8": 18,
+                "9": 17
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "evidently.metrics.data_integrity.column_summary_metric.ColumnSummaryResult",
+        "column_name": "BloodPressure",
+        "column_type": "num",
+        "reference_characteristics": {
+          "type": "evidently.metrics.data_integrity.column_summary_metric.NumericCharacteristics",
+          "number_of_rows": 700,
+          "count": 700,
+          "missing": 0,
+          "missing_percentage": 0.0,
+          "mean": 69.2,
+          "std": 18.79,
+          "min": 0.0,
+          "p25": 62.0,
+          "p50": 72.0,
+          "p75": 80.0,
+          "max": 122.0,
+          "unique": 45,
+          "unique_percentage": 6.43,
+          "infinite_count": 0,
+          "infinite_percentage": 0.0,
+          "most_common": 74.0,
+          "most_common_percentage": 7.86
+        },
+        "current_characteristics": {
+          "type": "evidently.metrics.data_integrity.column_summary_metric.NumericCharacteristics",
+          "number_of_rows": 300,
+          "count": 300,
+          "missing": 0,
+          "missing_percentage": 0.0,
+          "mean": 69.65,
+          "std": 23.8,
+          "min": 0.0,
+          "p25": 64.0,
+          "p50": 76.0,
+          "p75": 82.0,
+          "max": 114.0,
+          "unique": 35,
+          "unique_percentage": 11.67,
+          "infinite_count": 0,
+          "infinite_percentage": 0.0,
+          "most_common": 76.0,
+          "most_common_percentage": 8.33
+        },
+        "plot_data": {
+          "type": "evidently.metrics.data_integrity.column_summary_metric.DataQualityPlot",
+          "bins_for_hist": {
+            "type": "evidently.metric_results.Histogram",
+            "current": {
+              "type": "evidently.metric_results.HistogramData",
+              "x": [
+                0.0,
+                7.625,
+                15.25,
+                22.875,
+                30.5,
+                38.125,
+                45.75,
+                53.375,
+                61.0,
+                68.625,
+                76.25,
+                83.875,
+                91.5,
+                99.125,
+                106.75,
+                114.375
+              ],
+              "count": [
+                24,
+                0,
+                0,
+                1,
+                0,
+                0,
+                12,
+                10,
+                51,
+                76,
+                55,
+                52,
+                9,
+                6,
+                4,
+                0
+              ],
+              "name": null
+            },
+            "reference": {
+              "type": "evidently.metric_results.HistogramData",
+              "x": [
+                0.0,
+                7.625,
+                15.25,
+                22.875,
+                30.5,
+                38.125,
+                45.75,
+                53.375,
+                61.0,
+                68.625,
+                76.25,
+                83.875,
+                91.5,
+                99.125,
+                106.75,
+                114.375
+              ],
+              "count": [
+                30,
+                0,
+                0,
+                2,
+                1,
+                4,
+                25,
+                85,
+                136,
+                196,
+                108,
+                84,
+                16,
+                6,
+                6,
+                1
+              ],
+              "name": null
+            },
+            "current_log": {
+              "type": "evidently.metric_results.HistogramData",
+              "x": [
+                1.380211241711606,
+                1.4272878143091488,
+                1.4743643869066916,
+                1.5214409595042344,
+                1.5685175321017772,
+                1.61559410469932,
+                1.662670677296863,
+                1.7097472498944057,
+                1.7568238224919486,
+                1.8039003950894914,
+                1.8509769676870342,
+                1.898053540284577,
+                1.94513011288212,
+                1.9922066854796627,
+                2.0392832580772056
+              ],
+              "count": [
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                10,
+                7,
+                25,
+                54,
+                68,
+                72,
+                29,
+                7,
+                3
+              ],
+              "name": null
+            },
+            "reference_log": {
+              "type": "evidently.metric_results.HistogramData",
+              "x": [
+                1.380211241711606,
+                1.4272878143091488,
+                1.4743643869066916,
+                1.5214409595042344,
+                1.5685175321017772,
+                1.61559410469932,
+                1.662670677296863,
+                1.7097472498944057,
+                1.7568238224919486,
+                1.8039003950894914,
+                1.8509769676870342,
+                1.898053540284577,
+                1.94513011288212,
+                1.9922066854796627,
+                2.0392832580772056
+              ],
+              "count": [
+                1,
+                0,
+                1,
+                0,
+                1,
+                4,
+                17,
+                31,
+                93,
+                160,
+                186,
+                124,
+                39,
+                9,
+                4
+              ],
+              "name": null
+            }
+          },
+          "data_in_time": null,
+          "data_by_target": null,
+          "counts_of_values": {
+            "current": {
+              "x": {
+                "0": 76,
+                "1": 0,
+                "2": 70,
+                "3": 80,
+                "4": 90,
+                "5": 62,
+                "6": 82,
+                "7": 72,
+                "8": 78,
+                "9": 66
+              },
+              "count": {
+                "0": 25,
+                "1": 24,
+                "2": 23,
+                "3": 22,
+                "4": 20,
+                "5": 20,
+                "6": 18,
+                "7": 17,
+                "8": 15,
+                "9": 13
+              }
+            },
+            "reference": {
+              "x": {
+                "0": 74,
+                "1": 70,
+                "2": 78,
+                "3": 68,
+                "4": 72,
+                "5": 60,
+                "6": 76,
+                "7": 80,
+                "8": 64,
+                "9": 0
+              },
+              "count": {
+                "0": 55,
+                "1": 55,
+                "2": 45,
+                "3": 41,
+                "4": 40,
+                "5": 40,
+                "6": 39,
+                "7": 37,
+                "8": 32,
+                "9": 30
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "evidently.metrics.data_integrity.column_summary_metric.ColumnSummaryResult",
+        "column_name": "Insulin",
+        "column_type": "num",
+        "reference_characteristics": {
+          "type": "evidently.metrics.data_integrity.column_summary_metric.NumericCharacteristics",
+          "number_of_rows": 700,
+          "count": 700,
+          "missing": 0,
+          "missing_percentage": 0.0,
+          "mean": 73.74,
+          "std": 108.88,
+          "min": 0.0,
+          "p25": 0.0,
+          "p50": 0.0,
+          "p75": 120.0,
+          "max": 846.0,
+          "unique": 163,
+          "unique_percentage": 23.29,
+          "infinite_count": 0,
+          "infinite_percentage": 0.0,
+          "most_common": 0.0,
+          "most_common_percentage": 50.14
+        },
+        "current_characteristics": {
+          "type": "evidently.metrics.data_integrity.column_summary_metric.NumericCharacteristics",
+          "number_of_rows": 300,
+          "count": 300,
+          "missing": 0,
+          "missing_percentage": 0.0,
+          "mean": 89.88,
+          "std": 134.84,
+          "min": 0.0,
+          "p25": 0.0,
+          "p50": 0.0,
+          "p75": 150.0,
+          "max": 600.0,
+          "unique": 61,
+          "unique_percentage": 20.33,
+          "infinite_count": 0,
+          "infinite_percentage": 0.0,
+          "most_common": 0.0,
+          "most_common_percentage": 58.0
+        },
+        "plot_data": {
+          "type": "evidently.metrics.data_integrity.column_summary_metric.DataQualityPlot",
+          "bins_for_hist": {
+            "type": "evidently.metric_results.Histogram",
+            "current": {
+              "type": "evidently.metric_results.HistogramData",
+              "x": [
+                0.0,
+                52.875,
+                105.75,
+                158.625,
+                211.5,
+                264.375,
+                317.25,
+                370.125,
+                423.0,
+                475.875,
+                528.75,
+                581.625,
+                634.5,
+                687.375,
+                740.25,
+                793.125
+              ],
+              "count": [
+                178,
+                11,
+                42,
+                26,
+                11,
+                6,
+                11,
+                2,
+                1,
+                8,
+                3,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "name": null
+            },
+            "reference": {
+              "type": "evidently.metric_results.HistogramData",
+              "x": [
+                0.0,
+                52.875,
+                105.75,
+                158.625,
+                211.5,
+                264.375,
+                317.25,
+                370.125,
+                423.0,
+                475.875,
+                528.75,
+                581.625,
+                634.5,
+                687.375,
+                740.25,
+                793.125
+              ],
+              "count": [
+                391,
+                115,
+                77,
+                59,
+                17,
+                14,
+                11,
+                4,
+                2,
+                5,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1
+              ],
+              "name": null
+            },
+            "current_log": {
+              "type": "evidently.metric_results.HistogramData",
+              "x": [
+                1.1760912590556813,
+                1.3220311843876265,
+                1.4679711097195718,
+                1.613911035051517,
+                1.7598509603834622,
+                1.9057908857154073,
+                2.0517308110473524,
+                2.1976707363792976,
+                2.343610661711243,
+                2.4895505870431878,
+                2.6354905123751333,
+                2.7814304377070784
+              ],
+              "count": [
+                0,
+                0,
+                1,
+                3,
+                5,
+                9,
+                39,
+                29,
+                14,
+                13,
+                13,
+                0
+              ],
+              "name": null
+            },
+            "reference_log": {
+              "type": "evidently.metric_results.HistogramData",
+              "x": [
+                1.1760912590556813,
+                1.3220311843876265,
+                1.4679711097195718,
+                1.613911035051517,
+                1.7598509603834622,
+                1.9057908857154073,
+                2.0517308110473524,
+                2.1976707363792976,
+                2.343610661711243,
+                2.4895505870431878,
+                2.6354905123751333,
+                2.7814304377070784
+              ],
+              "count": [
+                4,
+                5,
+                10,
+                36,
+                44,
+                66,
+                65,
+                64,
+                27,
+                16,
+                9,
+                3
+              ],
+              "name": null
+            }
+          },
+          "data_in_time": null,
+          "data_by_target": null,
+          "counts_of_values": {
+            "current": {
+              "x": {
+                "0": 0,
+                "1": 480,
+                "2": 130,
+                "3": 145,
+                "4": 370,
+                "5": 175,
+                "6": 129,
+                "7": 114,
+                "8": 325,
+                "9": 185
+              },
+              "count": {
+                "0": 174,
+                "1": 6,
+                "2": 6,
+                "3": 5,
+                "4": 5,
+                "5": 4,
+                "6": 4,
+                "7": 4,
+                "8": 4,
+                "9": 4
+              }
+            },
+            "reference": {
+              "x": {
+                "0": 0,
+                "1": 105,
+                "2": 140,
+                "3": 90,
+                "4": 94,
+                "5": 100,
+                "6": 135,
+                "7": 120,
+                "8": 125,
+                "9": 165
+              },
+              "count": {
+                "0": 351,
+                "1": 11,
+                "2": 8,
+                "3": 7,
+                "4": 7,
+                "5": 7,
+                "6": 6,
+                "7": 6,
+                "8": 6,
+                "9": 5
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "evidently.metrics.data_integrity.column_summary_metric.ColumnSummaryResult",
+        "column_name": "Glucose",
+        "column_type": "num",
+        "reference_characteristics": {
+          "type": "evidently.metrics.data_integrity.column_summary_metric.NumericCharacteristics",
+          "number_of_rows": 700,
+          "count": 700,
+          "missing": 0,
+          "missing_percentage": 0.0,
+          "mean": 119.07,
+          "std": 31.39,
+          "min": 0.0,
+          "p25": 99.0,
+          "p50": 115.0,
+          "p75": 137.0,
+          "max": 199.0,
+          "unique": 129,
+          "unique_percentage": 18.43,
+          "infinite_count": 0,
+          "infinite_percentage": 0.0,
+          "most_common": 99.0,
+          "most_common_percentage": 2.43
+        },
+        "current_characteristics": {
+          "type": "evidently.metrics.data_integrity.column_summary_metric.NumericCharacteristics",
+          "number_of_rows": 300,
+          "count": 300,
+          "missing": 0,
+          "missing_percentage": 0.0,
+          "mean": 140.85,
+          "std": 29.52,
+          "min": 0.0,
+          "p25": 119.0,
+          "p50": 139.0,
+          "p75": 162.0,
+          "max": 199.0,
+          "unique": 91,
+          "unique_percentage": 30.33,
+          "infinite_count": 0,
+          "infinite_percentage": 0.0,
+          "most_common": 158.0,
+          "most_common_percentage": 4.0
+        },
+        "plot_data": {
+          "type": "evidently.metrics.data_integrity.column_summary_metric.DataQualityPlot",
+          "bins_for_hist": {
+            "type": "evidently.metric_results.Histogram",
+            "current": {
+              "type": "evidently.metric_results.HistogramData",
+              "x": [
+                0.0,
+                16.583333333333332,
+                33.166666666666664,
+                49.75,
+                66.33333333333333,
+                82.91666666666666,
+                99.5,
+                116.08333333333333,
+                132.66666666666666,
+                149.25,
+                165.83333333333331,
+                182.41666666666666
+              ],
+              "count": [
+                1,
+                0,
+                0,
+                0,
+                1,
+                10,
+                58,
+                54,
+                73,
+                36,
+                34,
+                33
+              ],
+              "name": null
+            },
+            "reference": {
+              "type": "evidently.metric_results.HistogramData",
+              "x": [
+                0.0,
+                16.583333333333332,
+                33.166666666666664,
+                49.75,
+                66.33333333333333,
+                82.91666666666666,
+                99.5,
+                116.08333333333333,
+                132.66666666666666,
+                149.25,
+                165.83333333333331,
+                182.41666666666666
+              ],
+              "count": [
+                5,
+                0,
+                1,
+                6,
+                42,
+                134,
+                177,
+                132,
+                82,
+                54,
+                40,
+                27
+              ],
+              "name": null
+            },
+            "current_log": {
+              "type": "evidently.metric_results.HistogramData",
+              "x": [
+                1.6434526764861874,
+                1.6938680918649196,
+                1.744283507243652,
+                1.7946989226223842,
+                1.8451143380011166,
+                1.8955297533798487,
+                1.945945168758581,
+                1.9963605841373133,
+                2.0467759995160453,
+                2.0971914148947777,
+                2.14760683027351,
+                2.1980222456522425,
+                2.2484376610309744
+              ],
+              "count": [
+                0,
+                0,
+                0,
+                0,
+                1,
+                2,
+                8,
+                40,
+                53,
+                52,
+                50,
+                45,
+                48
+              ],
+              "name": null
+            },
+            "reference_log": {
+              "type": "evidently.metric_results.HistogramData",
+              "x": [
+                1.6434526764861874,
+                1.6938680918649196,
+                1.744283507243652,
+                1.7946989226223842,
+                1.8451143380011166,
+                1.8955297533798487,
+                1.945945168758581,
+                1.9963605841373133,
+                2.0467759995160453,
+                2.0971914148947777,
+                2.14760683027351,
+                2.1980222456522425,
+                2.2484376610309744
+              ],
+              "count": [
+                1,
+                0,
+                5,
+                5,
+                21,
+                56,
+                95,
+                128,
+                131,
+                96,
+                67,
+                51,
+                39
+              ],
+              "name": null
+            }
+          },
+          "data_in_time": null,
+          "data_by_target": null,
+          "counts_of_values": {
+            "current": {
+              "x": {
+                "0": 158,
+                "1": 142,
+                "2": 179,
+                "3": 146,
+                "4": 134,
+                "5": 125,
+                "6": 109,
+                "7": 140,
+                "8": 112,
+                "9": 115
+              },
+              "count": {
+                "0": 12,
+                "1": 9,
+                "2": 9,
+                "3": 9,
+                "4": 8,
+                "5": 8,
+                "6": 8,
+                "7": 6,
+                "8": 6,
+                "9": 6
+              }
+            },
+            "reference": {
+              "x": {
+                "0": 99,
+                "1": 100,
+                "2": 106,
+                "3": 112,
+                "4": 108,
+                "5": 129,
+                "6": 105,
+                "7": 120,
+                "8": 117,
+                "9": 111
+              },
+              "count": {
+                "0": 17,
+                "1": 16,
+                "2": 15,
+                "3": 15,
+                "4": 14,
+                "5": 13,
+                "6": 12,
+                "7": 12,
+                "8": 12,
+                "9": 11
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "evidently.metrics.data_integrity.column_summary_metric.ColumnSummaryResult",
+        "column_name": "Outcome",
+        "column_type": "cat",
+        "reference_characteristics": {
+          "type": "evidently.metrics.data_integrity.column_summary_metric.CategoricalCharacteristics",
+          "number_of_rows": 700,
+          "count": 700,
+          "missing": 0,
+          "missing_percentage": 0.0,
+          "unique": 2,
+          "unique_percentage": 0.29,
+          "most_common": 0,
+          "most_common_percentage": 71.43,
+          "new_in_current_values_count": null,
+          "unused_in_current_values_count": null
+        },
+        "current_characteristics": {
+          "type": "evidently.metrics.data_integrity.column_summary_metric.CategoricalCharacteristics",
+          "number_of_rows": 300,
+          "count": 300,
+          "missing": 0,
+          "missing_percentage": 0.0,
+          "unique": 1,
+          "unique_percentage": 0.33,
+          "most_common": 1,
+          "most_common_percentage": 100.0,
+          "new_in_current_values_count": 0,
+          "unused_in_current_values_count": 1
+        },
+        "plot_data": {
+          "type": "evidently.metrics.data_integrity.column_summary_metric.DataQualityPlot",
+          "bins_for_hist": {
+            "type": "evidently.metric_results.Histogram",
+            "current": {
+              "type": "evidently.metric_results.HistogramData",
+              "x": [
+                "1"
+              ],
+              "count": [
+                300
+              ],
+              "name": null
+            },
+            "reference": {
+              "type": "evidently.metric_results.HistogramData",
+              "x": [
+                "0",
+                "1"
+              ],
+              "count": [
+                500,
+                200
+              ],
+              "name": null
+            },
+            "current_log": null,
+            "reference_log": null
+          },
+          "data_in_time": null,
+          "data_by_target": null,
+          "counts_of_values": {
+            "current": {
+              "x": {
+                "0": 1
+              },
+              "count": {
+                "0": 300
+              }
+            },
+            "reference": {
+              "x": {
+                "0": 0,
+                "1": 1
+              },
+              "count": {
+                "0": 500,
+                "1": 200
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "evidently.metrics.data_integrity.dataset_missing_values_metric.DatasetMissingValuesMetricResult",
+        "current": {
+          "type": "evidently.metrics.data_integrity.dataset_missing_values_metric.DatasetMissingValues",
+          "different_missing_values": {
+            "": 0,
+            "-Infinity": 0,
+            "Infinity": 0,
+            "null": 0
+          },
+          "number_of_different_missing_values": 0,
+          "different_missing_values_by_column": {
+            "Pregnancies": {
+              "": 0,
+              "-Infinity": 0,
+              "Infinity": 0,
+              "null": 0
+            },
+            "Glucose": {
+              "": 0,
+              "-Infinity": 0,
+              "Infinity": 0,
+              "null": 0
+            },
+            "BloodPressure": {
+              "": 0,
+              "-Infinity": 0,
+              "Infinity": 0,
+              "null": 0
+            },
+            "SkinThickness": {
+              "": 0,
+              "-Infinity": 0,
+              "Infinity": 0,
+              "null": 0
+            },
+            "Insulin": {
+              "": 0,
+              "-Infinity": 0,
+              "Infinity": 0,
+              "null": 0
+            },
+            "BMI": {
+              "": 0,
+              "-Infinity": 0,
+              "Infinity": 0,
+              "null": 0
+            },
+            "DiabetesPedigreeFunction": {
+              "": 0,
+              "-Infinity": 0,
+              "Infinity": 0,
+              "null": 0
+            },
+            "Age": {
+              "": 0,
+              "-Infinity": 0,
+              "Infinity": 0,
+              "null": 0
+            },
+            "Outcome": {
+              "": 0,
+              "-Infinity": 0,
+              "Infinity": 0,
+              "null": 0
+            },
+            "prediction": {
+              "": 0,
+              "-Infinity": 0,
+              "Infinity": 0,
+              "null": 0
+            }
+          },
+          "number_of_different_missing_values_by_column": {
+            "Pregnancies": 0,
+            "Glucose": 0,
+            "BloodPressure": 0,
+            "SkinThickness": 0,
+            "Insulin": 0,
+            "BMI": 0,
+            "DiabetesPedigreeFunction": 0,
+            "Age": 0,
+            "Outcome": 0,
+            "prediction": 0
+          },
+          "number_of_missing_values": 0,
+          "share_of_missing_values": 0.0,
+          "number_of_missing_values_by_column": {
+            "Pregnancies": 0,
+            "Glucose": 0,
+            "BloodPressure": 0,
+            "SkinThickness": 0,
+            "Insulin": 0,
+            "BMI": 0,
+            "DiabetesPedigreeFunction": 0,
+            "Age": 0,
+            "Outcome": 0,
+            "prediction": 0
+          },
+          "share_of_missing_values_by_column": {
+            "Pregnancies": 0.0,
+            "Glucose": 0.0,
+            "BloodPressure": 0.0,
+            "SkinThickness": 0.0,
+            "Insulin": 0.0,
+            "BMI": 0.0,
+            "DiabetesPedigreeFunction": 0.0,
+            "Age": 0.0,
+            "Outcome": 0.0,
+            "prediction": 0.0
+          },
+          "number_of_rows": 300,
+          "number_of_rows_with_missing_values": 0,
+          "share_of_rows_with_missing_values": 0.0,
+          "number_of_columns": 10,
+          "columns_with_missing_values": [],
+          "number_of_columns_with_missing_values": 0,
+          "share_of_columns_with_missing_values": 0.0
+        },
+        "reference": {
+          "type": "evidently.metrics.data_integrity.dataset_missing_values_metric.DatasetMissingValues",
+          "different_missing_values": {
+            "": 0,
+            "-Infinity": 0,
+            "Infinity": 0,
+            "null": 0
+          },
+          "number_of_different_missing_values": 0,
+          "different_missing_values_by_column": {
+            "Pregnancies": {
+              "": 0,
+              "-Infinity": 0,
+              "Infinity": 0,
+              "null": 0
+            },
+            "Glucose": {
+              "": 0,
+              "-Infinity": 0,
+              "Infinity": 0,
+              "null": 0
+            },
+            "BloodPressure": {
+              "": 0,
+              "-Infinity": 0,
+              "Infinity": 0,
+              "null": 0
+            },
+            "SkinThickness": {
+              "": 0,
+              "-Infinity": 0,
+              "Infinity": 0,
+              "null": 0
+            },
+            "Insulin": {
+              "": 0,
+              "-Infinity": 0,
+              "Infinity": 0,
+              "null": 0
+            },
+            "BMI": {
+              "": 0,
+              "-Infinity": 0,
+              "Infinity": 0,
+              "null": 0
+            },
+            "DiabetesPedigreeFunction": {
+              "": 0,
+              "-Infinity": 0,
+              "Infinity": 0,
+              "null": 0
+            },
+            "Age": {
+              "": 0,
+              "-Infinity": 0,
+              "Infinity": 0,
+              "null": 0
+            },
+            "Outcome": {
+              "": 0,
+              "-Infinity": 0,
+              "Infinity": 0,
+              "null": 0
+            },
+            "prediction": {
+              "": 0,
+              "-Infinity": 0,
+              "Infinity": 0,
+              "null": 0
+            }
+          },
+          "number_of_different_missing_values_by_column": {
+            "Pregnancies": 0,
+            "Glucose": 0,
+            "BloodPressure": 0,
+            "SkinThickness": 0,
+            "Insulin": 0,
+            "BMI": 0,
+            "DiabetesPedigreeFunction": 0,
+            "Age": 0,
+            "Outcome": 0,
+            "prediction": 0
+          },
+          "number_of_missing_values": 0,
+          "share_of_missing_values": 0.0,
+          "number_of_missing_values_by_column": {
+            "Pregnancies": 0,
+            "Glucose": 0,
+            "BloodPressure": 0,
+            "SkinThickness": 0,
+            "Insulin": 0,
+            "BMI": 0,
+            "DiabetesPedigreeFunction": 0,
+            "Age": 0,
+            "Outcome": 0,
+            "prediction": 0
+          },
+          "share_of_missing_values_by_column": {
+            "Pregnancies": 0.0,
+            "Glucose": 0.0,
+            "BloodPressure": 0.0,
+            "SkinThickness": 0.0,
+            "Insulin": 0.0,
+            "BMI": 0.0,
+            "DiabetesPedigreeFunction": 0.0,
+            "Age": 0.0,
+            "Outcome": 0.0,
+            "prediction": 0.0
+          },
+          "number_of_rows": 700,
+          "number_of_rows_with_missing_values": 0,
+          "share_of_rows_with_missing_values": 0.0,
+          "number_of_columns": 10,
+          "columns_with_missing_values": [],
+          "number_of_columns_with_missing_values": 0,
+          "share_of_columns_with_missing_values": 0.0
+        }
+      },
+      {
+        "type": "evidently.metrics.data_quality.dataset_correlations_metric.DatasetCorrelationsMetricResult",
+        "current": {
+          "type": "evidently.metrics.data_quality.dataset_correlations_metric.DatasetCorrelation",
+          "correlation": {
+            "pearson": {
+              "Age": {
+                "Age": 1.0,
+                "BMI": -0.13253131494144968,
+                "Pregnancies": 0.42053911142303046,
+                "DiabetesPedigreeFunction": -0.1824669271263897,
+                "SkinThickness": 0.011397400750913526,
+                "BloodPressure": 0.31681093167990804,
+                "Insulin": 0.024632574641519318,
+                "Glucose": 0.01935045543804866
+              },
+              "BMI": {
+                "Age": -0.13253131494144968,
+                "BMI": 1.0,
+                "Pregnancies": -0.05898643185380668,
+                "DiabetesPedigreeFunction": 0.10734999039246292,
+                "SkinThickness": 0.2619988498162522,
+                "BloodPressure": 0.13217619036177297,
+                "Insulin": 0.0663779524076309,
+                "Glucose": 0.08072861424801996
+              },
+              "Pregnancies": {
+                "Age": 0.42053911142303046,
+                "BMI": -0.05898643185380668,
+                "Pregnancies": 1.0,
+                "DiabetesPedigreeFunction": -0.10955820978675843,
+                "SkinThickness": 0.023255418512344663,
+                "BloodPressure": 0.16820181786132918,
+                "Insulin": 0.019568693707628742,
+                "Glucose": -0.11667198545825487
+              },
+              "DiabetesPedigreeFunction": {
+                "Age": -0.1824669271263897,
+                "BMI": 0.10734999039246292,
+                "Pregnancies": -0.10955820978675843,
+                "DiabetesPedigreeFunction": 1.0,
+                "SkinThickness": 0.23950570619000755,
+                "BloodPressure": 0.007648317978264042,
+                "Insulin": -0.015731519194183325,
+                "Glucose": 0.0699336504395491
+              },
+              "SkinThickness": {
+                "Age": 0.011397400750913526,
+                "BMI": 0.2619988498162522,
+                "Pregnancies": 0.023255418512344663,
+                "DiabetesPedigreeFunction": 0.23950570619000755,
+                "SkinThickness": 1.0,
+                "BloodPressure": 0.2280441848597381,
+                "Insulin": 0.46369804002764625,
+                "Glucose": 0.13189683453510706
+              },
+              "BloodPressure": {
+                "Age": 0.31681093167990804,
+                "BMI": 0.13217619036177297,
+                "Pregnancies": 0.16820181786132918,
+                "DiabetesPedigreeFunction": 0.007648317978264042,
+                "SkinThickness": 0.2280441848597381,
+                "BloodPressure": 1.0,
+                "Insulin": 0.15309149924453516,
+                "Glucose": 0.020634046858451056
+              },
+              "Insulin": {
+                "Age": 0.024632574641519318,
+                "BMI": 0.0663779524076309,
+                "Pregnancies": 0.019568693707628742,
+                "DiabetesPedigreeFunction": -0.015731519194183325,
+                "SkinThickness": 0.46369804002764625,
+                "BloodPressure": 0.15309149924453516,
+                "Insulin": 1.0,
+                "Glucose": 0.20685012646006556
+              },
+              "Glucose": {
+                "Age": 0.01935045543804866,
+                "BMI": 0.08072861424801996,
+                "Pregnancies": -0.11667198545825487,
+                "DiabetesPedigreeFunction": 0.0699336504395491,
+                "SkinThickness": 0.13189683453510706,
+                "BloodPressure": 0.020634046858451056,
+                "Insulin": 0.20685012646006556,
+                "Glucose": 1.0
+              }
+            },
+            "spearman": {
+              "Age": {
+                "Age": 1.0,
+                "BMI": -0.14755506115961753,
+                "Pregnancies": 0.5003182812888539,
+                "DiabetesPedigreeFunction": -0.1920477802698827,
+                "SkinThickness": -0.02722859738126925,
+                "BloodPressure": 0.36869319642906934,
+                "Insulin": -0.00971022023046284,
+                "Glucose": 0.01453025415486732
+              },
+              "BMI": {
+                "Age": -0.14755506115961753,
+                "BMI": 1.0,
+                "Pregnancies": -0.12174796649538223,
+                "DiabetesPedigreeFunction": 0.1297955532372274,
+                "SkinThickness": 0.326410508081148,
+                "BloodPressure": 0.19371256411345442,
+                "Insulin": 0.055831565529412146,
+                "Glucose": 0.1229144393946282
+              },
+              "Pregnancies": {
+                "Age": 0.5003182812888539,
+                "BMI": -0.12174796649538223,
+                "Pregnancies": 1.0,
+                "DiabetesPedigreeFunction": -0.12378833773681669,
+                "SkinThickness": 0.025492698474914026,
+                "BloodPressure": 0.15310523450597782,
+                "Insulin": -0.002897377862389882,
+                "Glucose": -0.12085322391490892
+              },
+              "DiabetesPedigreeFunction": {
+                "Age": -0.1920477802698827,
+                "BMI": 0.1297955532372274,
+                "Pregnancies": -0.12378833773681669,
+                "DiabetesPedigreeFunction": 1.0,
+                "SkinThickness": 0.25215121161704696,
+                "BloodPressure": -0.018481276927459055,
+                "Insulin": 0.08575180678961551,
+                "Glucose": 0.020586463811863378
+              },
+              "SkinThickness": {
+                "Age": -0.02722859738126925,
+                "BMI": 0.326410508081148,
+                "Pregnancies": 0.025492698474914026,
+                "DiabetesPedigreeFunction": 0.25215121161704696,
+                "SkinThickness": 1.0,
+                "BloodPressure": 0.10992315841626724,
+                "Insulin": 0.578004739059085,
+                "Glucose": 0.10768025198440577
+              },
+              "BloodPressure": {
+                "Age": 0.36869319642906934,
+                "BMI": 0.19371256411345442,
+                "Pregnancies": 0.15310523450597782,
+                "DiabetesPedigreeFunction": -0.018481276927459055,
+                "SkinThickness": 0.10992315841626724,
+                "BloodPressure": 1.0,
+                "Insulin": 0.07495126108048063,
+                "Glucose": 0.06917067413876737
+              },
+              "Insulin": {
+                "Age": -0.00971022023046284,
+                "BMI": 0.055831565529412146,
+                "Pregnancies": -0.002897377862389882,
+                "DiabetesPedigreeFunction": 0.08575180678961551,
+                "SkinThickness": 0.578004739059085,
+                "BloodPressure": 0.07495126108048063,
+                "Insulin": 1.0,
+                "Glucose": 0.19207579132669494
+              },
+              "Glucose": {
+                "Age": 0.01453025415486732,
+                "BMI": 0.1229144393946282,
+                "Pregnancies": -0.12085322391490892,
+                "DiabetesPedigreeFunction": 0.020586463811863378,
+                "SkinThickness": 0.10768025198440577,
+                "BloodPressure": 0.06917067413876737,
+                "Insulin": 0.19207579132669494,
+                "Glucose": 1.0
+              }
+            },
+            "kendall": {
+              "Age": {
+                "Age": 1.0,
+                "BMI": -0.10181822577943936,
+                "Pregnancies": 0.3602223967444551,
+                "DiabetesPedigreeFunction": -0.13372710996053733,
+                "SkinThickness": -0.017417387639411454,
+                "BloodPressure": 0.2560440707783452,
+                "Insulin": -0.006959289781048454,
+                "Glucose": 0.014403820085915113
+              },
+              "BMI": {
+                "Age": -0.10181822577943936,
+                "BMI": 1.0,
+                "Pregnancies": -0.09215273947727814,
+                "DiabetesPedigreeFunction": 0.08812255525584888,
+                "SkinThickness": 0.24506172165879983,
+                "BloodPressure": 0.13424696697749544,
+                "Insulin": 0.04105794944699907,
+                "Glucose": 0.08586486056336738
+              },
+              "Pregnancies": {
+                "Age": 0.3602223967444551,
+                "BMI": -0.09215273947727814,
+                "Pregnancies": 1.0,
+                "DiabetesPedigreeFunction": -0.0915646758176541,
+                "SkinThickness": 0.023140322170623298,
+                "BloodPressure": 0.1124623047317015,
+                "Insulin": -0.0018319815459885871,
+                "Glucose": -0.08380584870411412
+              },
+              "DiabetesPedigreeFunction": {
+                "Age": -0.13372710996053733,
+                "BMI": 0.08812255525584888,
+                "Pregnancies": -0.0915646758176541,
+                "DiabetesPedigreeFunction": 1.0,
+                "SkinThickness": 0.17929214588284365,
+                "BloodPressure": -0.014289136201340334,
+                "Insulin": 0.06522082120692793,
+                "Glucose": 0.0157065081862941
+              },
+              "SkinThickness": {
+                "Age": -0.017417387639411454,
+                "BMI": 0.24506172165879983,
+                "Pregnancies": 0.023140322170623298,
+                "DiabetesPedigreeFunction": 0.17929214588284365,
+                "SkinThickness": 1.0,
+                "BloodPressure": 0.0795799020163618,
+                "Insulin": 0.45626444754432066,
+                "Glucose": 0.07659916132547061
+              },
+              "BloodPressure": {
+                "Age": 0.2560440707783452,
+                "BMI": 0.13424696697749544,
+                "Pregnancies": 0.1124623047317015,
+                "DiabetesPedigreeFunction": -0.014289136201340334,
+                "SkinThickness": 0.0795799020163618,
+                "BloodPressure": 1.0,
+                "Insulin": 0.056355511276765954,
+                "Glucose": 0.04367588418598967
+              },
+              "Insulin": {
+                "Age": -0.006959289781048454,
+                "BMI": 0.04105794944699907,
+                "Pregnancies": -0.0018319815459885871,
+                "DiabetesPedigreeFunction": 0.06522082120692793,
+                "SkinThickness": 0.45626444754432066,
+                "BloodPressure": 0.056355511276765954,
+                "Insulin": 1.0,
+                "Glucose": 0.14114825259875158
+              },
+              "Glucose": {
+                "Age": 0.014403820085915113,
+                "BMI": 0.08586486056336738,
+                "Pregnancies": -0.08380584870411412,
+                "DiabetesPedigreeFunction": 0.0157065081862941,
+                "SkinThickness": 0.07659916132547061,
+                "BloodPressure": 0.04367588418598967,
+                "Insulin": 0.14114825259875158,
+                "Glucose": 1.0
+              }
+            },
+            "cramer_v": {}
+          },
+          "stats": {
+            "pearson": {
+              "type": "evidently.metrics.data_quality.dataset_correlations_metric.CorrelationStats",
+              "target_prediction_correlation": null,
+              "abs_max_target_features_correlation": null,
+              "abs_max_prediction_features_correlation": null,
+              "abs_max_correlation": 0.46369804002764625,
+              "abs_max_features_correlation": 0.46369804002764625
+            },
+            "spearman": {
+              "type": "evidently.metrics.data_quality.dataset_correlations_metric.CorrelationStats",
+              "target_prediction_correlation": null,
+              "abs_max_target_features_correlation": null,
+              "abs_max_prediction_features_correlation": null,
+              "abs_max_correlation": 0.578004739059085,
+              "abs_max_features_correlation": 0.578004739059085
+            },
+            "kendall": {
+              "type": "evidently.metrics.data_quality.dataset_correlations_metric.CorrelationStats",
+              "target_prediction_correlation": null,
+              "abs_max_target_features_correlation": null,
+              "abs_max_prediction_features_correlation": null,
+              "abs_max_correlation": 0.45626444754432066,
+              "abs_max_features_correlation": 0.45626444754432066
+            },
+            "cramer_v": {
+              "type": "evidently.metrics.data_quality.dataset_correlations_metric.CorrelationStats",
+              "target_prediction_correlation": null,
+              "abs_max_target_features_correlation": null,
+              "abs_max_prediction_features_correlation": null,
+              "abs_max_correlation": null,
+              "abs_max_features_correlation": null
+            }
+          },
+          "correlations_calculate": {
+            "pearson": {
+              "Age": {
+                "Age": 1.0,
+                "BMI": -0.13253131494144968,
+                "Pregnancies": 0.42053911142303046,
+                "DiabetesPedigreeFunction": -0.1824669271263897,
+                "SkinThickness": 0.011397400750913526,
+                "BloodPressure": 0.31681093167990804,
+                "Insulin": 0.024632574641519318,
+                "Glucose": 0.01935045543804866
+              },
+              "BMI": {
+                "Age": -0.13253131494144968,
+                "BMI": 1.0,
+                "Pregnancies": -0.05898643185380668,
+                "DiabetesPedigreeFunction": 0.10734999039246292,
+                "SkinThickness": 0.2619988498162522,
+                "BloodPressure": 0.13217619036177297,
+                "Insulin": 0.0663779524076309,
+                "Glucose": 0.08072861424801996
+              },
+              "Pregnancies": {
+                "Age": 0.42053911142303046,
+                "BMI": -0.05898643185380668,
+                "Pregnancies": 1.0,
+                "DiabetesPedigreeFunction": -0.10955820978675843,
+                "SkinThickness": 0.023255418512344663,
+                "BloodPressure": 0.16820181786132918,
+                "Insulin": 0.019568693707628742,
+                "Glucose": -0.11667198545825487
+              },
+              "DiabetesPedigreeFunction": {
+                "Age": -0.1824669271263897,
+                "BMI": 0.10734999039246292,
+                "Pregnancies": -0.10955820978675843,
+                "DiabetesPedigreeFunction": 1.0,
+                "SkinThickness": 0.23950570619000755,
+                "BloodPressure": 0.007648317978264042,
+                "Insulin": -0.015731519194183325,
+                "Glucose": 0.0699336504395491
+              },
+              "SkinThickness": {
+                "Age": 0.011397400750913526,
+                "BMI": 0.2619988498162522,
+                "Pregnancies": 0.023255418512344663,
+                "DiabetesPedigreeFunction": 0.23950570619000755,
+                "SkinThickness": 1.0,
+                "BloodPressure": 0.2280441848597381,
+                "Insulin": 0.46369804002764625,
+                "Glucose": 0.13189683453510706
+              },
+              "BloodPressure": {
+                "Age": 0.31681093167990804,
+                "BMI": 0.13217619036177297,
+                "Pregnancies": 0.16820181786132918,
+                "DiabetesPedigreeFunction": 0.007648317978264042,
+                "SkinThickness": 0.2280441848597381,
+                "BloodPressure": 1.0,
+                "Insulin": 0.15309149924453516,
+                "Glucose": 0.020634046858451056
+              },
+              "Insulin": {
+                "Age": 0.024632574641519318,
+                "BMI": 0.0663779524076309,
+                "Pregnancies": 0.019568693707628742,
+                "DiabetesPedigreeFunction": -0.015731519194183325,
+                "SkinThickness": 0.46369804002764625,
+                "BloodPressure": 0.15309149924453516,
+                "Insulin": 1.0,
+                "Glucose": 0.20685012646006556
+              },
+              "Glucose": {
+                "Age": 0.01935045543804866,
+                "BMI": 0.08072861424801996,
+                "Pregnancies": -0.11667198545825487,
+                "DiabetesPedigreeFunction": 0.0699336504395491,
+                "SkinThickness": 0.13189683453510706,
+                "BloodPressure": 0.020634046858451056,
+                "Insulin": 0.20685012646006556,
+                "Glucose": 1.0
+              }
+            },
+            "spearman": {
+              "Age": {
+                "Age": 1.0,
+                "BMI": -0.14755506115961753,
+                "Pregnancies": 0.5003182812888539,
+                "DiabetesPedigreeFunction": -0.1920477802698827,
+                "SkinThickness": -0.02722859738126925,
+                "BloodPressure": 0.36869319642906934,
+                "Insulin": -0.00971022023046284,
+                "Glucose": 0.01453025415486732
+              },
+              "BMI": {
+                "Age": -0.14755506115961753,
+                "BMI": 1.0,
+                "Pregnancies": -0.12174796649538223,
+                "DiabetesPedigreeFunction": 0.1297955532372274,
+                "SkinThickness": 0.326410508081148,
+                "BloodPressure": 0.19371256411345442,
+                "Insulin": 0.055831565529412146,
+                "Glucose": 0.1229144393946282
+              },
+              "Pregnancies": {
+                "Age": 0.5003182812888539,
+                "BMI": -0.12174796649538223,
+                "Pregnancies": 1.0,
+                "DiabetesPedigreeFunction": -0.12378833773681669,
+                "SkinThickness": 0.025492698474914026,
+                "BloodPressure": 0.15310523450597782,
+                "Insulin": -0.002897377862389882,
+                "Glucose": -0.12085322391490892
+              },
+              "DiabetesPedigreeFunction": {
+                "Age": -0.1920477802698827,
+                "BMI": 0.1297955532372274,
+                "Pregnancies": -0.12378833773681669,
+                "DiabetesPedigreeFunction": 1.0,
+                "SkinThickness": 0.25215121161704696,
+                "BloodPressure": -0.018481276927459055,
+                "Insulin": 0.08575180678961551,
+                "Glucose": 0.020586463811863378
+              },
+              "SkinThickness": {
+                "Age": -0.02722859738126925,
+                "BMI": 0.326410508081148,
+                "Pregnancies": 0.025492698474914026,
+                "DiabetesPedigreeFunction": 0.25215121161704696,
+                "SkinThickness": 1.0,
+                "BloodPressure": 0.10992315841626724,
+                "Insulin": 0.578004739059085,
+                "Glucose": 0.10768025198440577
+              },
+              "BloodPressure": {
+                "Age": 0.36869319642906934,
+                "BMI": 0.19371256411345442,
+                "Pregnancies": 0.15310523450597782,
+                "DiabetesPedigreeFunction": -0.018481276927459055,
+                "SkinThickness": 0.10992315841626724,
+                "BloodPressure": 1.0,
+                "Insulin": 0.07495126108048063,
+                "Glucose": 0.06917067413876737
+              },
+              "Insulin": {
+                "Age": -0.00971022023046284,
+                "BMI": 0.055831565529412146,
+                "Pregnancies": -0.002897377862389882,
+                "DiabetesPedigreeFunction": 0.08575180678961551,
+                "SkinThickness": 0.578004739059085,
+                "BloodPressure": 0.07495126108048063,
+                "Insulin": 1.0,
+                "Glucose": 0.19207579132669494
+              },
+              "Glucose": {
+                "Age": 0.01453025415486732,
+                "BMI": 0.1229144393946282,
+                "Pregnancies": -0.12085322391490892,
+                "DiabetesPedigreeFunction": 0.020586463811863378,
+                "SkinThickness": 0.10768025198440577,
+                "BloodPressure": 0.06917067413876737,
+                "Insulin": 0.19207579132669494,
+                "Glucose": 1.0
+              }
+            },
+            "kendall": {
+              "Age": {
+                "Age": 1.0,
+                "BMI": -0.10181822577943936,
+                "Pregnancies": 0.3602223967444551,
+                "DiabetesPedigreeFunction": -0.13372710996053733,
+                "SkinThickness": -0.017417387639411454,
+                "BloodPressure": 0.2560440707783452,
+                "Insulin": -0.006959289781048454,
+                "Glucose": 0.014403820085915113
+              },
+              "BMI": {
+                "Age": -0.10181822577943936,
+                "BMI": 1.0,
+                "Pregnancies": -0.09215273947727814,
+                "DiabetesPedigreeFunction": 0.08812255525584888,
+                "SkinThickness": 0.24506172165879983,
+                "BloodPressure": 0.13424696697749544,
+                "Insulin": 0.04105794944699907,
+                "Glucose": 0.08586486056336738
+              },
+              "Pregnancies": {
+                "Age": 0.3602223967444551,
+                "BMI": -0.09215273947727814,
+                "Pregnancies": 1.0,
+                "DiabetesPedigreeFunction": -0.0915646758176541,
+                "SkinThickness": 0.023140322170623298,
+                "BloodPressure": 0.1124623047317015,
+                "Insulin": -0.0018319815459885871,
+                "Glucose": -0.08380584870411412
+              },
+              "DiabetesPedigreeFunction": {
+                "Age": -0.13372710996053733,
+                "BMI": 0.08812255525584888,
+                "Pregnancies": -0.0915646758176541,
+                "DiabetesPedigreeFunction": 1.0,
+                "SkinThickness": 0.17929214588284365,
+                "BloodPressure": -0.014289136201340334,
+                "Insulin": 0.06522082120692793,
+                "Glucose": 0.0157065081862941
+              },
+              "SkinThickness": {
+                "Age": -0.017417387639411454,
+                "BMI": 0.24506172165879983,
+                "Pregnancies": 0.023140322170623298,
+                "DiabetesPedigreeFunction": 0.17929214588284365,
+                "SkinThickness": 1.0,
+                "BloodPressure": 0.0795799020163618,
+                "Insulin": 0.45626444754432066,
+                "Glucose": 0.07659916132547061
+              },
+              "BloodPressure": {
+                "Age": 0.2560440707783452,
+                "BMI": 0.13424696697749544,
+                "Pregnancies": 0.1124623047317015,
+                "DiabetesPedigreeFunction": -0.014289136201340334,
+                "SkinThickness": 0.0795799020163618,
+                "BloodPressure": 1.0,
+                "Insulin": 0.056355511276765954,
+                "Glucose": 0.04367588418598967
+              },
+              "Insulin": {
+                "Age": -0.006959289781048454,
+                "BMI": 0.04105794944699907,
+                "Pregnancies": -0.0018319815459885871,
+                "DiabetesPedigreeFunction": 0.06522082120692793,
+                "SkinThickness": 0.45626444754432066,
+                "BloodPressure": 0.056355511276765954,
+                "Insulin": 1.0,
+                "Glucose": 0.14114825259875158
+              },
+              "Glucose": {
+                "Age": 0.014403820085915113,
+                "BMI": 0.08586486056336738,
+                "Pregnancies": -0.08380584870411412,
+                "DiabetesPedigreeFunction": 0.0157065081862941,
+                "SkinThickness": 0.07659916132547061,
+                "BloodPressure": 0.04367588418598967,
+                "Insulin": 0.14114825259875158,
+                "Glucose": 1.0
+              }
+            },
+            "cramer_v": {}
+          }
+        },
+        "reference": {
+          "type": "evidently.metrics.data_quality.dataset_correlations_metric.DatasetCorrelation",
+          "correlation": {
+            "pearson": {
+              "Age": {
+                "Age": 1.0,
+                "BMI": 0.05926052552802926,
+                "Pregnancies": 0.5668244879492236,
+                "DiabetesPedigreeFunction": 0.06624380188585838,
+                "SkinThickness": -0.11118283402703218,
+                "BloodPressure": 0.2073823169904645,
+                "Insulin": -0.06934644154462906,
+                "Glucose": 0.24410854707171498
+              },
+              "BMI": {
+                "Age": 0.05926052552802926,
+                "BMI": 1.0,
+                "Pregnancies": 0.04591455144617183,
+                "DiabetesPedigreeFunction": 0.11135969215077286,
+                "SkinThickness": 0.4022479227878295,
+                "BloodPressure": 0.32047195013849517,
+                "Insulin": 0.20581678827778127,
+                "Glucose": 0.2332030901611465
+              },
+              "Pregnancies": {
+                "Age": 0.5668244879492236,
+                "BMI": 0.04591455144617183,
+                "Pregnancies": 1.0,
+                "DiabetesPedigreeFunction": -0.012631467892605597,
+                "SkinThickness": -0.1051390595766269,
+                "BloodPressure": 0.09263935793775949,
+                "Insulin": -0.11842033733178828,
+                "Glucose": 0.10100781558767122
+              },
+              "DiabetesPedigreeFunction": {
+                "Age": 0.06624380188585838,
+                "BMI": 0.11135969215077286,
+                "Pregnancies": -0.012631467892605597,
+                "DiabetesPedigreeFunction": 1.0,
+                "SkinThickness": 0.13202916671749113,
+                "BloodPressure": 0.05081884335096348,
+                "Insulin": 0.1988157732786822,
+                "Glucose": 0.11525725808706062
+              },
+              "SkinThickness": {
+                "Age": -0.11118283402703218,
+                "BMI": 0.4022479227878295,
+                "Pregnancies": -0.1051390595766269,
+                "DiabetesPedigreeFunction": 0.13202916671749113,
+                "SkinThickness": 1.0,
+                "BloodPressure": 0.20185308959574044,
+                "Insulin": 0.4040260310520036,
+                "Glucose": 0.06105485093106217
+              },
+              "BloodPressure": {
+                "Age": 0.2073823169904645,
+                "BMI": 0.32047195013849517,
+                "Pregnancies": 0.09263935793775949,
+                "DiabetesPedigreeFunction": 0.05081884335096348,
+                "SkinThickness": 0.20185308959574044,
+                "BloodPressure": 1.0,
+                "Insulin": 0.0919821696622597,
+                "Glucose": 0.19429540086112826
+              },
+              "Insulin": {
+                "Age": -0.06934644154462906,
+                "BMI": 0.20581678827778127,
+                "Pregnancies": -0.11842033733178828,
+                "DiabetesPedigreeFunction": 0.1988157732786822,
+                "SkinThickness": 0.4040260310520036,
+                "BloodPressure": 0.0919821696622597,
+                "Insulin": 1.0,
+                "Glucose": 0.30774547210770736
+              },
+              "Glucose": {
+                "Age": 0.24410854707171498,
+                "BMI": 0.2332030901611465,
+                "Pregnancies": 0.10100781558767122,
+                "DiabetesPedigreeFunction": 0.11525725808706062,
+                "SkinThickness": 0.06105485093106217,
+                "BloodPressure": 0.19429540086112826,
+                "Insulin": 0.30774547210770736,
+                "Glucose": 1.0
+              }
+            },
+            "spearman": {
+              "Age": {
+                "Age": 1.0,
+                "BMI": 0.151451055635181,
+                "Pregnancies": 0.6288576209201998,
+                "DiabetesPedigreeFunction": 0.06694493040160343,
+                "SkinThickness": -0.06718588598838313,
+                "BloodPressure": 0.3367115336381122,
+                "Insulin": -0.13483386656689578,
+                "Glucose": 0.271213352648328
+              },
+              "BMI": {
+                "Age": 0.151451055635181,
+                "BMI": 1.0,
+                "Pregnancies": 0.015328590626436368,
+                "DiabetesPedigreeFunction": 0.13077286713800365,
+                "SkinThickness": 0.46196573308368294,
+                "BloodPressure": 0.31378326574966603,
+                "Insulin": 0.17484780517151707,
+                "Glucose": 0.24073191158970578
+              },
+              "Pregnancies": {
+                "Age": 0.6288576209201998,
+                "BMI": 0.015328590626436368,
+                "Pregnancies": 1.0,
+                "DiabetesPedigreeFunction": -0.03552135729648818,
+                "SkinThickness": -0.0994359270316172,
+                "BloodPressure": 0.148763810764012,
+                "Insulin": -0.15502653651084874,
+                "Glucose": 0.10889359758278122
+              },
+              "DiabetesPedigreeFunction": {
+                "Age": 0.06694493040160343,
+                "BMI": 0.13077286713800365,
+                "Pregnancies": -0.03552135729648818,
+                "DiabetesPedigreeFunction": 1.0,
+                "SkinThickness": 0.13997521083970868,
+                "BloodPressure": 0.04098949232190969,
+                "Insulin": 0.19392180955271343,
+                "Glucose": 0.07239816440591108
+              },
+              "SkinThickness": {
+                "Age": -0.06718588598838313,
+                "BMI": 0.46196573308368294,
+                "Pregnancies": -0.0994359270316172,
+                "DiabetesPedigreeFunction": 0.13997521083970868,
+                "SkinThickness": 1.0,
+                "BloodPressure": 0.1402179711167976,
+                "Insulin": 0.4853290333522475,
+                "Glucose": 0.06400465153596725
+              },
+              "BloodPressure": {
+                "Age": 0.3367115336381122,
+                "BMI": 0.31378326574966603,
+                "Pregnancies": 0.148763810764012,
+                "DiabetesPedigreeFunction": 0.04098949232190969,
+                "SkinThickness": 0.1402179711167976,
+                "BloodPressure": 1.0,
+                "Insulin": -0.011775995323829298,
+                "Glucose": 0.2735143701180629
+              },
+              "Insulin": {
+                "Age": -0.13483386656689578,
+                "BMI": 0.17484780517151707,
+                "Pregnancies": -0.15502653651084874,
+                "DiabetesPedigreeFunction": 0.19392180955271343,
+                "SkinThickness": 0.4853290333522475,
+                "BloodPressure": -0.011775995323829298,
+                "Insulin": 1.0,
+                "Glucose": 0.19933311385093644
+              },
+              "Glucose": {
+                "Age": 0.271213352648328,
+                "BMI": 0.24073191158970578,
+                "Pregnancies": 0.10889359758278122,
+                "DiabetesPedigreeFunction": 0.07239816440591108,
+                "SkinThickness": 0.06400465153596725,
+                "BloodPressure": 0.2735143701180629,
+                "Insulin": 0.19933311385093644,
+                "Glucose": 1.0
+              }
+            },
+            "kendall": {
+              "Age": {
+                "Age": 1.0,
+                "BMI": 0.10459007537214966,
+                "Pregnancies": 0.4787190603819953,
+                "DiabetesPedigreeFunction": 0.04429322614451207,
+                "SkinThickness": -0.0461948010829813,
+                "BloodPressure": 0.23853773031815248,
+                "Insulin": -0.09668469517040497,
+                "Glucose": 0.18731022299336356
+              },
+              "BMI": {
+                "Age": 0.10459007537214966,
+                "BMI": 1.0,
+                "Pregnancies": 0.015353515040266807,
+                "DiabetesPedigreeFunction": 0.08715765416772973,
+                "SkinThickness": 0.3442288839902672,
+                "BloodPressure": 0.2209430480640171,
+                "Insulin": 0.12925749263505829,
+                "Glucose": 0.16359293420479717
+              },
+              "Pregnancies": {
+                "Age": 0.4787190603819953,
+                "BMI": 0.015353515040266807,
+                "Pregnancies": 1.0,
+                "DiabetesPedigreeFunction": -0.023953771194285666,
+                "SkinThickness": -0.07466032462402554,
+                "BloodPressure": 0.1122040423621687,
+                "Insulin": -0.11831473409396222,
+                "Glucose": 0.07677979342721153
+              },
+              "DiabetesPedigreeFunction": {
+                "Age": 0.04429322614451207,
+                "BMI": 0.08715765416772973,
+                "Pregnancies": -0.023953771194285666,
+                "DiabetesPedigreeFunction": 1.0,
+                "SkinThickness": 0.09840882050025578,
+                "BloodPressure": 0.027221134460053104,
+                "Insulin": 0.1429391625678484,
+                "Glucose": 0.04941717187583505
+              },
+              "SkinThickness": {
+                "Age": -0.0461948010829813,
+                "BMI": 0.3442288839902672,
+                "Pregnancies": -0.07466032462402554,
+                "DiabetesPedigreeFunction": 0.09840882050025578,
+                "SkinThickness": 1.0,
+                "BloodPressure": 0.10525953297835865,
+                "Insulin": 0.3781425081883395,
+                "Glucose": 0.04216361298141851
+              },
+              "BloodPressure": {
+                "Age": 0.23853773031815248,
+                "BMI": 0.2209430480640171,
+                "Pregnancies": 0.1122040423621687,
+                "DiabetesPedigreeFunction": 0.027221134460053104,
+                "SkinThickness": 0.10525953297835865,
+                "BloodPressure": 1.0,
+                "Insulin": -0.0070937822347882495,
+                "Glucose": 0.18635147846180286
+              },
+              "Insulin": {
+                "Age": -0.09668469517040497,
+                "BMI": 0.12925749263505829,
+                "Pregnancies": -0.11831473409396222,
+                "DiabetesPedigreeFunction": 0.1429391625678484,
+                "SkinThickness": 0.3781425081883395,
+                "BloodPressure": -0.0070937822347882495,
+                "Insulin": 1.0,
+                "Glucose": 0.15193837286947023
+              },
+              "Glucose": {
+                "Age": 0.18731022299336356,
+                "BMI": 0.16359293420479717,
+                "Pregnancies": 0.07677979342721153,
+                "DiabetesPedigreeFunction": 0.04941717187583505,
+                "SkinThickness": 0.04216361298141851,
+                "BloodPressure": 0.18635147846180286,
+                "Insulin": 0.15193837286947023,
+                "Glucose": 1.0
+              }
+            },
+            "cramer_v": {
+              "prediction": {
+                "prediction": 1.0,
+                "Outcome": 1.0
+              },
+              "Outcome": {
+                "prediction": 1.0,
+                "Outcome": 1.0
+              }
+            }
+          },
+          "stats": {
+            "pearson": {
+              "type": "evidently.metrics.data_quality.dataset_correlations_metric.CorrelationStats",
+              "target_prediction_correlation": null,
+              "abs_max_target_features_correlation": null,
+              "abs_max_prediction_features_correlation": null,
+              "abs_max_correlation": 0.5668244879492236,
+              "abs_max_features_correlation": 0.5668244879492236
+            },
+            "spearman": {
+              "type": "evidently.metrics.data_quality.dataset_correlations_metric.CorrelationStats",
+              "target_prediction_correlation": null,
+              "abs_max_target_features_correlation": null,
+              "abs_max_prediction_features_correlation": null,
+              "abs_max_correlation": 0.6288576209201998,
+              "abs_max_features_correlation": 0.6288576209201998
+            },
+            "kendall": {
+              "type": "evidently.metrics.data_quality.dataset_correlations_metric.CorrelationStats",
+              "target_prediction_correlation": null,
+              "abs_max_target_features_correlation": null,
+              "abs_max_prediction_features_correlation": null,
+              "abs_max_correlation": 0.4787190603819953,
+              "abs_max_features_correlation": 0.4787190603819953
+            },
+            "cramer_v": {
+              "type": "evidently.metrics.data_quality.dataset_correlations_metric.CorrelationStats",
+              "target_prediction_correlation": null,
+              "abs_max_target_features_correlation": null,
+              "abs_max_prediction_features_correlation": 1.0,
+              "abs_max_correlation": 1.0,
+              "abs_max_features_correlation": 0.0
+            }
+          },
+          "correlations_calculate": {
+            "pearson": {
+              "Age": {
+                "Age": 1.0,
+                "BMI": 0.05926052552802926,
+                "Pregnancies": 0.5668244879492236,
+                "DiabetesPedigreeFunction": 0.06624380188585838,
+                "SkinThickness": -0.11118283402703218,
+                "BloodPressure": 0.2073823169904645,
+                "Insulin": -0.06934644154462906,
+                "Glucose": 0.24410854707171498
+              },
+              "BMI": {
+                "Age": 0.05926052552802926,
+                "BMI": 1.0,
+                "Pregnancies": 0.04591455144617183,
+                "DiabetesPedigreeFunction": 0.11135969215077286,
+                "SkinThickness": 0.4022479227878295,
+                "BloodPressure": 0.32047195013849517,
+                "Insulin": 0.20581678827778127,
+                "Glucose": 0.2332030901611465
+              },
+              "Pregnancies": {
+                "Age": 0.5668244879492236,
+                "BMI": 0.04591455144617183,
+                "Pregnancies": 1.0,
+                "DiabetesPedigreeFunction": -0.012631467892605597,
+                "SkinThickness": -0.1051390595766269,
+                "BloodPressure": 0.09263935793775949,
+                "Insulin": -0.11842033733178828,
+                "Glucose": 0.10100781558767122
+              },
+              "DiabetesPedigreeFunction": {
+                "Age": 0.06624380188585838,
+                "BMI": 0.11135969215077286,
+                "Pregnancies": -0.012631467892605597,
+                "DiabetesPedigreeFunction": 1.0,
+                "SkinThickness": 0.13202916671749113,
+                "BloodPressure": 0.05081884335096348,
+                "Insulin": 0.1988157732786822,
+                "Glucose": 0.11525725808706062
+              },
+              "SkinThickness": {
+                "Age": -0.11118283402703218,
+                "BMI": 0.4022479227878295,
+                "Pregnancies": -0.1051390595766269,
+                "DiabetesPedigreeFunction": 0.13202916671749113,
+                "SkinThickness": 1.0,
+                "BloodPressure": 0.20185308959574044,
+                "Insulin": 0.4040260310520036,
+                "Glucose": 0.06105485093106217
+              },
+              "BloodPressure": {
+                "Age": 0.2073823169904645,
+                "BMI": 0.32047195013849517,
+                "Pregnancies": 0.09263935793775949,
+                "DiabetesPedigreeFunction": 0.05081884335096348,
+                "SkinThickness": 0.20185308959574044,
+                "BloodPressure": 1.0,
+                "Insulin": 0.0919821696622597,
+                "Glucose": 0.19429540086112826
+              },
+              "Insulin": {
+                "Age": -0.06934644154462906,
+                "BMI": 0.20581678827778127,
+                "Pregnancies": -0.11842033733178828,
+                "DiabetesPedigreeFunction": 0.1988157732786822,
+                "SkinThickness": 0.4040260310520036,
+                "BloodPressure": 0.0919821696622597,
+                "Insulin": 1.0,
+                "Glucose": 0.30774547210770736
+              },
+              "Glucose": {
+                "Age": 0.24410854707171498,
+                "BMI": 0.2332030901611465,
+                "Pregnancies": 0.10100781558767122,
+                "DiabetesPedigreeFunction": 0.11525725808706062,
+                "SkinThickness": 0.06105485093106217,
+                "BloodPressure": 0.19429540086112826,
+                "Insulin": 0.30774547210770736,
+                "Glucose": 1.0
+              }
+            },
+            "spearman": {
+              "Age": {
+                "Age": 1.0,
+                "BMI": 0.151451055635181,
+                "Pregnancies": 0.6288576209201998,
+                "DiabetesPedigreeFunction": 0.06694493040160343,
+                "SkinThickness": -0.06718588598838313,
+                "BloodPressure": 0.3367115336381122,
+                "Insulin": -0.13483386656689578,
+                "Glucose": 0.271213352648328
+              },
+              "BMI": {
+                "Age": 0.151451055635181,
+                "BMI": 1.0,
+                "Pregnancies": 0.015328590626436368,
+                "DiabetesPedigreeFunction": 0.13077286713800365,
+                "SkinThickness": 0.46196573308368294,
+                "BloodPressure": 0.31378326574966603,
+                "Insulin": 0.17484780517151707,
+                "Glucose": 0.24073191158970578
+              },
+              "Pregnancies": {
+                "Age": 0.6288576209201998,
+                "BMI": 0.015328590626436368,
+                "Pregnancies": 1.0,
+                "DiabetesPedigreeFunction": -0.03552135729648818,
+                "SkinThickness": -0.0994359270316172,
+                "BloodPressure": 0.148763810764012,
+                "Insulin": -0.15502653651084874,
+                "Glucose": 0.10889359758278122
+              },
+              "DiabetesPedigreeFunction": {
+                "Age": 0.06694493040160343,
+                "BMI": 0.13077286713800365,
+                "Pregnancies": -0.03552135729648818,
+                "DiabetesPedigreeFunction": 1.0,
+                "SkinThickness": 0.13997521083970868,
+                "BloodPressure": 0.04098949232190969,
+                "Insulin": 0.19392180955271343,
+                "Glucose": 0.07239816440591108
+              },
+              "SkinThickness": {
+                "Age": -0.06718588598838313,
+                "BMI": 0.46196573308368294,
+                "Pregnancies": -0.0994359270316172,
+                "DiabetesPedigreeFunction": 0.13997521083970868,
+                "SkinThickness": 1.0,
+                "BloodPressure": 0.1402179711167976,
+                "Insulin": 0.4853290333522475,
+                "Glucose": 0.06400465153596725
+              },
+              "BloodPressure": {
+                "Age": 0.3367115336381122,
+                "BMI": 0.31378326574966603,
+                "Pregnancies": 0.148763810764012,
+                "DiabetesPedigreeFunction": 0.04098949232190969,
+                "SkinThickness": 0.1402179711167976,
+                "BloodPressure": 1.0,
+                "Insulin": -0.011775995323829298,
+                "Glucose": 0.2735143701180629
+              },
+              "Insulin": {
+                "Age": -0.13483386656689578,
+                "BMI": 0.17484780517151707,
+                "Pregnancies": -0.15502653651084874,
+                "DiabetesPedigreeFunction": 0.19392180955271343,
+                "SkinThickness": 0.4853290333522475,
+                "BloodPressure": -0.011775995323829298,
+                "Insulin": 1.0,
+                "Glucose": 0.19933311385093644
+              },
+              "Glucose": {
+                "Age": 0.271213352648328,
+                "BMI": 0.24073191158970578,
+                "Pregnancies": 0.10889359758278122,
+                "DiabetesPedigreeFunction": 0.07239816440591108,
+                "SkinThickness": 0.06400465153596725,
+                "BloodPressure": 0.2735143701180629,
+                "Insulin": 0.19933311385093644,
+                "Glucose": 1.0
+              }
+            },
+            "kendall": {
+              "Age": {
+                "Age": 1.0,
+                "BMI": 0.10459007537214966,
+                "Pregnancies": 0.4787190603819953,
+                "DiabetesPedigreeFunction": 0.04429322614451207,
+                "SkinThickness": -0.0461948010829813,
+                "BloodPressure": 0.23853773031815248,
+                "Insulin": -0.09668469517040497,
+                "Glucose": 0.18731022299336356
+              },
+              "BMI": {
+                "Age": 0.10459007537214966,
+                "BMI": 1.0,
+                "Pregnancies": 0.015353515040266807,
+                "DiabetesPedigreeFunction": 0.08715765416772973,
+                "SkinThickness": 0.3442288839902672,
+                "BloodPressure": 0.2209430480640171,
+                "Insulin": 0.12925749263505829,
+                "Glucose": 0.16359293420479717
+              },
+              "Pregnancies": {
+                "Age": 0.4787190603819953,
+                "BMI": 0.015353515040266807,
+                "Pregnancies": 1.0,
+                "DiabetesPedigreeFunction": -0.023953771194285666,
+                "SkinThickness": -0.07466032462402554,
+                "BloodPressure": 0.1122040423621687,
+                "Insulin": -0.11831473409396222,
+                "Glucose": 0.07677979342721153
+              },
+              "DiabetesPedigreeFunction": {
+                "Age": 0.04429322614451207,
+                "BMI": 0.08715765416772973,
+                "Pregnancies": -0.023953771194285666,
+                "DiabetesPedigreeFunction": 1.0,
+                "SkinThickness": 0.09840882050025578,
+                "BloodPressure": 0.027221134460053104,
+                "Insulin": 0.1429391625678484,
+                "Glucose": 0.04941717187583505
+              },
+              "SkinThickness": {
+                "Age": -0.0461948010829813,
+                "BMI": 0.3442288839902672,
+                "Pregnancies": -0.07466032462402554,
+                "DiabetesPedigreeFunction": 0.09840882050025578,
+                "SkinThickness": 1.0,
+                "BloodPressure": 0.10525953297835865,
+                "Insulin": 0.3781425081883395,
+                "Glucose": 0.04216361298141851
+              },
+              "BloodPressure": {
+                "Age": 0.23853773031815248,
+                "BMI": 0.2209430480640171,
+                "Pregnancies": 0.1122040423621687,
+                "DiabetesPedigreeFunction": 0.027221134460053104,
+                "SkinThickness": 0.10525953297835865,
+                "BloodPressure": 1.0,
+                "Insulin": -0.0070937822347882495,
+                "Glucose": 0.18635147846180286
+              },
+              "Insulin": {
+                "Age": -0.09668469517040497,
+                "BMI": 0.12925749263505829,
+                "Pregnancies": -0.11831473409396222,
+                "DiabetesPedigreeFunction": 0.1429391625678484,
+                "SkinThickness": 0.3781425081883395,
+                "BloodPressure": -0.0070937822347882495,
+                "Insulin": 1.0,
+                "Glucose": 0.15193837286947023
+              },
+              "Glucose": {
+                "Age": 0.18731022299336356,
+                "BMI": 0.16359293420479717,
+                "Pregnancies": 0.07677979342721153,
+                "DiabetesPedigreeFunction": 0.04941717187583505,
+                "SkinThickness": 0.04216361298141851,
+                "BloodPressure": 0.18635147846180286,
+                "Insulin": 0.15193837286947023,
+                "Glucose": 1.0
+              }
+            },
+            "cramer_v": {
+              "prediction": {
+                "prediction": 1.0,
+                "Outcome": 1.0
+              },
+              "Outcome": {
+                "prediction": 1.0,
+                "Outcome": 1.0
+              }
+            }
+          }
+        },
+        "target_correlation": null
+      }
+    ],
+    "tests": [],
+    "test_results": [],
+    "options": {
+      "color": null,
+      "render": null,
+      "custom": {}
+    }
+  },
+  "metrics_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "test_ids": [],
+  "options": {
+    "color": null,
+    "render": null,
+    "custom": {}
+  }
+}

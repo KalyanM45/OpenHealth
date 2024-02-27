@@ -1,0 +1,223 @@
+{
+  "id": "688d46cd-cd14-4726-8aba-d9b0b9ffc49b",
+  "name": null,
+  "timestamp": "2024-02-27T03:17:11.090659",
+  "metadata": {
+    "metric_presets": [
+      "ClassificationPreset"
+    ]
+  },
+  "tags": [],
+  "suite": {
+    "metrics": [
+      {
+        "probas_threshold": null,
+        "k": null,
+        "type": "evidently.metrics.classification_performance.confusion_matrix_metric.ClassificationConfusionMatrix",
+        "options": {
+          "color": null,
+          "render": null,
+          "custom": {}
+        }
+      },
+      {
+        "type": "evidently.metrics.classification_performance.classification_quality_metric.ClassificationQualityMetric",
+        "options": {
+          "color": null,
+          "render": null,
+          "custom": {}
+        },
+        "probas_threshold": null,
+        "k": null
+      },
+      {
+        "type": "evidently.metrics.classification_performance.class_balance_metric.ClassificationClassBalance",
+        "options": {
+          "color": null,
+          "render": null,
+          "custom": {}
+        }
+      },
+      {
+        "type": "evidently.metrics.classification_performance.quality_by_class_metric.ClassificationQualityByClass",
+        "options": {
+          "color": null,
+          "render": null,
+          "custom": {}
+        },
+        "probas_threshold": null,
+        "k": null
+      },
+      {
+        "type": "evidently.metrics.classification_performance.quality_by_feature_table.ClassificationQualityByFeatureTable",
+        "options": {
+          "color": null,
+          "render": null,
+          "custom": {}
+        },
+        "columns": null,
+        "descriptors": null
+      }
+    ],
+    "metric_results": [
+      {
+        "type": "evidently.metrics.classification_performance.confusion_matrix_metric.ClassificationConfusionMatrixResult",
+        "current_matrix": {
+          "type": "evidently.metric_results.ConfusionMatrix",
+          "labels": [
+            0,
+            1
+          ],
+          "values": [
+            [
+              225,
+              0
+            ],
+            [
+              0,
+              173
+            ]
+          ]
+        },
+        "reference_matrix": null,
+        "target_names": null
+      },
+      {
+        "type": "evidently.metrics.classification_performance.classification_quality_metric.ClassificationQualityMetricResult",
+        "current": {
+          "type": "evidently.metric_results.DatasetClassificationQuality",
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "roc_auc": null,
+          "log_loss": null,
+          "tpr": 1.0,
+          "tnr": 1.0,
+          "fpr": 0.0,
+          "fnr": 0.0,
+          "rate_plots_data": null,
+          "plot_data": null
+        },
+        "reference": null,
+        "target_name": "diagnosis"
+      },
+      {
+        "type": "evidently.metrics.classification_performance.class_balance_metric.ClassificationClassBalanceResult",
+        "plot_data": {
+          "type": "evidently.metric_results.Histogram",
+          "current": {
+            "type": "evidently.metric_results.HistogramData",
+            "x": [
+              "0",
+              "1"
+            ],
+            "count": [
+              225,
+              173
+            ],
+            "name": null
+          },
+          "reference": null,
+          "current_log": null,
+          "reference_log": null
+        }
+      },
+      {
+        "type": "evidently.metrics.classification_performance.quality_by_class_metric.ClassificationQualityByClassResult",
+        "columns": {
+          "type": "evidently.metric_results.DatasetColumns",
+          "utility_columns": {
+            "type": "evidently.metric_results.DatasetUtilityColumns",
+            "date": null,
+            "id": null,
+            "target": "diagnosis",
+            "prediction": "prediction"
+          },
+          "target_type": "cat",
+          "num_feature_names": [
+            "area_se",
+            "area_worst",
+            "compactness_mean",
+            "compactness_se",
+            "compactness_worst",
+            "concave points_mean",
+            "concave points_se",
+            "concave points_worst",
+            "concavity_se",
+            "concavity_worst",
+            "fractal_dimension_mean",
+            "fractal_dimension_se",
+            "fractal_dimension_worst",
+            "smoothness_mean",
+            "smoothness_se",
+            "smoothness_worst",
+            "symmetry_mean",
+            "symmetry_se",
+            "symmetry_worst",
+            "texture_mean",
+            "texture_se",
+            "texture_worst"
+          ],
+          "cat_feature_names": [],
+          "text_feature_names": [],
+          "datetime_feature_names": [],
+          "target_names": null,
+          "task": "classification"
+        },
+        "current": {
+          "type": "evidently.metrics.classification_performance.quality_by_class_metric.ClassificationQuality",
+          "metrics": {
+            "0": {
+              "type": "evidently.metrics.classification_performance.objects.ClassMetric",
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 225.0
+            },
+            "1": {
+              "type": "evidently.metrics.classification_performance.objects.ClassMetric",
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 173.0
+            }
+          },
+          "roc_aucs": null
+        },
+        "reference": null
+      },
+      {
+        "type": "evidently.metrics.classification_performance.quality_by_feature_table.ClassificationQualityByFeatureTableResults",
+        "current": {
+          "type": "evidently.metric_results.StatsByFeature",
+          "plot_data": {},
+          "predictions": null
+        },
+        "reference": null,
+        "target_name": "",
+        "columns": []
+      }
+    ],
+    "tests": [],
+    "test_results": [],
+    "options": {
+      "color": null,
+      "render": null,
+      "custom": {}
+    }
+  },
+  "metrics_ids": [
+    1,
+    2,
+    0,
+    3,
+    4
+  ],
+  "test_ids": [],
+  "options": {
+    "color": null,
+    "render": null,
+    "custom": {}
+  }
+}
