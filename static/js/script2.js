@@ -15,6 +15,6 @@ document
           }, 400);
 
           setTimeout(function () {
-            window.location.href = "index.html";
-          }, 4000);
+            window.location.href = "landing1.html";
+          }, 6500);
         });

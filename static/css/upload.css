@@ -47,7 +47,7 @@
     position: absolute;
     top: 58%;
     left: 50%;
-    transform: translate(-140%, -65%);
+    transform: translate(-100%, -65%);
     z-index: 2;
     width: 30%;
     padding: 20px;
@@ -60,14 +60,14 @@
 
   .bg-text1 {
     background-color: rgb(0, 238, 255);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.4);
     color: #0ef;
     font-weight: bold;
     border: 3px solid #0ef;
     position: absolute;
     top: 58%;
     left: 50%;
-    transform: translate(50%, -100%);
+    transform: translate(40%, -100%);
     z-index: 2;
     width: 25%;
     padding: 20px;

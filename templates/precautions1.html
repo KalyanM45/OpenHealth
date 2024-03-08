@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First Aid for Multiple Diseases</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url("../static/images/x.jpg") no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        header {
+            background-color: transparent;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 100%;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .disease {
+            width: 100%;
+            margin-bottom: -10px;
+            padding: 10px;
+            border-radius: 8px;
+            color: #fff;
+            display: flex;
+            opacity: 1;
+            transition: transform 0.8s ease;
+            transform: translateX(0);
+        }
+
+        .disease.hiding {
+            transform: translateX(-100%);
+        }
+
+        .disease h2 {
+            margin-top: 0;
+
+        }
+
+        .disease h3 {
+            margin-top: 0;
+
+        }
+
+        .disease .content {
+            flex: 1;
+        }
+
+        .disease p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .disease img {
+            max-width: 300px;
+            margin-left: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        svg text {
+            font-family: Lora;
+            letter-spacing: 2px;
+            stroke: #0ef;
+            font-size: 70px;
+            font-weight: bold;
+            stroke-width: 1.2;
+            animation: textAnimate 1.5s infinite alternate;
+        }
+
+        @keyframes textAnimate {
+            0% {
+                stroke-dasharray: 0 50%;
+                stroke-dashoffset: 20%;
+                fill: #0ef;
+            }
+
+            100% {
+                stroke-dasharray: 50% 0;
+                stroke-dashoffset: -20%;
+                fill: hsla(189, 68%, 75%, 0%);
+            }
+        }
+
+        text {
+            text-shadow: 3.5px 2px 8px #0ef;
+        }
+
+        .patterns {
+            margin-left: -800px;
+            margin-bottom: -60px;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            opacity: 0.4;
+            z-index: -1;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            text-align: justify
+        }
+        span{
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="overlay"></div>
+    <header>
+        <div class="patterns">
+            <svg width="100%" height="100%">
+                <defs>
+                    <pattern id="polka-dots" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+                    </pattern>
+                    <style>
+                        @import url("https://fonts.googleapis.com/css?  family=Lora:400,400i,700,700i");
+                    </style>
+                </defs>
+
+                <rect x="0" y="0" width="100%" height="100%" fill="url(#polka-dots)"></rect>
+
+                <text x="70%" y="50%" text-anchor="middle">What if....?</text>
+            </svg>
+        </div>
+    </header>
+    <div class="container">
+        <div class="disease" id="disease1">
+            <div class="content">
+                <h2>First Aid Instructions for 10 Medical Emergencies:</h2>
+                <p>
+                    First aid is the immediate care a sick or injured person gets. In some cases, it may be the only
+                    care a person needs. In others, first aid is a way to prevent a person's condition from worsening
+                    and keep them alive until paramedics arrive or they are taken to the hospital.
+
+                    The best way to prepare for these events is to get official first-aid training. In the meantime,
+                    there are some basic life-saving steps you can learn.
+
+
+                    In addition to learning basic life-saving steps, it's important to familiarize yourself with common
+                    medical emergencies such as choking, heart attacks, and strokes. Understanding how to recognize
+                    symptoms and take appropriate action can greatly improve outcomes for those in need.
+
+
+                    Moreover, having a well-equipped first aid kit readily available in your home, car, or workplace can
+                    provide essential supplies for managing emergencies effectively.
+                </p>
+
+            </div>
+            <img src="../static/images/1.jpg" alt="Disease 1 Image" />
+        </div>
+        <div class="disease" id="disease1">
+            <div class="content">
+                <h2>ABCs of First Aid</h2>
+                <p>
+                    If someone is unconscious or unresponsive, the basic principle of first aid that you need to know is
+                </p>
+                <p><span>ABC: airway, breathing,</span> and <span>circulation.</span> </p>
+                <p>
+                <ul>
+                    <li>Airway: If someone’s not breathing, the first thing you need to do is open their airway.</li>
+                    <li>Breathing: If you have cleared a person’s airway but they’re still not breathing, provide rescue
+                        breathing.</li>
+                    <li>Circulation: As you are doing rescue breathing, perform chest compressions to keep the person’s
+                        blood circulating. If the person is not responsive, check their pulse. If their heart has
+                        stopped, provide chest compressions.</li>
+                </ul>
+                </p>
+                <p>A simpler version of the ABCs is:</p>
+                <p>
+                <ul>
+                    <li>Awake? If the person is not awake, try to wake them. If they don’t wake up, make sure someone is
+                        calling 911 and move on to the next step.</li>
+                    <li>Breathing? If a person is not awake and not breathing, start rescue breathing and chest
+                        compressions. Then, move to the next step.</li>
+                    <li>Continue care: When you call for help, follow instructions from 911 or continue treatment until
+                        an ambulance arrives.</li>
+                </ul>
+                </p>
+            </div>
+            <img src="../static/images/2.jpg" alt="Disease 1 Image" />
+        </div>
+        <div class="disease" id="disease1">
+            <div class="content">
+                <h3>Some first aid courses also include D and E:</h3>
+                <p>
+                <ul>
+                    <li>D can stand for: Disability assessment, deadly bleeding, or automated external defibrillator
+                        (AED). An AED is a device that shocks the heart to make it start beating again. </li>
+                    <li>E can stand for: Examination (checking the person for signs of injury, bleeding, allergies, or
+                        other problems once you know they’re breathing and their heart is beating).</li>
+                </ul>
+                </p>
+            </div>
+            <!img src="disease_image_1.jpg" alt="Disease 1 Image" />
+        </div>
+        <div class="disease" id="disease1">
+            <div class="content">
+                <h2>First Aid for a Stopped Heart:</h2>
+                <p>
+                    Cardiopulmonary resuscitation (CPR) is one of the most important emergency medical procedures that a
+                    person can know.
+                </p>
+                <p>When a person is in cardiac arrest (heart is not beating), doing CPR and/or using an AED could
+                    restart their heart and/or recirculate blood until their heart can be restarted with a
+                    defibrillator. This can restore their life.</p>
+                <p>AEDs are available in many public areas and businesses. These first aid devices are made to be easy
+                    to use even if you have no training.</p>
+            </div>
+            <img src="disease_image_1.jpg" alt="Disease 1 Image" />
+        </div>
+        <div class="disease" id="disease1">
+            <div class="content">
+                <h3>What to Do</h3>
+                <p>
+                    If you think someone is in cardiac arrest, there are four steps you can take to help them.
+                </p>
+                <p>
+                <ul>
+                    <li>Find a person nearby. Make eye contact, point to them, and say: “Call 911.”</li>
+                    <li>Start doing chest compressions on the person who needs help. Using both your hands, push down
+                        hard and fast in the centre of the person’s chest. Let their chest come back up naturally
+                        between compressions. You may hear pops or snaps; this is normal.</li>
+                    <li>Keep going until someone with more training arrives.</li>
+                    <li>If you’re trained in CPR, you can use chest compressions and rescue breathing.</li>
+                    <li>5. If it’s available, use an AED. However, do not put off doing chest compressions to go look
+                        for an AED. If possible, instruct someone else to go find the device and bring it to you.</li>
+                </ul>
+                </p>
+
+            </div>
+            <!img src="disease_image_1.jpg" alt="Disease 1 Image" />
+        </div>
+        <div class="disease" id="disease1">
+            <div class="content">
+                <h2>First Aid for Bleeding:</h2>
+                <p>
+                    If someone is injured and bleeding, there are a few basics about how blood works that will be
+                    helpful for you to know.
+                    The colour of the blood and how it’s leaving the body can give you a sense of the extent of the
+                    injury:
+
+                </p>
+                <p>
+                <ul>
+                    <li>
+                        Capillaries: Bleeding from the smallest blood vessels (capillaries) looks like a trickle. This
+                        kind of bleeding usually stops on its own.
+                    </li>
+                    <li>Veins: A consistent blood flow and blood that’s a dark red colour is most likely coming from the
+                        veins. This type of bleeding can range from mild to severe.</li>
+                    <li>Arteries: Arteries are the largest blood vessels and carry a lot of oxygen. If they are injured,
+                        bright red blood will spurt out. Blood can be lost very fast with this kind of bleeding.</li>
+                </ul>
+                </p>
+                <p>Almost all bleeding can be controlled with first aid. If severe bleeding keeps going, a person can go
+                    into shock and may die.</p>
+            </div>
+            <img src="disease_image_1.jpg" alt="Disease 1 Image" />
+        </div>
+        <div class="disease" id="disease1">
+            <div class="content">
+                <h3>What to Do</h3>
+                <p>
+                    While it is important to stop bleeding, begin with the ABCs of first aid.
+                    The next steps are to:
+
+                </p>
+                <p>
+                <ul>
+                    <li>
+                        Put on disposable gloves if you have them. This will protect you from infectious diseases like
+                        viral hepatitis and HIV/AIDS that can be spread in a person’s blood.
+                    </li>
+                    <li>
+                        Rinse the wound with water.
+                    </li>
+                    <li>
+                        Cover the wound with a gauze or cloth (e.g., towel, blanket, clothing).
+                    </li>
+                    <li>
+                        Apply direct pressure to stop the flow of blood and encourage clotting (when blood naturally
+                        thickens to stop blood loss).
+                    </li>
+                    <li>
+                        Elevate the bleeding body part above the person’s heart if you can.
+                    </li>
+                    <li>
+                        Do not remove the cloth if it becomes soaked. Removing the first layer will interfere with the
+                        clotting process and result in more blood loss. Instead, add more layers if needed.
+                    </li>
+                    <li>
+                        Once bleeding has stopped, put a clean bandage on the wound.
+                    </li>
+                </ul>
+                </p>
+                <p>Get medical help if:</p>
+                <p>
+                <ul>
+                    <li>
+                        The wound is deep.
+                    </li>
+                    <li>
+                        The wound has widely separated sides.
+                    </li>
+                    <li>
+                        The injury oozes blood after pressure has been applied.
+                    </li>
+                    <li>
+                        The injury is from an animal or human bite.
+                    </li>
+                    <li>
+                        The injury is a puncture, burn, or electrical injury.
+                    </li>
+                    <li>
+                        You think there is arterial bleeding.
+                    </li>
+                    <li>
+                        Blood is soaking through the bandages.
+                    </li>
+                    <li>
+                        The bleeding is not stopping.
+                    </li>
+                </ul>
+                </p>
+                <p>
+                    If you are taking the person to the hospital, make sure that you have someone else who can keep
+                    administering first aid while you drive.
+                </p>
+            </div>
+            <!img src="disease_image_1.jpg" alt="Disease 1 Image" />
+        </div>
+        <div class="disease" id="disease1">
+            <div class="content">
+                <h2>First Aid for Choking: </h2>
+                <p>
+                    Choking happens when a person’s windpipe (trachea) gets blocked by food or an object. It is a
+                    serious event that can lead to unconsciousness or even death.
+                </p>
+                <p>Signs of choking include:</p>
+                <p>
+                <ul>
+                    <li>
+                        Gagging, gasping, or wheezing
+                    </li>
+                    <li>
+                        Inability to talk or make noise
+                    </li>
+                    <li>
+                        Turning blue in the face
+                    </li>
+                    <li>
+                        Grabbing at the throat
+                    </li>
+                    <li>
+                        Waving arms
+                    </li>
+                    <li>
+                        Looking panicked
+                    </li>
+                </ul>
+                </p>
+            </div>
+            <img src="disease_image_1.jpg" alt="Disease 1 Image" />
+        </div>
+        <div class="disease" id="disease1">
+            <div class="content">
+                <h3>Using the Heimlich Manuever</h3>
+                <p>
+                    The Heimlich maneuver is a series of abdominal thrusts that can help dislodge the thing a person is
+                    choking on. This first aid technique should only be done if someone is truly choking.
+                </p>
+                <p>Before doing anything, ask the person if they are choking. Remember: If someone is coughing or
+                    talking, they are not choking.</p>
+            </div>
+            <!img src="disease_image_1.jpg" alt="Disease 1 Image" />
+        </div>
+        <div class="disease" id="disease1">
+            <div class="content">
+                <h3>What to Do</h3>
+                <p>
+                    If someone is choking, you should know how to use the Heimlich maneuver.
+                    Here are the steps:
+
+                </p>
+                <p>
+                <ul>
+                    <li>
+                        Stand behind the person and lean them slightly forward.
+                    </li>
+                    <li>
+                        Put your arms around their waist.
+                    </li>
+                    <li>
+                        Clench your fist and place it between their belly button (navel) and rib cage.
+                    </li>
+                    <li>
+                        Grab your fist with your other hand.
+                    </li>
+                    <li>
+                        Pull your clenched fist sharply backward and upward under the person’s rib cage in five quick
+                        thrusts.
+                    </li>
+                    <li>
+                        Repeat until the object is coughed up.
+                    </li>
+                </ul>
+                </p>
+
+            </div>
+            <img src="disease_image_1.jpg" alt="Disease 1 Image" />
+        </div>
+        <div class="disease" id="disease1">
+            <div class="content">
+                <p>
+                    For someone who is obese or pregnant, perform the thrusts around the chest instead of the abdomen.
+                </p>
+                <p>If someone is choking and becomes unconscious:</p>
+                <p>
+                <ul>
+                    <li>
+                        Place them on their back and kneel over them.
+                    </li>
+                    <li>
+                        Place the heel of your hand slightly above their belly button.
+                    </li>
+                    <li>
+                        Place your other hand on top of it.
+                    </li>
+                    <li>
+                        Give quick upward thrusts to dislodge the object.
+                    </li>
+                </ul>
+                </p>
+            </div>
+            <!img src="disease_image_1.jpg" alt="Disease 1 Image" />
+        </div>
+        <div class="disease" id="disease1">
+            <div class="content">
+                <h3>Helping a Choking Infant</h3>
+                <p>
+                    If a baby is choking, you need to use different first aid techniques to help them.
+                </p>
+                <p>Start with back blows:</p>
+                <p>
+                <ul>
+                    <li>
+                        Lay the baby across your forearm, face down.
+                    </li>
+                    <li>
+                        Support them with your lap or upper thigh.
+                    </li>
+                    <li>
+                        Hold their chest in your hand and jaw between your fingers (the baby’s head should be pointed
+                        down so it’s lower than their body).
+                    </li>
+                    <li>
+                        With the heel of your free hand, give five quick, forceful blows to the baby’s back between the
+                        shoulder blades.
+                    </li>
+                </ul>
+                </p>
+            </div>
+            <img src="disease_image_1.jpg" alt="Disease 1 Image" />
+        </div>
+        <div class="disease" id="disease1">
+            <div class="content">
+                <h3>If back blows don’t work, try chest thrusts:</h3>
+                <p>
+                <ul>
+                    <li>
+                        Turn the baby face up, keeping them on your lap for support.
+                    </li>
+                    <li>
+                        Keeping their head angled down, lower than their body, hold the back of their head with your
+                        hand to steady it.
+                    </li>
+                    <li>
+                        Place two or three of your fingers in the centre of the baby’s chest just below the nipples.
+                    </li>
+                    <li>
+                        Give five quick thrusts downward so the breastbone gets pushed in about 1.5 inches.
+                    </li>
+                </ul>
+                </p>
+                <p>If a choking infant loses consciousness, you may need to do CPR until emergency help arrives.</p>
+            </div>
+            <!img src="disease_image_1.jpg" alt="Disease 1 Image" />
+        </div>
+        <div class="disease" id="disease1">
+            <div class="content">
+                <h3>What to Do if You're Alone and Choking</h3>
+                <p>
+                    You can give yourself the Heimlich maneuver even if you are alone.
+                </p>
+                <p>
+                <ul>
+                    <li>
+                        Call 911 first, even though you will not be able to speak. Leave the phone connected. 911 can
+                        pinpoint your location and send emergency help. Use a landline if available. If a landline isn't
+                        available, a cell phone can be used.
+                    </li>
+                    <li>
+                        Grasp one fist with the other hand and place above your belly button.
+                    </li>
+                    <li>
+                        Thrust inward and upward with your fist. Repeat until the object is dislodged.
+                    </li>
+                    <li>
+                        You can also bend over a hard surface such as the back of a chair. Use the hard surface to apply
+                        repeated thrusts to your abdomen. Repeat until the object is dislodged.
+                    </li>
+                </ul>
+                </p>
+            </div>
+            <!img src="disease_image_1.jpg" alt="Disease 1 Image" />
+        </div>
+        <div class="disease" id="disease1">
+            <div class="content">
+                <h2>First Aid for Burns:</h2>
+                <p>
+                    The first step to treating a burn is to stop the burning process.
+                    This might mean:
+                </p>
+                <p>
+                <ul>
+                    <li>
+                        Cleaning up chemicals
+                    </li>
+                    <li>
+                        Turning off electricity
+                    </li>
+                    <li>
+                        Cooling heat with running water
+                    </li>
+                    <li>
+                        Covering up or taking a person inside out of the sun
+                    </li>
+                </ul>
+                </p>
+            </div>
+            <img src="disease_image_1.jpg" alt="Disease 1 Image" />
+        </div>
+        <div class="disease" id="disease1">
+            <div class="content">
+                <p>
+                    The severity of a burn is based on how deep in the skin it is and how big it is:
+                </p>
+                <p>
+                <ul>
+                    <li>
+                        First-degree burn: This kind of burn only affects only the outer layer of skin and causes
+                        redness and swelling. It is considered a minor burn.
+                    </li>
+                    <li>
+                        Second-degree burn: This kind of burn affects two layers of skin and causes blistering, redness,
+                        and swelling. It is considered a major burn if it’s more than 3 inches wide or is on the face,
+                        hands, feet, genitals, buttocks, or over a major joint.
+                    </li>
+                    <li>
+                        Third-degree burn: This kind of burn affects deeper layers of skin and causes white or blackened
+                        skin that can be numb. It is always considered a major burn.
+                    </li>
+                </ul>
+                </p>
+            </div>
+            <!img src="disease_image_1.jpg" alt="Disease 1 Image" />
+        </div>
+        <div class="disease" id="disease1">
+            <div class="content">
+                <h3>What to Do</h3>
+                <p>
+                    Major burns need emergency medical attention. Once you’ve stopped the burning process, call 911 or
+                    get someone else to.
+                </p>
+                <p>For burns that are not an emergency, you can take these first aid steps:</p>
+                <p>
+                <ul>
+                    <li>
+                        Flush the burned area with cool running water for several minutes. Do not use ice.
+                    </li>
+                    <li>
+                        Apply a light gauze bandage. If the burn is minor, you can put on an ointment, like aloe vera,
+                        before you cover it.
+                    </li>
+                    <li>
+                        Take Motrin (ibuprofen) or Tylenol (acetaminophen) for pain relief if you need it.
+                    </li>
+                    <li>
+                        Do not break any blisters that form.
+                    </li>
+                </ul>
+                </p>
+            </div>
+            <!img src="disease_image_1.jpg" alt="Disease 1 Image" />
+        </div>
+        <div class="disease" id="disease1">
+            <div class="content">
+                <h2>First Aid for Blisters:</h2>
+                <p>
+                    Blisters protect damaged skin while it heals.Some blisters need to be treated and others don’t.
+                    Whether you need to treat a blister depends on how bad it is and your overall health.
+                </p>
+                <h3>What to Do</h3>
+                <p>If the blister is small, not open, and doesn’t hurt, it’s best to leave it alone. You can cover it to
+                    prevent rubbing, which could cause it to swell and burst.</p>
+                <p>Do not pop a small blister. This could let bacteria get inside it and cause an infection.</p>
+                <p>
+                    If the blister is big or painful, you need to take different steps to treat it.
+                </p>
+            </div>
+            <img src="disease_image_1.jpg" alt="Disease 1 Image" />
+        </div>
+        <div class="disease" id="disease1">
+            <div class="content">
+
+                <p>
+                    Here are the first-aid steps to take for a more serious blister:
+                </p>
+                <p>
+                <ul>
+                    <li>
+                        Wash your hands.
+                    </li>
+                    <li>
+                        Sterilize a needle with alcohol.
+                    </li>
+                    <li>
+                        Make small holes at the edge of the blister.
+                    </li>
+                    <li>
+                        Gently push out the fluid.
+                    </li>
+                    <li>
+                        Apply antibiotic ointment.
+                    </li>
+                    <li>
+                        Put on a bandage.
+                    </li>
+                    <li>
+                        If possible, take steps to protect the area from further rubbing or pressure.
+                    </li>
+                </ul>
+                </p>
+            </div>
+            <!img src="disease_image_1.jpg" alt="Disease 1 Image" />
+        </div>
+        <div class="disease" id="disease1">
+            <div class="content">
+                <p>
+                    If you have a compromised immune system, you are more likely to get an infection and should not
+                    drain a blister on your own. However, your healthcare provider may want to drain it to help prevent
+                    infection.
+                </p>
+                <p>If a blister breaks open on its own:</p>
+                <p>
+                <ul>
+                    <li>
+                        Gently wash the area with clean water only.
+                    </li>
+                    <li>
+                        Smooth the flap of broken skin over the newly exposed skin, unless it’s dirty, torn, or there is
+                        pus under it.
+                    </li>
+                    <li>
+                        Put petroleum jelly on it.
+                    </li>
+                    <li>
+                        Cover it with a bandage.
+                    </li>
+                </ul>
+                </p>
+                <p>
+                    Change the bandage any time it gets wet. Take it off when you go to bed to give the area a chance to
+                    air out.
+                </p>
+            </div>
+            <!img src="disease_image_1.jpg" alt="Disease 1 Image" />
+        </div>
+        <div class="disease" id="disease1">
+            <div class="content">
+                <h2>First Aid for a Broken Bone or Fracture:</h2>
+                <p>
+                    Any injury to your limbs, hands, and feet needs to be treated as a broken bone until an X-ray can be
+                    done.
+                    While broken bones or fractures do need medical treatment, they do not all require an emergency trip
+                    to the hospital. First aid steps can help stabilize the bone until you can see a healthcare
+                    provider.
+
+                </p>
+                <h3>What to Do</h3>
+                <p>In some cases, you will need emergency medical care to deal with a broken bone.</p>
+                <p>Call 911 if:</p>
+                <p>
+                <ul>
+                    <li>
+                        The person is bleeding a lot, is unresponsive, is not breathing, or has more than one injury.
+                    </li>
+                    <li>
+                        You think a person has a fracture or other serious injury in their spinal column, head, hip,
+                        pelvis, or thigh. In this case, do not move the person.
+                    </li>
+                    <li>
+                        A broken bone is poking through the skin (open or compound fracture).
+                    </li>
+                    <li>
+                        The area below an injured joint feels cold and clammy or looks bluish.
+                    </li>
+                    <li>
+                        You cannot keep the injury from moving well enough to transport the person.
+                    </li>
+                </ul>
+                </p>
+            </div>
+            <img src="disease_image_1.jpg" alt="Disease 1 Image" />
+        </div>
+        <div class="disease" id="disease1">
+            <div class="content">
+
+                <p>
+                    Otherwise, you can use first aid, then go to urgent care or contact your healthcare provider for
+                    guidance.
+                </p>
+                <p>Here’s what to do next:</p>
+                <p>
+                <ul>
+                    <li>
+                        Do not try to straighten the bone.
+                    </li>
+                    <li>
+                        For a limb, use a splint and padding to keep it still, then elevate it.
+                    </li>
+                    <li>
+                        Put a cold pack on the injury—but not directly on the skin. Use a barrier between the ice and
+                        the skin to keep the tissue from being damaged. If all you have is ice, put it in a plastic bag
+                        and wrap it in a shirt or towel before applying it.
+                    </li>
+                    <li>
+                        Give the person anti-inflammatory drugs like Advil (ibuprofen) or Aleve (naproxen) for pain.
+                    </li>
+                </ul>
+                </p>
+            </div>
+            <!img src="disease_image_1.jpg" alt="Disease 1 Image" />
+        </div>
+        <div class="disease" id="disease1">
+            <div class="content">
+                <h2>First Aid for Sprains:</h2>
+                <p>
+                    A sprain is an injury to the connective tissues that hold bones, cartilage, and joints together
+                    (ligaments).
+                    Sprains are most often caused when the twisting of a joint overstretches or tears these tissues.
+                    They tend to happen in the ankles, knees, and wrists.
+                    The symptoms of a sprain are similar to those of a broken bone. A person will need to have an X-ray
+                    to figure out which injury they have.
+
+                </p>
+                <h3>What to Do</h3>
+                <p>
+                    The first thing to do is make sure that the injured person stops any unnecessary activity, as moving
+                    can make the injury worse.
+                </p>
+            </div>
+            <img src="disease_image_1.jpg" alt="Disease 1 Image" />
+        </div>
+        <div class="disease" id="disease1">
+            <div class="content">
+
+                <p>
+                    Sprains often don’t require emergency treatment. However, you should get immediate medical care if
+                    the injured person:
+                </p>
+                <p>
+                <ul>
+                    <li>
+                        Has severe pain when they move or are touched
+                    </li>
+                    <li>
+                        Cannot put any weight on the injured joint
+                    </li>
+                    <li>
+                        Has increased bruising
+                    </li>
+                    <li>
+                        Has numbness or pins-and-needles near the sprain
+                    </li>
+                    <li>
+                        Shows signs of infection
+                    </li>
+                    <li>
+                        Has little or no improvement during the first week after the injury happens
+                    </li>
+
+                </ul>
+                </p>
+
+            </div>
+            <!img src="disease_image_1.jpg" alt="Disease 1 Image" />
+        </div>
+        <div class="disease" id="disease1">
+            <div class="content">
+
+                <p>
+                    If emergency care is not needed, follow these first aid steps:
+                </p>
+                <p>
+                <ul>
+                    <li>
+                        Keep the limb as still as possible.
+                    </li>
+                    <li>
+                        Apply a cold pack.
+                    </li>
+                    <li>
+                        Elevate the injured part if you can do so safely.
+                    </li>
+                    <li>
+                        Use NSAIDs for pain.
+                    </li>
+                    <li>
+                        Ask your provider about any other treatment for a sprain you might need.
+                    </li>
+                </ul>
+                </p>
+            </div>
+            <!img src="disease_image_1.jpg" alt="Disease 1 Image" />
+        </div>
+        <div class="disease" id="disease1">
+            <div class="content">
+                <h2>First Aid for Nosebleeds:</h2>
+                <p>
+                    Nosebleeds can have various causes. In children, the most common cause of a nosebleed is digital
+                    trauma—better known as picking your nose.
+                </p>
+                <p>Other causes of a bloody nose include:</p>
+                <p>
+                <ul>
+                    <li>
+                        Dry or hot air
+                    </li>
+                    <li>
+                        High altitudes
+                    </li>
+                    <li>
+                        Chemical fumes that irritate the nasal passages
+                    </li>
+                    <li>
+                        Colds and allergies
+                    </li>
+                    <li>
+                        Blowing your nose hard or often
+                    </li>
+                    <li>
+                        Trauma to the nose
+                    </li>
+                    <li>
+                        Deviated septum (crooked nasal cartilage)
+                    </li>
+                    <li>
+                        Nasal polyps (non-cancerous or cancerous growths in the nasal passage and sinuses) or nasal
+                        tumours
+                    </li>
+                    <li>
+                        Bleeding disorders (e.g., haemophilia and leukaemia)
+                    </li>
+                    <li>
+                        High blood pressure
+                    </li>
+                    <li>
+                        Pregnancy
+                    </li>
+                    <li>
+                        Frequent use of nasal sprays, decongestants, and antihistamines
+                    </li>
+                    <li>
+                        NSAIDs
+                    </li>
+                    <li>
+                        Blood thinners (e.g. warfarin)
+                    </li>
+                    <li>
+                        Cocaine and other drugs that are inhaled or snorted
+                    </li>
+                </ul>
+                </p>
+                <p>
+                    Many of these things dry out or damage the delicate membranes in your nostrils, causing them to get
+                    crusty and burst when irritated.
+                </p>
+            </div>
+            <img src="disease_image_1.jpg" alt="Disease 1 Image" />
+        </div>
+        <div class="disease" id="disease1">
+            <div class="content">
+                <h3>What to Do</h3>
+                <p>
+                    First aid for a nosebleed has a few simple steps.If your nose is bleeding:
+
+                </p>
+                <p>
+                <ul>
+                    <li>
+                        Lean slightly forward, not back.
+                    </li>
+                    <li>
+                        Pinch your nose just below the bridge. It needs to be high enough that the nostrils are not
+                        pinched closed.
+                    </li>
+                    <li>
+                        After five minutes, check to see if the bleeding has stopped. If not, continue pinching and
+                        check after another 10 minutes.
+                    </li>
+                    <li>
+                        Apply a cold pack to the bridge of your nose while you’re pinching.
+                    </li>
+                </ul>
+                </p>
+
+            </div>
+            <!img src="disease_image_1.jpg" alt="Disease 1 Image" />
+        </div>
+        <div class="disease" id="disease1">
+            <div class="content">
+                <p>
+                    In some cases, you will need to let your provider know if you have a bloody nose.
+                </p>
+                <p>Call your provider if:</p>
+                <p>
+                <ul>
+                    <li>
+                        You get frequent nosebleeds.
+                    </li>
+                    <li>
+                        You have anaemia symptoms (e.g., weakness, faintness, fatigue, and pale skin).
+                    </li>
+                    <li>
+                        You’re taking blood thinners.
+                    </li>
+                    <li>
+                        You have a clotting or bleeding disorder.
+                    </li>
+                    <li>
+                        You just started a new medication.
+                    </li>
+                    <li>
+                        You also have unusual bruising.
+                    </li>
+                </ul>
+                </p>
+            </div>
+            <img src="disease_image_1.jpg" alt="Disease 1 Image" />
+        </div>
+        <div class="disease" id="disease1">
+            <div class="content">
+                <p>
+                    You might need to seek emergency medical care for a bloody nose.
+                </p>
+                <p>Call 911 or go to the emergency room if:</p>
+                <p>
+                <ul>
+                    <li>
+                        The bleeding will not stop even after more than 15 minutes of direct pressure.
+                    </li>
+                    <li>
+                        There is a lot of blood loss.
+                    </li>
+                    <li>
+                        You have a hard time breathing.
+                    </li>
+                    <li>
+                        You’ve swallowed a lot of blood and vomited it up.
+                    </li>
+                    <li>
+                        You’ve had a serious injury or a blow to the head.
+                    </li>
+                </ul>
+                </p>
+            </div>
+            <!img src="disease_image_1.jpg" alt="Disease 1 Image" />
+        </div>
+        <div class="disease" id="disease1">
+            <div class="content">
+                <h2>First Aid for Frostbite:</h2>
+                <p>
+                    Frostbite happens when the body’s tissues freeze deeply in the cold. This is the opposite of a burn,
+                    but the damage it does to your skin is almost the same.
+                </p>
+                <h3>What to Do</h3>
+                <p>Treating frostbite involves carefully and gradually warming the affected area. If at all possible, it
+                    should only be done by a medical professional. The most important reason to wait for rewarming is if
+                    there is any risk of refreezing.</p>
+
+            </div>
+            <img src="disease_image_1.jpg" alt="Disease 1 Image" />
+        </div>
+        <div class="disease" id="disease1">
+            <div class="content">
+                <p>
+                    If that’s not possible, or while you’re waiting for an ambulance, you can begin first aid for
+                    frostbite.
+                </p>
+                <p>
+                <ul>
+                    <li>
+                        Get out of the cold.
+                    </li>
+                    <li>
+                        Put the affected area in warm water (98 to 105 degrees) for 20 to 30 minutes.
+                    </li>
+                    <li>
+                        Do not rub the affected area.
+                    </li>
+                    <li>
+                        Do not use sources of dry heat (e.g., heating pads, fireplace).
+                    </li>
+                    <li>
+                        For fingers and toes, you can put clean cotton balls between them after they have warmed up.
+                    </li>
+                    <li>
+                        Loosely wrap the area with bandages.
+                    </li>
+                    <li>
+                        Use Tylenol (acetaminophen) or Advil (ibuprofen) for pain.
+                    </li>
+                    <li>
+                        Get medical attention as soon as possible.
+                    </li>
+                </ul>
+                </p>
+                <p>For small areas of minor frostbite, you can also warm the area with skin-to-skin contact (putting
+                    your skin on someone else’s).
+                    Get emergency treatment if the skin is hard and begins turning white.
+                </p>
+            </div>
+            <!img src="disease_image_1.jpg" alt="Disease 1 Image" />
+        </div>
+        <div class="disease" id="disease1">
+            <div class="content">
+                <h2>First Aid for Bee Stings:</h2>
+                <p>
+                    Bee stings can hurt a lot but are only a minor problem for many people. However, for people who are
+                    allergic to bee venom, a sting can be deadly.
+                </p>
+                <p>An allergy can develop at any time—that’s why it’s important to always watch for an allergic reaction
+                    after a bee sting.</p>
+                <p>Signs of an allergic reaction to a sting include:</p>
+                <p>
+                <ul>
+                    <li>
+                        Swelling away from the area that was stung
+                    </li>
+                    <li>
+                        Flushing
+                    </li>
+                    <li>
+                        Hives (raised, large red or skin-coloured bumps)
+                    </li>
+                    <li>
+                        Itching
+                    </li>
+                    <li>
+                        Signs of anaphylaxis (a life-threatening allergic reaction that can cause hives, swelling, chest
+                        pain, confusion, sweating, blue lips and nails, and trouble breathing)
+                    </li>
+                </ul>
+                </p>
+            </div>
+            <img src="disease_image_1.jpg" alt="Disease 1 Image" />
+        </div>
+        <div class="disease" id="disease1">
+            <div class="content">
+                <h3>What to Do</h3>
+                <p>
+                    Call 911 immediately or get the person to the hospital if they have signs of an allergic reaction to
+                    a bee sting.
+                </p>
+                <p>If the person who was stung has a known allergy to bee stings, use an EpiPen to prevent anaphylaxis.
+                </p>
+                <p>In someone without a known bee allergy, watch for signs of an allergy while you’re performing first
+                    aid:</p>
+                <p>
+                <ul>
+                    <li>
+                        Get the stinger out immediately. This will prevent additional venom from getting into the
+                        person. To remove a stinger, it is best to use a straight-edged object such as a credit card to
+                        scrape the stinger out of the skin. Avoid squeezing the venom sac with tweezers or your fingers,
+                        as this can inject venom into the skin.
+                    </li>
+                    <li>
+                        Wash the area with soap and water.
+                    </li>
+                    <li>
+                        Use a cold pack to help with the swelling at the site; however, do not apply ice directly to the
+                        skin.
+                    </li>
+                    <li>
+                        Use an allergy medication or antihistamine (like Benadryl) to reduce swelling and itching.
+                    </li>
+                    <li>
+                        Use Tylenol (acetaminophen) or Advil (ibuprofen) for pain.
+                    </li>
+                </ul>
+                </p>
+            </div>
+            <!img src="disease_image_1.jpg" alt="Disease 1 Image" />
+        </div>
+        <div class="disease" id="disease1">
+            <div class="content">
+                <h2>First Aid Kit List</h2>
+                <p>
+                    First aid kits are sold at many pharmacies and department stores, but you can also make your own.
+                    You should keep one in your vehicle and in your home.
+                </p>
+                <p>A basic first-aid kit should contain:</p>
+                <p>
+                <ul>
+                    <li>
+                        Adhesive bandages in multiple sizes and shapes
+                    </li>
+                    <li>
+                        Gauze pads in multiple sizes
+                    </li>
+                    <li>
+                        Compress dressings
+                    </li>
+                    <li>
+                        Adhesive cloth tape
+                    </li>
+                    <li>
+                        A roll of gauze
+                    </li>
+                    <li>
+                        Gloves
+                    </li>
+                    <li>
+                        Antiseptic wipes
+                    </li>
+                    <li>
+                        Antibiotic ointment
+                    </li>
+                    <li>
+                        Hydrocortisone ointment
+                    </li>
+                    <li>
+                        A breathing barrier for performing CPR
+                    </li>
+                    <li>
+                        An instant cold compress
+                    </li>
+                    <li>
+                        Baby aspirin
+                    </li>
+                    <li>
+                        Tweezers
+                    </li>
+                    <li>
+                        An oral thermometer
+                    </li>
+                    <li>
+                        An emergency blanket
+                    </li>
+                </ul>
+                </p>
+            </div>
+            <img src="disease_image_1.jpg" alt="Disease 1 Image" />
+        </div>
+        <div class="disease" id="disease1">
+            <div class="content">
+                <h2>Summary</h2>
+                <p>
+                    If you can get formal first aid training, that’s the best way to know what to do if a medical
+                    emergency happens to you, a loved one, or even a stranger.</p>
+                <p>Even without formal training, it helps to know the ABCs (airway, breathing, and circulation) and how
+                    to do CPR.</p>
+                <p>
+                    Attempting to provide first aid care is often better than doing nothing. Sometimes, acting quickly
+                    can save a person’s life.
+                </p>
+            </div>
+            <!img src="disease_image_1.jpg" alt="Disease 1 Image" />
+        </div>
+
+    </div>
+
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+
+        ScrollReveal().reveal(".disease", {
+            delay: 300,
+            duration: 800,
+            easing: "ease-in",
+        });
+
+
+        window.addEventListener("scroll", revealOnScroll);
+
+        function revealOnScroll() {
+            const reveals = document.querySelectorAll(".disease");
+            for (let i = 0; i < reveals.length; i++) {
+                const windowHeight = window.innerHeight;
+                const revealTop = reveals[i].getBoundingClientRect().top;
+                const revealPoint = 50;
+
+                if (revealTop < windowHeight - revealPoint) {
+                    reveals[i].classList.remove("hiding");
+                } else {
+                    reveals[i].classList.add("hiding");
+                }
+            }
+        }
+
+
+        revealOnScroll();
+    </script>
+</body>
+
+</html>

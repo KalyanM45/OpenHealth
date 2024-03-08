@@ -1,6 +1,6 @@
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -18,8 +18,8 @@ body {
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .notfound {
@@ -36,25 +36,25 @@ body {
   display: inline-block;
   width: 140px;
   height: 140px;
-  background-image: url('../images/emoji.png');
+  background-image: url("../images/emoji.png");
   background-size: cover;
 }
 
 .notfound .notfound-404:before {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 100%;
   -webkit-transform: scale(2.4);
-      -ms-transform: scale(2.4);
-          transform: scale(2.4);
+  -ms-transform: scale(2.4);
+  transform: scale(2.4);
   border-radius: 50%;
   background-color: #f2f5f8;
   z-index: -1;
 }
 
 .notfound h1 {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 65px;
   font-weight: 700;
   margin-top: 0px;
@@ -64,7 +64,7 @@ body {
 }
 
 .notfound h2 {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 21px;
   font-weight: 400;
   margin: 0;
@@ -73,13 +73,13 @@ body {
 }
 
 .notfound p {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   color: #999fa5;
   font-weight: 400;
 }
 
 .notfound a {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   display: inline-block;
   font-weight: 700;
   border-radius: 40px;
