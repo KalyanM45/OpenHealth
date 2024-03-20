@@ -7,7 +7,7 @@ document.getElementById("redirectButton1").addEventListener("click", function() 
 });
 
 document.getElementById("redirectButton2").addEventListener("click", function() {
-    window.open("../templates/malaria_input.html", "_blank");
+    window.open("../templates/malaria_upload.html", "_blank");
 });
 
 document.getElementById("redirectButton3").addEventListener("click", function() {
@@ -27,7 +27,7 @@ document.getElementById("redirectButton6").addEventListener("click", function() 
 });
 
 document.getElementById("redirectButton7").addEventListener("click", function() {
-    window.open("../templates/liver_upload.html", "_blank");
+    window.open("../templates/liver_input.html", "_blank");
 });
 
 document.getElementById("redirectButton8").addEventListener("click", function() {
