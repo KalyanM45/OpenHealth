@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/css/input.css" />
+    <title>Breast Cancer Input Form</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-image: url(../static/images/breast_bg.jpg);
+        background-size: cover;
+        font-family: Arial, sans-serif;
+      }
+      .heading h2 {
+        color: #fff;
+        font-size: 5em;
+        position: absolute;
+        top: -50px;
+        left: 300px;
+      }
+      .bg-text {
+        background-color: rgb(0, 238, 255);
+        background-color: rgba(0, 0, 0, 0.4);
+        color: #0ef;
+        font-weight: bold;
+        border: 3px solid #0ef;
+        position: absolute;
+        top: 78%;
+        left: 50%;
+        transform: translate(-90%, -50%);
+        z-index: 2;
+        width: 50%;
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .bg-text1 {
+        background-color: rgb(0, 238, 255);
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #0ef;
+        font-weight: bold;
+        border: 3px solid #0ef;
+        position: absolute;
+        top: 88%;
+        left: 50%;
+        transform: translate(50%, -100%);
+        z-index: 2;
+        width: 25%;
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0.3;
+        z-index: -1;
+      }
+      form {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="overlay"></div>
+    <section>
+      <div class="heading">
+        <h2>Breast Cancer Prediction</h2>
+        <h2>Breast Cancer Prediction</h2>
+      </div>
+    </section>
+    <div class="bg-text">
+      <form action="/bcancer" method="post">
+        <div class="container">
+          <input
+            required=""
+            type="number"
+            name="texture_mean"
+            step="any"
+            class="input"
+          />
+          <label for="texture_mean" class="label">Texture Mean:</label>
+        </div>
+        <div class="container">
+          <input
+            required=""
+            type="number"
+            name="smoothness_mean"
+            step="any"
+            class="input"
+          />
+          <label for="smoothness_mean" class="label">Smoothness Mean:</label>
+        </div>
+        <div class="container">
+          <input
+            required=""
+            type="number"
+            name="compactness_mean"
+            step="any"
+            class="input"
+          />
+          <label for="compactness_mean" class="label">Compactness Mean</label>
+        </div>
+        <div class="container">
+          <input
+            required=""
+            type="number"
+            name="concave_points_mean"
+            step="any"
+            class="input"
+          />
+          <label for="concave_points_mean" class="label"
+            >Concave Points Mean</label
+          >
+        </div>
+        <div class="container">
+          <input
+            required=""
+            type="number"
+            name="symmetry_mean"
+            step="any"
+            class="input"
+          />
+          <label for="symmetry_mean" class="label">Symmetry Mean</label>
+        </div>
+        <div class="container">
+          <input
+            required=""
+            type="number"
+            name="fractal_dimension_mean"
+            step="any"
+            class="input"
+          />
+          <label for="fractal_dimension_mean" class="label"
+            >Fractal Dimension Mean</label
+          >
+        </div>
+        <div class="container">
+          <input
+            required=""
+            type="number"
+            name="texture_se"
+            step="any"
+            class="input"
+          />
+          <label for="texture_se" class="label">Texture SE</label>
+        </div>
+        <div class="container">
+          <input
+            required=""
+            type="number"
+            name="area_se"
+            step="any"
+            class="input"
+          />
+          <label for="area_se" class="label">Area SE</label>
+        </div>
+        <div class="container">
+          <input
+            required=""
+            type="number"
+            name="smoothness_se"
+            step="any"
+            class="input"
+          />
+          <label for="smoothness_se" class="label">Smoothness SE</label>
+        </div>
+        <div class="container">
+          <input
+            required=""
+            type="number"
+            name="compactness_se"
+            step="any"
+            class="input"
+          />
+          <label for="compactness_se" class="label">Compactness SE</label>
+        </div>
+        <div class="container">
+          <input
+            required=""
+            type="number"
+            name="concavity_se"
+            step="any"
+            class="input"
+          />
+          <label for="concavity_se" class="label">Concavity SE</label>
+        </div>
+        <div class="container">
+          <input
+            required=""
+            type="number"
+            name="concave_points_se"
+            step="any"
+            class="input"
+          />
+          <label for="concave_points_se" class="label">Concave Points SE</label>
+        </div>
+        <div class="container">
+          <input
+            required=""
+            type="number"
+            name="symmetry_se"
+            step="any"
+            class="input"
+          />
+          <label for="symmetry_se" class="label">Symmetry SE</label>
+        </div>
+        <div class="container">
+          <input
+            required=""
+            type="number"
+            name="fractal_dimension_se"
+            step="any"
+            class="input"
+          />
+          <label for="fractal_dimension_se" class="label"
+            >Fractal Dimension SE</label
+          >
+        </div>
+        <div class="container">
+          <input
+            required=""
+            type="number"
+            name="texture_worst"
+            step="any"
+            class="input"
+          />
+          <label for="texture_worst" class="label">Texture Worst</label>
+        </div>
+        <div class="container">
+          <input
+            required=""
+            type="number"
+            name="area_worst"
+            step="any"
+            class="input"
+          />
+          <label for="area_worst" class="label">Area Worst</label>
+        </div>
+        <div class="container">
+          <input
+            required=""
+            type="number"
+            name="smoothness_worst"
+            step="any"
+            class="input"
+          />
+          <label for="smoothness_worst" class="label">Smoothness Worst</label>
+        </div>
+        <div class="container">
+          <input
+            required=""
+            type="number"
+            name="compactness_worst"
+            step="any"
+            class="input"
+          />
+          <label for="compactness_worst" class="label">Compactness Worst</label>
+        </div>
+        <div class="container">
+          <input
+            required=""
+            type="number"
+            name="concavity_worst"
+            step="any"
+            class="input"
+          />
+          <label for="concavity_worst" class="label">Concavity Worst</label>
+        </div>
+        <div class="container">
+          <input
+            required=""
+            type="number"
+            name="concave_points_worst"
+            step="any"
+            class="input"
+          />
+          <label for="concave_points_worst" class="label"
+            >Concave Points Worst</label
+          >
+        </div>
+        <div class="container">
+          <input
+            required=""
+            type="number"
+            name="symmetry_worst"
+            step="any"
+            class="input"
+          />
+          <label for="symmetry_worst" class="label">Symmetry Worst</label>
+        </div>
+        <div class="container">
+          <input
+            required=""
+            type="number"
+            name="fractal_dimension_worst"
+            step="any"
+            class="input"
+          />
+          <label for="fractal_dimension_worst" class="label"
+            >Fractal Dimension Worst</label
+          >
+        </div>
+        <div class="container">
+          <input type="submit" value="Submit" class="button" />
+        </div>
+      </form>
+    </div>
+
+    <div class="bg-text1">
+      <h2>Results</h2>
+      <br />
+      {% if final_result is defined %}
+      <div class="result">
+        {% if final_result == 0 %}
+        <center><h1>Breast Cancer Not detected</h1></center>
+        {% else %}
+        <center><h1>Breast Cancer detected</h1></center>
+        {% endif %}
+      </div>
+      {% endif %}
+      <br />
+
+      <button class="moreinfo" id="redirectmore">More Info</button>
+    </div>
+
+    <script src="../static/js/input.js"></script>
+  </body>
+</html>

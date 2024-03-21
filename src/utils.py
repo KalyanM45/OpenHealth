@@ -77,3 +77,15 @@ def recognition_prompt(query):
     - Additionally, {query}
 
 if the image is not related to medical or healthcare, please provide a message saying "Please Provide Valid Medical Image".'''
+    
+
+def get_med(disease, output):
+    prmp = f'''
+For the given disease {disease} for this {output} give me the following details in this format:
+Disease Name:
+Output:
+Food Advice: In this section, provide the food items that are good for the patient and the food items that are bad for the patient.
+Dont provide any false or misleading information.
+'''
+    ans = text_model.generate_content(prompt)
+    return ans.text

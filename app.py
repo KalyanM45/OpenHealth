@@ -9,7 +9,7 @@ import subprocess
 import numpy as np
 from PIL import Image
 from tensorflow.keras.models import load_model
-from src.utils import gen_from_image, gen_from_text
+from src.utils import gen_from_image, gen_from_text, get_med
 from flask import Flask, render_template,request,redirect,url_for
 from src.Multi_Disease_System.Parkinsons_Disease_Prediction.pipelines.Prediction_pipeline import Parkinsons_Data, PredictParkinsons
 from src.Multi_Disease_System.Breast_Cancer_Prediction.pipelines.Prediction_pipeline import BCancer_Data, PredictBCancer
@@ -17,24 +17,31 @@ from src.Multi_Disease_System.Diabetes_Disease_Prediction.pipelines.Prediction_p
 from src.Multi_Disease_System.Heart_Disease_Prediction.pipelines.Prediction_pipeline import CustomData, PredictPipeline
 brain_model = load_model('Artifacts\Brain_Tumour\BrainModel.h5')
 kidney_model = load_model('Artifacts\Kidney_Disease\Kidney_Model.h5')
+#lung_model = load_model('Artifacts\Lung_Disease\Lung_Model.h5')
+livermodel = pickle.load(open('Artifacts\Liver_Disease\Liver_Model.pkl', 'rb'))
+liverpreprocessor = pickle.load(open('Artifacts\Liver_Disease\Liver_Preprocessor.pkl', 'rb'))
+
+
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
     try:
-        return render_template('index.html')
+        return render_template('landing.html')
     except:
         return render_template('error.html')
     
-
-@app.route('/redirect')
-def redirect_to_landing():
-    return redirect(url_for('landing'))
-
-@app.route('/landing')
-def landing():
-    return render_template('index')
+@app.route('/services')
+def index1():
+    try:
+        return render_template('services.html')
+    except:
+        return render_template('error.html')
+    
+'''@app.route('/landing')
+def other():
+    return render_template('landing.html')'''
 
 @app.route('/chatbot')
 def run_streamlit():
@@ -53,6 +60,21 @@ def run_streamlit1():
     except:
         return render_template('error.html')
 
+@app.route('/food/<disease>/<tumor_type>', methods=['GET', 'POST'])
+def more_info(disease, tumor_type):
+    if request.method == 'POST':
+        prompt = f"Give me information about the {disease} for this suffering type {tumor_type} in the following paragraph format:\
+        Disease Name: \
+        Disease Description:\
+        Disease Symptoms:\
+        Disease Treatment:\
+        Disease Food to Eat:\
+        Disease Food to Avoid:"  
+        # Generate information based on the disease and tumor type
+        answer = text_model.generate_content(prompt) # Replace with actual generated content
+        ans = answer.replace('*', '\n') 
+        return render_template("llm.html", answer=ans)
+    return render_template("llm.html", disease=disease, tumor_type=tumor_type)
 
 
 @app.route('/brain', methods=['GET', 'POST'])
@@ -76,7 +98,16 @@ def brain():
             prediction_label = class_labels[np.argmax(predictions)]
             confidence = np.max(predictions)
             os.remove(file_path)
-            return render_template('brain_tumour.html', prediction=prediction_label, confidence=confidence)
+
+            if request.form.get('button') == 'More Info':
+                if prediction_label == 'Glioma Tumour':
+                    return redirect(url_for('brain_tumour1', disease='brain', tumor_type='glioma'))
+                elif prediction_label == 'Meningioma Tumour':
+                    return redirect(url_for('brain_tumour2', disease='brain', tumor_type='meningioma'))
+                elif prediction_label == 'Pituitary Tumour':
+                    return redirect(url_for('brain_tumour3', disease='brain', tumor_type='pituitary'))                
+            
+            return render_template('brain_tumour.html', prediction=prediction_label)
         except:
             return render_template('error.html')
     return render_template('brain_tumour.html')
@@ -113,10 +144,10 @@ def brain_post():
             final_data = data.get_data_as_dataframe()
             predict_pipeline = PredictBCancer()
             pred = predict_pipeline.predict(final_data)
-            result = round(pred[0], 2)
-            return render_template('bcancer.html', final_result=result)
+            an = round(pred[0], 2)
+            return render_template('bcancer.html', final_result=an)
         except:
-            return render_template('error.html')
+            pass
     return render_template('bcancer.html')
 
 @app.route('/diabetes', methods=["GET", "POST"])
@@ -189,20 +220,63 @@ def kidney():
             return render_template('error.html', message=str(e))
     return render_template('kidney.html')
 
-@app.route('/liver')
-def liver():
-    try:
-        return render_template('liver.html')
-    except:
-        return render_template('error.html')
-
-
+'''
 @app.route('/lung')
-def lung():
-    try:
-        return render_template('lung.html')
-    except:
-        return render_template('error.html')
+def predict():
+    if request.method == 'POST':
+        img_file = request.files['file']
+        img_path = "static/" + img_file.filename
+        img_file.save(img_path)
+
+        # Preprocess the image
+        img = image.load_img(img_path, target_size=(224, 224))
+        img_array = image.img_to_array(img)
+        img_array = np.expand_dims(img_array, axis=0)
+        img_array /= 255.0
+
+        # Make prediction
+        prediction = lung_model.predict(img_array)
+        predicted_class = np.argmax(prediction)
+
+        # Define classes
+        classes = ['COVID-19', 'Normal', 'Pneumonia-Bacterial', 'Pneumonia-Viral', 'Tuberculosis']
+
+        return render_template('result.html', img_path=img_path, prediction=classes[predicted_class])
+    return render_template('lung.html')'''
+
+@app.route('/liver', methods=['GET', 'POST'])
+def liver():
+    if request.method == 'POST':
+        age = float(request.form['age'])
+        gender = int(request.form['gender'])
+        total_bilirubin = float(request.form['total_bilirubin'])
+        direct_bilirubin = float(request.form['direct_bilirubin'])
+        alkaline_phosphotase = float(request.form['alkaline_phosphotase'])
+        alamine_aminotransferase = float(request.form['alamine_aminotransferase'])
+        aspartate_aminotransferase = float(request.form['aspartate_aminotransferase'])
+        total_proteins = float(request.form['total_proteins'])
+        albumin = float(request.form['albumin'])
+        albumin_globulin_ratio = float(request.form['albumin_globulin_ratio'])
+        
+        # Preprocess features
+        features = np.array([age, gender, total_bilirubin, direct_bilirubin, alkaline_phosphotase,
+                            alamine_aminotransferase, aspartate_aminotransferase, total_proteins,
+                            albumin, albumin_globulin_ratio]).reshape(1, -1)
+        
+        # Make prediction - (livermodel and liverpreprocessor assumed to be defined elsewhere)
+        prediction = livermodel.predict(liverpreprocessor.transform(features))[0]
+        probability = livermodel.predict_proba(liverpreprocessor.transform(features))[0][1]
+        
+        # Prepare response
+        if prediction == 1:
+            result = 'Positive'
+        else:
+            result = 'Negative'
+        
+        return render_template('liver.html', prediction=result)
+
+    return render_template('liver.html')
+
 
 @app.route('/malaria')
 def malaria():
@@ -233,6 +307,54 @@ def parkinsons():
         except:
             return render_template("error.html")
     return render_template('parkinsons.html')
+
+import os
+import google.generativeai as genai
+
+genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+text_model = genai.GenerativeModel('gemini-pro') 
+
+@app.route('/brain_tumour1')
+def brain_tumour1(disease, tumor_type):
+    prompt = f"Give me information about the brain disease for this suffering type glioma tumour in the following paragraph format:\
+        Disease Name: \
+        Disease Description:\
+        Disease Symptoms:\
+        Disease Treatment:\
+        Disease Food to Eat:\
+        Disease Food to Avoid:"  
+        # Generate information based on the disease and tumor type
+    answer = text_model.generate_content(prompt) # Replace with actual generated content
+    ans = answer.replace('*', '\n') 
+    return render_template("llm.html", answer=ans)
+
+@app.route('/brain_tumour2')
+def brain_tumour2(disease, tumor_type):
+    prompt = f"Give me information about the brain disease for this suffering type meningioma tumour in the following paragraph format:\
+        Disease Name: \
+        Disease Description:\
+        Disease Symptoms:\
+        Disease Treatment:\
+        Disease Food to Eat:\
+        Disease Food to Avoid:"  
+        # Generate information based on the disease and tumor type
+    answer = text_model.generate_content(prompt) # Replace with actual generated content
+    ans = answer.replace('*', '\n') 
+    return render_template("llm.html", answer=ans)
+
+@app.route('/brain_tumour3')
+def brain_tumour3(disease, tumor_type):
+    prompt = f"Give me information about the brain disease for this suffering type pituatary tumour in the following paragraph format:\
+        Disease Name: \
+        Disease Description:\
+        Disease Symptoms:\
+        Disease Treatment:\
+        Disease Food to Eat:\
+        Disease Food to Avoid:"  
+        # Generate information based on the disease and tumor type
+    answer = text_model.generate_content(prompt) # Replace with actual generated content
+    ans = answer.replace('*', '\n') 
+    return render_template("llm.html", answer=ans)
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)

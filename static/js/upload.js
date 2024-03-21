@@ -45,3 +45,7 @@ document
         const fileLabel = document.querySelector(".footer p");
         fileLabel.textContent = "No file selected";
       });
+
+      document.getElementById("redirectmore").addEventListener("click", function() {
+        window.open("../templates/llm.html", "_blank");
+    });

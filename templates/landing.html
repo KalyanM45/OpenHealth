@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/css/landingstyle.css" />
+    <link rel="stylesheet" href="../static/css/landingstyle1.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <title>Home</title>
+  </head>
+  <body>
+    <div class="topnav" id="myTopnav">
+      <a href="landing.html">Home</a>
+
+      <a href="services.html">Services</a>
+
+      <a href="#about">About</a>
+
+      <a href="#contact">Contact</a>
+      <i class="fa fa-user-md logo"></i>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars" aria-hidden="true" id="bars"></i>
+      </a>
+    </div>
+    <div class="slider">
+      <div class="myslide fade">
+        <div class="txt">
+          <h1>OPEN HEALTH</h1>
+          <p>A COMPREHENSIVE<br />AI TOOL FOR REMOTE HEALTH CARE</p>
+        </div>
+        <img
+          src="../static/images/OpenHealth_SH1.jpeg"
+          style="width: 100%; height: 100%"
+        />
+      </div>
+
+      <div class="myslide fade">
+        <div class="txt">
+          <h1>Brain Cancer Detection</h1>
+          <p>Unleashing Hope<br />Early Detection, Brighter Futures.</p>
+        </div>
+        <img
+          src="../static/images/Brain_SH2.jpg"
+          style="width: 100%; height: 100%"
+        />
+      </div>
+
+      <div class="myslide fade">
+        <div class="txt">
+          <h1>Heart Disease Prediction</h1>
+          <p>HeartGuard<br />Predict your heart, right from the start</p>
+        </div>
+        <img
+          src="../static/images/Heart_SH3.jpeg"
+          style="width: 100%; height: 100%"
+        />
+      </div>
+
+      <div class="myslide fade">
+        <div class="txt">
+          <h1>Liver Disease Prediction</h1>
+          <p>
+            Unveiling the silent threat<br />Safeguarding Lives through Liver
+            Disease Prediction.
+          </p>
+        </div>
+        <img
+          src="../static/images/Liver_SH4.jpg"
+          style="width: 100%; height: 100%"
+        />
+      </div>
+
+      <div class="myslide fade">
+        <div class="txt">
+          <h1>Lung Disease Prediction</h1>
+          <p>Breathe Ahead<br />Resist the lung disease before it starts</p>
+        </div>
+        <img
+          src="../static/images/Lung_SH5.jpeg"
+          style="width: 100%; height: 100%"
+        />
+      </div>
+
+      <div class="myslide fade">
+        <div class="txt">
+          <h1>Kideny Disease Prediction</h1>
+          <p>RenalGuard<br />Be proactive, predict, protect</p>
+        </div>
+        <img
+          src="../static/images/Kidney_SH6.jpeg"
+          style="width: 100%; height: 100%"
+        />
+      </div>
+
+      <div class="myslide fade">
+        <div class="txt">
+          <h1>Breast Cancer Prediction</h1>
+          <p>
+            Safeguarding Grace<br />Don't wait for symptoms, predict potential
+          </p>
+        </div>
+        <img
+          src="../static/images/Breast_SH7.jpg"
+          style="width: 100%; height: 100%"
+        />
+      </div>
+
+      <div class="myslide fade">
+        <div class="txt">
+          <h1>Diabetes Disease Prediction</h1>
+          <p>Glucosight<br />Embrace a sweeter future with proactive care</p>
+        </div>
+        <img
+          src="../static/images/Diabetes_SH8.jpg"
+          style="width: 100%; height: 100%"
+        />
+      </div>
+
+      <div class="myslide fade">
+        <div class="txt">
+          <h1>Skin Cancer Prediction</h1>
+          <p>DermisGuard<br />Unlock the secrets of your skin</p>
+        </div>
+        <img
+          src="../static/images/Skin_SH9.jpeg"
+          style="width: 100%; height: 100%"
+        />
+      </div>
+
+      <div class="myslide fade">
+        <div class="txt">
+          <h1>Malaria Prediction</h1>
+          <p>MosquitoShield<br />Bite back against malaria</p>
+        </div>
+        <img
+          src="../static/images/Malaria_SH10.jpg"
+          style="width: 100%; height: 100%"
+        />
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      <div class="dotsbox" style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+        <span class="dot" onclick="currentSlide(7)"></span>
+        <span class="dot" onclick="currentSlide(8)"></span>
+        <span class="dot" onclick="currentSlide(9)"></span>
+        <span class="dot" onclick="currentSlide(10)"></span>
+      </div>
+    </div>
+
+    <script src="../static/js/script4.js"></script>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </body>
+</html>

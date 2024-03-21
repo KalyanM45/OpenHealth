@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/css/input.css" />
+    <title>Heart Input Form</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-image: url(../static/images/heart_bg.jpg);
+        background-size: cover;
+        font-family: Arial, sans-serif;
+      }
+      .heading h2 {
+        color: #fff;
+        font-size: 5em;
+        position: absolute;
+        top: -50px;
+        left: 300px;
+      }
+      .bg-text {
+        background-color: rgb(0, 238, 255);
+        background-color: rgba(0, 0, 0, 0.6);
+        color: #0ef;
+        font-weight: bold;
+        border: 3px solid #0ef;
+        position: absolute;
+        top: 78%;
+        left: 50%;
+        margin-top: -150px;
+        transform: translate(-90%, -50%);
+        z-index: 2;
+        width: 50%;
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .bg-text1 {
+        background-color: rgb(0, 238, 255);
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #0ef;
+        font-weight: bold;
+        border: 3px solid #0ef;
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        transform: translate(50%, -100%);
+        z-index: 2;
+        width: 25%;
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+      form {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      option {
+        color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="heading">
+        <h2>Heart Disease Prediction</h2>
+        <h2>Heart Disease Prediction</h2>
+      </div>
+    </section>
+    <div class="bg-text">
+      <form method="post">
+        <div class="container">
+          <input required="" type="text" name="age" class="input" />
+          <label for="age" class="label">Age</label>
+        </div>
+        <div class="container">
+          <select name="sex" required="" class="input">
+            <option value="0">Female</option>
+            <option value="1">Male</option>
+          </select>
+
+          <label for="sex" class="label">Sex</label>
+        </div>
+        <div class="container">
+          <select name="cp" required="" class="input">
+            <option value="0">Typical Angina</option>
+            <option value="1">Atypical Angina</option>
+            <option value="2">Non-Anginal Pain</option>
+            <option value="3">Asymptomatic</option>
+          </select>
+
+          <label for="cp" class="label">Chest Pain Type</label>
+        </div>
+        <div class="container">
+          <input required="" type="text" name="trestbps" class="input" />
+          <label for="trestbps" class="label">Resting Blood Pressure </label>
+        </div>
+        <div class="container">
+          <input required="" type="text" name="chol" class="input" />
+          <label for="chol" class="label">Serum Cholesterol </label>
+        </div>
+        <div class="container">
+          <select name="fbs" required="" class="input">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+          </select>
+          <label for="fbs" class="label">Fasting Blood Sugar</label>
+        </div>
+        <div class="container">
+          <select name="restecg" required="" class="input">
+            <option value="0">Normal</option>
+            <option value="1">ST-T Wave Abnormality</option>
+            <option value="2">Left Ventricular Hypertrophy</option>
+          </select>
+          <label for="restecg" class="label">Rest ECG</label>
+        </div>
+        <div class="container">
+          <input required="" type="text" name="thalach" class="input" />
+          <label for="thalach" class="label">Thalach</label>
+        </div>
+        <div class="container">
+          <input required="" type="text" name="text" class="input" />
+          <label class="label">Exang</label>
+        </div>
+        <div class="container">
+          <select name="exang" required="" class="input">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+          </select>
+          <label for="exang" class="label">Exercise Induced</label>
+        </div>
+        <div class="container">
+          <input required="" type="text" name="text" class="input" />
+          <label class="label">Slope</label>
+        </div>
+        <div class="container">
+          <input required="" type="text" name="oldpeak" class="input" />
+          <label for="oldpeak" class="label">Old peak</label>
+        </div>
+        <div class="container">
+          <select name="slope" required="" class="input">
+            <option value="0">Upsloping</option>
+            <option value="1">Flat</option>
+            <option value="2">Downsloping</option>
+          </select>
+          <label for="slope" class="label">Slope of the Peak</label>
+        </div>
+        <div class="container">
+          <select name="ca" required="" class="input">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+          <label for="ca" class="label">Number of Major Vessels</label>
+        </div>
+        <div class="container">
+          <select name="thal" required="" class="input">
+            <option value="0">Normal</option>
+            <option value="1">Fixed Defect</option>
+            <option value="2">Reversible Defect</option>
+          </select>
+          <label for="thal" class="label">Thalassemia</label>
+        </div>
+        <div class="container">
+          <input type="submit" value="Submit" class="button" />
+        </div>
+      </form>
+    </div>
+
+    <div class="bg-text1">
+      <h2>Results</h2><br><br>
+      {% if final_result is defined %}
+        <div class="result">
+            {% if final_result == 0 %}
+                <p>No heart disease detected</p>
+            {% else %}
+                <p>Suffering from heart disease</p>
+            {% endif %}
+        </div>
+    {% endif %}
+    <br>
+
+
+    <button class="moreinfo" id="redirectmore">
+      More Info
+    </button>
+    </div>
+
+    <script src="../static/js/input.js"></script>
+  </body>
+</html>

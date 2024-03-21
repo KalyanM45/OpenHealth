@@ -217,3 +217,50 @@
     box-shadow: 0 0 0 0 transparent;
     transition: box-shadow 0.2s ease-in;
   }
+  .moreinfo {
+    width: 10em;
+    position: relative;
+    height: 3.5em;
+    border: 3px ridge #0ef;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    transition: 1s;
+    border-radius: 0.3em;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .moreinfo::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: transparent;
+    transition: 0.5s;
+    transform-origin: center;
+  }
+
+  .moreinfo::before {
+    content: "";
+    transform-origin: center;
+    position: absolute;
+    top: 80%;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: transparent;
+    transition: 0.5s;
+  }
+
+  .moreinfo:hover::before,
+  .moreinfo:hover::after {
+    transform: scale(0)
+  }
+
+  .moreinfo:hover {
+    box-shadow: inset 0px 0px 25px #0ef;
+  }

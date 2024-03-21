@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../static/css/input.css" />
+    <title>Parkinson's Disease Detection</title>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-image: url(../static/images/parkison_bg.jpg);
+        background-size: cover;
+        font-family: Arial, sans-serif;
+      }
+      .heading h2 {
+        color: #fff;
+        font-size: 5em;
+        position: absolute;
+        top: -50px;
+        left: 300px;
+      }
+      .bg-text {
+        background-color: rgb(0, 238, 255);
+        background-color: rgba(0, 0, 0, 0.6);
+        color: #0ef;
+        font-weight: bold;
+        border: 3px solid #0ef;
+        position: absolute;
+        top: 78%;
+        left: 50%;
+        margin-top: -150px;
+        transform: translate(-90%, -50%);
+        z-index: 2;
+        width: 50%;
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .bg-text1 {
+        background-color: rgb(0, 238, 255);
+        background-color: rgba(0, 0, 0, 0.3);
+        color: #0ef;
+        font-weight: bold;
+        border: 3px solid #0ef;
+        position: absolute;
+        top: 85%;
+        left: 50%;
+        transform: translate(50%, -100%);
+        z-index: 2;
+        width: 25%;
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+      .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0.7;
+        z-index: -1;
+      }
+      form{
+        display: flex;
+        flex-wrap: wrap;
+        
+      }
+    </style>
+  </head>
+  <body>
+    <div class="overlay"></div>
+    <section>
+      <div class="heading">
+        <h2>Parkinson`s Disease Prediction</h2>
+        <h2>Parkinson`s Disease Prediction</h2>
+      </div>
+    </section>
+    <div class="bg-text">
+      <form action="/parkinsons" method="post">
+        <div class="container">
+          <input type="number" step="any" name="MDVPFO" required="" class="input" />
+          <label class="label" for="MDVPFO">MDVPfo:</label>
+        </div>
+        <div class="container">
+          <input type="number" step="any" name="MDVPFHI" required="" class="input" />
+          <label class="label" for="MDVPFHI">MDVPfhi:</label>
+        </div>
+        <div class="container">
+          <input type="number" step="any" name="MDVPFLO" required="" class="input" />
+          <label class="label" for="MDVPFLO">MDVPflo:</label>
+        </div>
+        <div class="container">
+          <input type="number" step="any" name="MDVPJ" required="" class="input" />
+          <label class="label" for="MDVPJ">MDVPjitter:</label>
+        </div>
+        <div class="container">
+          <input type="number" step="any" name="RPDE" required="" class="input" />
+          <label class="label" for="RPDE">RPDE:</label>
+        </div>
+        <div class="container">
+          <input type="number" step="any" name="DFA" required="" class="input" />
+          <label class="label" for="DFA">DFA:</label>
+        </div>
+        <div class="container">
+          <input type="number" step="any" name="spread2" required="" class="input" />
+          <label class="label" for="spread2">spread2:</label>
+        </div>
+        <div class="container">
+          <input type="number" step="any" name="D2" required="" class="input" />
+          <label class="label" for="D2">D2:</label>
+        </div>
+        <div class="container">
+            <input type="submit" value="Submit" class="button" />
+        </div>
+      </form>
+    </div>
+    <div class="bg-text1">
+        <h2>Results</h2>
+
+        <br>
+        {% if final_result is defined %}
+        <div class="result">
+          {% if final_result == 0 %}
+          <center><h1>No Parkinson's Disease detected</h1></center>
+          {% else %}
+          <center><h1>Parkinson's Disease detected</h1></center>
+          {% endif %}
+        </div>
+        {% endif %}
+
+
+        <br>
+
+
+    <button class="moreinfo" id="redirectmore">
+      More Info
+    </button>
+
+    <script src="../static/js/input.js"></script>
+   
+</div>
+  </body>
+</html>

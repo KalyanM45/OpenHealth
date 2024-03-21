@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liver Prediction</title>
+  </head>
+  <body>
+    <h1>Liver Prediction</h1>
+
+    {% if not prediction %}
+    <!-- Form for input -->
+    <form action="/liver" method="post">
+      <label for="age">Age:</label>
+      <input type="text" id="age" name="age" required /><br /><br />
+      <label for="gender">Gender (0 for Female, 1 for Male):</label>
+      <input type="text" id="gender" name="gender" required /><br /><br />
+      <label for="total_bilirubin">Total Bilirubin:</label>
+      <input
+        type="text"
+        id="total_bilirubin"
+        name="total_bilirubin"
+        required
+      /><br /><br />
+      <label for="direct_bilirubin">Direct Bilirubin:</label>
+      <input
+        type="text"
+        id="direct_bilirubin"
+        name="direct_bilirubin"
+        required
+      /><br /><br />
+      <label for="alkaline_phosphotase">Alkaline Phosphotase:</label>
+      <input
+        type="text"
+        id="alkaline_phosphotase"
+        name="alkaline_phosphotase"
+        required
+      /><br /><br />
+      <label for="alamine_aminotransferase">Alamine Aminotransferase:</label>
+      <input
+        type="text"
+        id="alamine_aminotransferase"
+        name="alamine_aminotransferase"
+        required
+      /><br /><br />
+      <label for="aspartate_aminotransferase"
+        >Aspartate Aminotransferase:</label
+      >
+      <input
+        type="text"
+        id="aspartate_aminotransferase"
+        name="aspartate_aminotransferase"
+        required
+      /><br /><br />
+      <label for="total_proteins">Total Proteins:</label>
+      <input
+        type="text"
+        id="total_proteins"
+        name="total_proteins"
+        required
+      /><br /><br />
+      <label for="albumin">Albumin:</label>
+      <input type="text" id="albumin" name="albumin" required /><br /><br />
+      <label for="albumin_globulin_ratio">Albumin Globulin Ratio:</label>
+      <input
+        type="text"
+        id="albumin_globulin_ratio"
+        name="albumin_globulin_ratio"
+        required
+      /><br /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+    {% endif %} {% if prediction %}
+    <!-- Display prediction result -->
+    <h2>Prediction Result:</h2>
+    <p>Prediction: {{ prediction }}</p>
+    {% endif %}
+  </body>
+</html>
