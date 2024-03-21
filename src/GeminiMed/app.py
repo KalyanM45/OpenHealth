@@ -22,7 +22,7 @@ def get_gemini_response(question):
     response = model.generate_content(question)
     return response.text
 
-st.title('GeminiMed: GPT-4.5')
+st.title('OpenHealth: GPT-4.5')
 
 user_input = st.text_input("Enter Your Medical Query Here:")
 

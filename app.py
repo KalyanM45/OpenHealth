@@ -19,7 +19,7 @@ brain_model = load_model('Artifacts\Brain_Tumour\BrainModel.h5')
 kidney_model = load_model('Artifacts\Kidney_Disease\Kidney_Model.h5')
 #lung_model = load_model('Artifacts\Lung_Disease\Lung_Model.h5')
 livermodel = pickle.load(open('Artifacts\Liver_Disease\Liver_Model.pkl', 'rb'))
-liverpreprocessor = pickle.load(open('Artifacts\Liver_Disease\Liver_Preprocessor.pkl', 'rb'))
+#liverpreprocessor = pickle.load(open('Artifacts\Liver_Disease\Liver_Preprocessor.pkl', 'rb'))
 
 
 
@@ -264,8 +264,8 @@ def liver():
                             albumin, albumin_globulin_ratio]).reshape(1, -1)
         
         # Make prediction - (livermodel and liverpreprocessor assumed to be defined elsewhere)
-        prediction = livermodel.predict(liverpreprocessor.transform(features))[0]
-        probability = livermodel.predict_proba(liverpreprocessor.transform(features))[0][1]
+        prediction = livermodel.predict(features)[0]
+        probability = livermodel.predict_proba(features)[0][1]
         
         # Prepare response
         if prediction == 1:
