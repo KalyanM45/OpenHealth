@@ -13,4 +13,6 @@ python-dotenv
 streamlit
 tensorflow
 opencv-python
+pymongo
+chainlit
 -e .
