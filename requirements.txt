@@ -15,4 +15,5 @@ tensorflow
 opencv-python
 pymongo
 chainlit
+pymongo[srv]
 -e .
