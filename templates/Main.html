@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Health</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: url('https://lh3.googleusercontent.com/SpF9hIf_C3KSo-xElVbNF768qUJtb4TNoXTczjyxdH9BSUNnNaedlC7QYq6d9C8YGVnEfSjDdvC3hR4p81UijHFgLoqWqqRPQ70lpnJB50OAAot0iw=w3840-rw') no-repeat center center/cover;
+            color: #fff;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            border-radius: 20px; /* Curved edges for the body */
+        }
+        .container {
+            width: 100vw;
+            height: 100vh;
+            overflow-y: scroll;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            padding-left: 20px; /* Added gap on the left */
+            padding-right: 20px; /* Added gap on the right */
+        }
+        .container::-webkit-scrollbar {
+            display: none;
+        }
+        .section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        .hero {
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px;
+        }
+        .hero h1, .section-title {
+            font-size: 5rem;
+            font-weight: bold;
+            background: linear-gradient(90deg, #4A90E2, #E94E77);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            opacity: 0.8;
+            background: linear-gradient(90deg, #4A90E2, #E94E77);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .features, .clickable-section {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px 20px;
+        }
+        .card {
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(255, 255, 255, 0.1);
+            width: 320px;
+            transition: 0.3s;
+            text-align: center;
+            border-top: 4px solid #4a90e2;
+        }
+        .card img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(255, 255, 255, 0.15);
+        }
+        .clickable-card {
+            background: #242424;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+            width: 260px;
+            text-decoration: none;
+            color: #fff;
+            transition: 0.3s;
+            text-align: center;
+            cursor: pointer;
+            border: 2px solid #4a90e2;
+        }
+        .clickable-card:hover {
+            background: #4a90e2;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="hero" class="section hero">
+            <h1>Open Health</h1><br>
+            <p>Innovating Healthcare With AI-Driven Solutions</p>
+        </div>
+        <div id="features" class="section features">
+            <h2 class="section-title">Our Features</h2>
+            <div style="display: flex; gap: 20px;">
+                <div class="card">
+                    <img src="feature1.png" alt="Feature 1">
+                    <h3>AI Diagnosis</h3>
+                    <p>AI-powered diagnosis and recommendations.</p>
+                </div>
+                <div class="card">
+                    <img src="feature2.png" alt="Feature 2">
+                    <h3>Real-Time Monitoring</h3>
+                    <p>Real-time health monitoring and alerts.</p>
+                </div>
+                <div class="card">
+                    <img src="feature3.png" alt="Feature 3">
+                    <h3>Data Insights</h3>
+                    <p>Data-driven insights for better patient care.</p>
+                </div>
+            </div>
+        </div>
+        <div id="clickable-section" class="section clickable-section">
+            <h2 class="section-title">Explore More</h2>
+            <div style="display: flex; gap: 20px;">
+                <a href="page1.html" class="clickable-card">Learn More</a>
+                <a href="page2.html" class="clickable-card">Get Started</a>
+                <a href="page3.html" class="clickable-card">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
